@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<link rel="stylesheet" href="/css/normalize.css"></link>
+<link rel="stylesheet" href="/css/estructuras.css"></link>
+<link rel="stylesheet" href="/css/font-roboto.css"></link>
+<link rel="stylesheet" href="/css/fontawesome.css"></link>
+<link rel="stylesheet" href="/css/animate.css"></link>
+<link rel="stylesheet" href="/css/site.css"></link>
+
+</head>
+<body>
+
+<div id="p-login">
+
+      <form action="#" class="form">
+        <div class="isotipo iso-form"></div>
+        <h4 style="text-align: center;">ESTRUCTURAS</h4>
+
+        <div class="objs-elems">
+            <div class="objs-ins">
+                <label>Usuario</label>
+                <input data-value="default" class="bord" type="text" id="user_app">
+            </div>
+          </div>
+        <div class="objs-elems">
+          <div class="objs-ins">
+              <label>Password</label>
+              <input data-value="default" type="password" class="bord"  id="pass_app">
+          </div>
+        </div>
+        <button class="form_button" id="btn_inicio">Entrar</button>
+
+      </form>
+
+</div>
+
+<div id="p-inicio">
+
+  <div id="main-contenedor">
+      <div class="link-init" >
+          <div class="link-content">Administración</div>
+          <span ><i class="fas fa-atlas"></i></span>
+        </div>
+
+        <div class="link-init" >
+            <div class="link-content">Estructura General</div>
+            <span ><i class="far fa-calendar-alt"></i></span>
+        </div>
+
+        <div class="link-init">
+            <div class="link-content">Estructura Individual</div>
+            <span ><i class="fas fa-digital-tachograph"></i></span>
+        </div>
+
+        <div class="link-init">
+            <div class="link-content">Bloqueo</div>
+            <span ><i class="fas fa-lock"></i></span>
+        </div>
+        <div class="link-init">
+            <div class="link-content">Ine</div>
+          <span ><i class="far fa-clock"></i></span>
+          </div>
+  </div>
+
+
+  <div class="bt-user">
+      <div class="txt-bt fa fa-user" ></div>
+   </div>
+
+  <div class="footer-init">
+    <div class="footer-iso">
+
+    <div class="footer-logo">
+      <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	          viewBox="0 0 127 81" style="enable-background:new 0 0 127 81;" xml:space="preserve">
+      <g>
+        <path style="fill:#FFFFFF;" d="M43.2,1.2H25.3c-0.6,0-1.2,0.3-1.5,0.8L1.1,39.7c-0.3,0.5-0.3,1.1-0.1,1.6L17,78.7
+          c0.3,0.6,0.9,1,1.6,1h18.1c1.2,0,2.1-1.3,1.6-2.4l-15.5-36c-0.2-0.5-0.2-1.1,0.1-1.6L44.7,3.9C45.4,2.7,44.5,1.2,43.2,1.2z"/>
+        <g>
+          <path style="fill:#FFFFFF;" d="M81.3,1.2H66.5c-1.1,0-2.1,0.6-2.6,1.5L43.8,35.9c-1.2,2,0.2,4.6,2.6,4.6h14.8
+            c1.1,0,2.1-0.6,2.6-1.5L83.9,5.9C85.1,3.8,83.6,1.2,81.3,1.2z"/>
+          <path style="fill:#FFFFFF;" d="M44.8,79.8h14.8c1.1,0,2.1-0.6,2.6-1.5l20.1-33.2c1.2-2-0.2-4.6-2.6-4.6H64.9
+            c-1.1,0-2.1,0.6-2.6,1.5L42.2,75.1C41,77.2,42.4,79.8,44.8,79.8z"/>
+        </g>
+        <path style="fill:#FFFFFF;" d="M108.4,1.2H90.2c-1.2,0-2.1,1.3-1.6,2.4l15.5,36c0.2,0.5,0.2,1.1-0.1,1.6L82.3,77.1
+          c-0.7,1.2,0.1,2.6,1.5,2.6h17.9c0.6,0,1.2-0.3,1.5-0.8l22.8-37.7c0.3-0.5,0.3-1.1,0.1-1.6L110,2.3C109.7,1.6,109.1,1.2,108.4,1.2z"
+          />
+      </g>
+      </svg>
+
+    </div>
+    <div class="footer-text">
+        ESTRUCTURAS
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="p-general" >
+
+    <div class="p-i-header bkg-amarillo">
+        <div class="p-g-bar"> <span class="fas fa-sign-out-alt"></span></div>
+        <div class="p-i-isotipo">
+        <div class="p-i-logo">
+          <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 127 81" style="enable-background:new 0 0 127 81;" xml:space="preserve">
+          <g>
+            <path style="fill:#FFFFFF;" d="M43.2,1.2H25.3c-0.6,0-1.2,0.3-1.5,0.8L1.1,39.7c-0.3,0.5-0.3,1.1-0.1,1.6L17,78.7
+              c0.3,0.6,0.9,1,1.6,1h18.1c1.2,0,2.1-1.3,1.6-2.4l-15.5-36c-0.2-0.5-0.2-1.1,0.1-1.6L44.7,3.9C45.4,2.7,44.5,1.2,43.2,1.2z"/>
+            <g>
+              <path style="fill:#FFFFFF;" d="M81.3,1.2H66.5c-1.1,0-2.1,0.6-2.6,1.5L43.8,35.9c-1.2,2,0.2,4.6,2.6,4.6h14.8
+                c1.1,0,2.1-0.6,2.6-1.5L83.9,5.9C85.1,3.8,83.6,1.2,81.3,1.2z"/>
+              <path style="fill:#FFFFFF;" d="M44.8,79.8h14.8c1.1,0,2.1-0.6,2.6-1.5l20.1-33.2c1.2-2-0.2-4.6-2.6-4.6H64.9
+                c-1.1,0-2.1,0.6-2.6,1.5L42.2,75.1C41,77.2,42.4,79.8,44.8,79.8z"/>
+            </g>
+            <path style="fill:#FFFFFF;" d="M108.4,1.2H90.2c-1.2,0-2.1,1.3-1.6,2.4l15.5,36c0.2,0.5,0.2,1.1-0.1,1.6L82.3,77.1
+              c-0.7,1.2,0.1,2.6,1.5,2.6h17.9c0.6,0,1.2-0.3,1.5-0.8l22.8-37.7c0.3-0.5,0.3-1.1,0.1-1.6L110,2.3C109.7,1.6,109.1,1.2,108.4,1.2z"
+              />
+          </g>
+          </svg>
+
+        </div>
+        <div class="p-i-text">ESTRUCTURA GENERAL</div>
+        </div>
+    </div>
+
+    <div id="es-general">
+
+        <div>
+          <div class="objs-elems make-table" style="width:10%;">
+            <div class="objs-ins"><label>CANAL</label><div>7</div></div>
+            <div class="objs-ins"><label>FECHA</label><div>21-12-2018</div></div>
+            <div class="objs-ins"><label>ESCENARIO</label><div>Escenario A</div></div>
+          </div>
+
+        </div>
+
+          <div class="" >
+            <table class="tabla-box" id="table-g">
+
+              <thead>
+                      <tr>
+                          <th>Programas</th>
+                          <th>Entrada</th>
+                          <th>Contenido</th>
+                          <th>Fin</th>
+                          <th>Capsula Para Bloqueo Ine</th>
+                          <th>Plecas / Cortinillas</th>
+                          <th>Venta Nac</th>
+                          <th>Venta B</th>
+                          <th>Patrocinio</th>
+                          <th>Garantizado</th>
+                          <th>Venta Nac.</th>
+                          <th>Venta Local</th>
+                          <th>Total Venta</th>
+                          <th>Cap Informativa Noticias</th>
+                          <th>Promos Nac</th>
+                          <th>Promos Ine</th>
+                          <th>Identificador Canal 06 Seg.</th>
+                          <th>Rtc</th>
+                          <th>Ine Ordinario</th>
+                          <th>Total</th>
+                          <th>Comentario Avances</th>
+                          <th>Carrier Ine</th>
+                          <th>Cortinillas </th>
+                          <th>Cap// Avances</th>
+                          <th>Total Ine</th>
+                          <th>Total Carrier</th>
+                          <th>Salida</th>
+                          <th>Spots Patrocinio</th>
+                          <th>Spots Garantizado</th>
+                          <th>Promocion</th>
+                          </tr>
+              </thead>
+
+              <tbody>
+
+
+              <tr>
+              <td>BARRAS DE AJUSTE</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>RTC</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 8</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 9</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:37:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>QUE COTORREO</td>
+              <td>00:37:22</td>
+              <td>00:28:00</td>
+              <td>01:05:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>01:05:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL FARMACIAS SIMILARES 1</td>
+              <td>01:05:22</td>
+              <td>00:00:00</td>
+              <td>01:05:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>01:05:22</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>HIMNO NACIONAL</td>
+              <td>01:05:22</td>
+              <td>00:01:40</td>
+              <td>01:07:02</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>01:07:08</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>NAVIDAD 2018 30 SEG</td>
+              <td>05:48:30</td>
+              <td>00:00:30</td>
+              <td>05:49:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>05:49:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>HECHOS AM</td>
+              <td>05:49:00</td>
+              <td>02:19:12</td>
+              <td>08:08:12</td>
+              <td>00:03:30</td>
+              <td> </td>
+              <td>00:24:00</td>
+              <td>00:04:00</td>
+              <td>00:00:00</td>
+              <td>00:03:00</td>
+              <td>00:31:00</td>
+              <td>00:04:00</td>
+              <td>00:35:00</td>
+              <td>00:00:00</td>
+              <td>00:02:40</td>
+              <td>00:00:00</td>
+              <td>00:00:12</td>
+              <td>00:03:00</td>
+              <td>00:01:00</td>
+              <td>00:46:48</td>
+              <td> </td>
+              <td>00:05:00</td>
+              <td>00:00:06</td>
+              <td>00:01:20</td>
+              <td>00:07:30</td>
+              <td>00:44:10</td>
+              <td>08:55:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>AVANCE VLA 20 SEG //  CAP VENTANEANDO 20 SEG CORTE 0720 HRS  // 2 ROMPECORTES 20 SEG</td>
+              </tr>
+              <tr>
+              <td>VENGA LA ALEGRIA</td>
+              <td>08:55:00</td>
+              <td>02:15:22</td>
+              <td>11:10:22</td>
+              <td>00:03:00</td>
+              <td> </td>
+              <td>00:29:10</td>
+              <td>00:04:00</td>
+              <td>00:00:00</td>
+              <td>00:04:20</td>
+              <td>00:37:30</td>
+              <td>00:04:00</td>
+              <td>00:41:30</td>
+              <td>00:02:00</td>
+              <td>00:03:00</td>
+              <td>00:00:30</td>
+              <td>00:00:12</td>
+              <td>00:03:00</td>
+              <td>00:01:00</td>
+              <td>00:54:38</td>
+              <td> </td>
+              <td>00:04:30</td>
+              <td>00:00:06</td>
+              <td>00:00:20</td>
+              <td>00:07:30</td>
+              <td>00:53:30</td>
+              <td>12:05:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>1 CORTES INFORMATIVOS DE 1MIN // AVANCE TUS 20 SEG</td>
+              </tr>
+              <tr>
+              <td>TODO UN SHOW</td>
+              <td>12:05:00</td>
+              <td>01:19:22</td>
+              <td>13:24:22</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:18:55</td>
+              <td>00:02:40</td>
+              <td>00:00:00</td>
+              <td>00:01:45</td>
+              <td>00:23:20</td>
+              <td>00:02:40</td>
+              <td>00:26:00</td>
+              <td>00:02:00</td>
+              <td>00:02:30</td>
+              <td>00:00:30</td>
+              <td>00:00:12</td>
+              <td>00:02:00</td>
+              <td>00:00:30</td>
+              <td>00:35:08</td>
+              <td> </td>
+              <td>00:01:00</td>
+              <td>00:00:06</td>
+              <td>00:01:20</td>
+              <td>00:03:00</td>
+              <td>00:33:20</td>
+              <td>13:59:30</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>1 CORTES INFORMATIVOS // CAP VENTANEANDO 20SEG CORTE 1230 HRS</td>
+              </tr>
+              <tr>
+              <td>NAVIDAD 2018 30 SEG</td>
+              <td>13:59:30</td>
+              <td>00:00:30</td>
+              <td>14:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>14:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>HECHOS MERIDIANO</td>
+              <td>14:00:00</td>
+              <td>00:42:08</td>
+              <td>14:42:08</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:09:55</td>
+              <td>00:01:50</td>
+              <td>00:00:00</td>
+              <td>00:00:55</td>
+              <td>00:12:40</td>
+              <td>00:01:20</td>
+              <td>00:14:00</td>
+              <td>00:00:00</td>
+              <td>00:00:30</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:02:00</td>
+              <td>00:00:30</td>
+              <td>00:17:52</td>
+              <td> </td>
+              <td>00:00:30</td>
+              <td>00:00:06</td>
+              <td>00:00:40</td>
+              <td>00:02:30</td>
+              <td>00:17:40</td>
+              <td>15:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>1 AVANCE VENTANEANDO 20" / AVANCE 1500 20"  </td>
+              </tr>
+              <tr>
+              <td>NAVIDAD 2018 30 SEG</td>
+              <td>15:00:00</td>
+              <td>00:00:30</td>
+              <td>15:00:30</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>15:00:30</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>ESCAPE PERFECTO</td>
+              <td>15:00:30</td>
+              <td>00:42:00</td>
+              <td>15:42:30</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:11:35</td>
+              <td>00:01:50</td>
+              <td>00:00:00</td>
+              <td>00:01:15</td>
+              <td>00:14:40</td>
+              <td>00:01:20</td>
+              <td>00:16:00</td>
+              <td>00:01:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:00:30</td>
+              <td>00:18:02</td>
+              <td> </td>
+              <td>00:00:30</td>
+              <td>00:00:06</td>
+              <td>00:00:20</td>
+              <td>00:00:30</td>
+              <td>00:16:10</td>
+              <td>16:00:32</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>CORTE INFORMATIVO  40 "// AVANCE VENTANEANDO 20" </td>
+              </tr>
+              <tr>
+              <td>NAVIDAD 2018 30 SEG</td>
+              <td>16:00:32</td>
+              <td>00:00:30</td>
+              <td>16:01:02</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>16:01:02</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>VENTANEANDO CON PATY CHAPOY</td>
+              <td>16:01:02</td>
+              <td>00:57:46</td>
+              <td>16:58:48</td>
+              <td>00:01:00</td>
+              <td> </td>
+              <td>00:20:00</td>
+              <td>00:02:40</td>
+              <td>00:00:00</td>
+              <td>00:00:20</td>
+              <td>00:23:00</td>
+              <td>00:01:00</td>
+              <td>00:24:00</td>
+              <td>00:01:00</td>
+              <td>00:00:20</td>
+              <td>00:01:00</td>
+              <td>00:00:06</td>
+              <td>00:01:00</td>
+              <td>00:00:00</td>
+              <td>00:31:12</td>
+              <td> </td>
+              <td>00:01:00</td>
+              <td>00:00:06</td>
+              <td>00:02:40</td>
+              <td>00:03:00</td>
+              <td>00:29:20</td>
+              <td>17:30:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>CORTE INFORMATIVO 40" // AVANCE ENAMORANDONOS 20" // 4 ROMPECORTES 20" // AVANCE ENAMORANDONOS 1 MIN</td>
+              </tr>
+              <tr>
+              <td>ENAMORÁNDONOS</td>
+              <td>17:30:00</td>
+              <td>01:20:02</td>
+              <td>18:50:02</td>
+              <td>00:03:00</td>
+              <td> </td>
+              <td>00:22:55</td>
+              <td>00:03:00</td>
+              <td>00:00:00</td>
+              <td>00:00:25</td>
+              <td>00:26:20</td>
+              <td>00:02:40</td>
+              <td>00:29:00</td>
+              <td>00:02:00</td>
+              <td>00:02:00</td>
+              <td>00:00:00</td>
+              <td>00:00:12</td>
+              <td>00:02:00</td>
+              <td>00:00:00</td>
+              <td>00:39:38</td>
+              <td> </td>
+              <td>00:03:00</td>
+              <td>00:00:06</td>
+              <td>00:01:20</td>
+              <td>00:05:00</td>
+              <td>00:37:20</td>
+              <td>19:29:40</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>CORTE INFORMATIVO 1MIN //  6 ROMPECORTES 10" // AVANCE VENTANEANDO 20 SEG  </td>
+              </tr>
+              <tr>
+              <td>EXATLÓN MÉXICO A1 2018</td>
+              <td>19:29:40</td>
+              <td>02:29:00</td>
+              <td>21:58:40</td>
+              <td>00:04:30</td>
+              <td> </td>
+              <td>00:15:55</td>
+              <td>00:01:20</td>
+              <td>00:00:00</td>
+              <td>00:01:45</td>
+              <td>00:19:00</td>
+              <td>00:01:00</td>
+              <td>00:20:00</td>
+              <td>00:02:00</td>
+              <td>00:00:20</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:02:30</td>
+              <td>00:01:30</td>
+              <td>00:31:02</td>
+              <td> </td>
+              <td>00:05:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:08:30</td>
+              <td>00:32:20</td>
+              <td>22:29:42</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>2 CORTE  INFORMATIVO 1MIN</td>
+              </tr>
+              <tr>
+              <td>NOTICIERO HECHOS NOCHE</td>
+              <td>22:29:42</td>
+              <td>00:35:12</td>
+              <td>23:04:54</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:07:20</td>
+              <td>00:01:00</td>
+              <td>00:00:00</td>
+              <td>00:01:00</td>
+              <td>00:09:20</td>
+              <td>00:00:40</td>
+              <td>00:10:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:10:06</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:09:20</td>
+              <td>23:15:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>HECHOS CDMX</td>
+              <td>23:15:00</td>
+              <td>00:04:00</td>
+              <td>23:19:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>23:19:06</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>LOS PROTAGONISTAS</td>
+              <td>23:19:06</td>
+              <td>00:32:00</td>
+              <td>23:51:06</td>
+              <td>00:01:00</td>
+              <td> </td>
+              <td>00:07:20</td>
+              <td>00:01:00</td>
+              <td>00:00:00</td>
+              <td>00:00:40</td>
+              <td>00:09:00</td>
+              <td>00:01:00</td>
+              <td>00:10:00</td>
+              <td>00:00:00</td>
+              <td>00:00:40</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:02:30</td>
+              <td>00:00:30</td>
+              <td>00:14:52</td>
+              <td> </td>
+              <td>00:02:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:04:00</td>
+              <td>00:16:10</td>
+              <td>24:05:58</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>HIMNO NACIONAL</td>
+              <td>24:05:58</td>
+              <td>00:01:40</td>
+              <td>24:07:38</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:06</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:07:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>IGLESIA UNIVERSAL</td>
+              <td>24:07:44</td>
+              <td>00:28:00</td>
+              <td>24:35:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:01:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:01:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:01:00</td>
+              <td>00:02:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 2</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>MARCAS DE RENOMBRE 3</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 4</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 5</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 6</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>INFOMERCIAL MARCAS DE RENOMBRE 7</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td>BARRAS DE AJUSTE</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td>24:36:44</td>
+              <td>00:00:00</td>
+              <td>00:00:00</td>
+              <td> </td>
+              </tr>
+              <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              </tr>
+
+              </tbody>
+
+              <tfoot>
+                  <tr>
+                      <td> </td>
+                      <td> </td>
+                      <td>14:17:24</td>
+                      <td>468:48:20</td>
+                      <td>00:16:00</td>
+                      <td> </td>
+                      <td>02:47:05</td>
+                      <td>00:23:20</td>
+                      <td>00:00:00</td>
+                      <td>00:15:25</td>
+                      <td>03:25:50</td>
+                      <td>00:19:40</td>
+                      <td>03:45:30</td>
+                      <td>00:10:00</td>
+                      <td>00:12:00</td>
+                      <td>00:03:00</td>
+                      <td>00:01:18</td>
+                      <td>00:18:00</td>
+                      <td>00:05:30</td>
+                      <td>05:00:36</td>
+                      <td> </td>
+                      <td>00:22:30</td>
+                      <td>00:01:18</td>
+                      <td>00:08:00</td>
+                      <td>00:42:30</td>
+                      <td>04:51:20</td>
+                      <td> </td>
+                      <td>00:00:00</td>
+                      <td>00:00:00</td>
+                      <td> </td>
+                      </tr>
+
+              </tfoot>
+
+            </table>
+          </div>
+
+    </div>
+
+</div>
+
+<div id="p-individual">
+
+  <div class="p-i-header">
+    <div class="p-i-bar"> <span class="fas fa-bars"></span></div>
+    <div class="p-i-isotipo">
+    <div class="p-i-logo">
+      <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	          viewBox="0 0 127 81" style="enable-background:new 0 0 127 81;" xml:space="preserve">
+      <g>
+        <path style="fill:#FFFFFF;" d="M43.2,1.2H25.3c-0.6,0-1.2,0.3-1.5,0.8L1.1,39.7c-0.3,0.5-0.3,1.1-0.1,1.6L17,78.7
+          c0.3,0.6,0.9,1,1.6,1h18.1c1.2,0,2.1-1.3,1.6-2.4l-15.5-36c-0.2-0.5-0.2-1.1,0.1-1.6L44.7,3.9C45.4,2.7,44.5,1.2,43.2,1.2z"/>
+        <g>
+          <path style="fill:#FFFFFF;" d="M81.3,1.2H66.5c-1.1,0-2.1,0.6-2.6,1.5L43.8,35.9c-1.2,2,0.2,4.6,2.6,4.6h14.8
+            c1.1,0,2.1-0.6,2.6-1.5L83.9,5.9C85.1,3.8,83.6,1.2,81.3,1.2z"/>
+          <path style="fill:#FFFFFF;" d="M44.8,79.8h14.8c1.1,0,2.1-0.6,2.6-1.5l20.1-33.2c1.2-2-0.2-4.6-2.6-4.6H64.9
+            c-1.1,0-2.1,0.6-2.6,1.5L42.2,75.1C41,77.2,42.4,79.8,44.8,79.8z"/>
+        </g>
+        <path style="fill:#FFFFFF;" d="M108.4,1.2H90.2c-1.2,0-2.1,1.3-1.6,2.4l15.5,36c0.2,0.5,0.2,1.1-0.1,1.6L82.3,77.1
+          c-0.7,1.2,0.1,2.6,1.5,2.6h17.9c0.6,0,1.2-0.3,1.5-0.8l22.8-37.7c0.3-0.5,0.3-1.1,0.1-1.6L110,2.3C109.7,1.6,109.1,1.2,108.4,1.2z"
+          />
+      </g>
+      </svg>
+
+    </div>
+      <div class="p-i-text">ESTRUCTURA INDIVIDUAL</div>
+    </div>
+  </div>
+
+</div>
+
+<div id="p-operativa">
+
+  <div class="p-i-header bkg-orange">
+        <div class="p-i-bar"> <span class="fas fa-bars"></span></div>
+        <div class="p-i-isotipo">
+        <div class="p-i-logo">
+          <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 127 81" style="enable-background:new 0 0 127 81;" xml:space="preserve">
+          <g>
+            <path style="fill:#FFFFFF;" d="M43.2,1.2H25.3c-0.6,0-1.2,0.3-1.5,0.8L1.1,39.7c-0.3,0.5-0.3,1.1-0.1,1.6L17,78.7
+              c0.3,0.6,0.9,1,1.6,1h18.1c1.2,0,2.1-1.3,1.6-2.4l-15.5-36c-0.2-0.5-0.2-1.1,0.1-1.6L44.7,3.9C45.4,2.7,44.5,1.2,43.2,1.2z"/>
+            <g>
+              <path style="fill:#FFFFFF;" d="M81.3,1.2H66.5c-1.1,0-2.1,0.6-2.6,1.5L43.8,35.9c-1.2,2,0.2,4.6,2.6,4.6h14.8
+                c1.1,0,2.1-0.6,2.6-1.5L83.9,5.9C85.1,3.8,83.6,1.2,81.3,1.2z"/>
+              <path style="fill:#FFFFFF;" d="M44.8,79.8h14.8c1.1,0,2.1-0.6,2.6-1.5l20.1-33.2c1.2-2-0.2-4.6-2.6-4.6H64.9
+                c-1.1,0-2.1,0.6-2.6,1.5L42.2,75.1C41,77.2,42.4,79.8,44.8,79.8z"/>
+            </g>
+            <path style="fill:#FFFFFF;" d="M108.4,1.2H90.2c-1.2,0-2.1,1.3-1.6,2.4l15.5,36c0.2,0.5,0.2,1.1-0.1,1.6L82.3,77.1
+              c-0.7,1.2,0.1,2.6,1.5,2.6h17.9c0.6,0,1.2-0.3,1.5-0.8l22.8-37.7c0.3-0.5,0.3-1.1,0.1-1.6L110,2.3C109.7,1.6,109.1,1.2,108.4,1.2z"
+              />
+          </g>
+          </svg>
+
+        </div>
+          <div class="p-i-text">ESTRUCTURA OPERATIVA</div>
+        </div>
+  </div>
+
+</div>
+
+<div id="buscador" class="buscador" >
+    <div class="urgente close-panel fas fa-times"></div>
+    <div class="buscador-txt">Buscar Estructura</div>
+    <div class="objs-elems" style="width: 95%;">
+        <div class="objs-ins">
+            <label>Fecha</label>
+            <select class="bord">
+                <option value="-1">Select</option>
+                <option></option>
+            </select>
+        </div>
+        <div class="objs-ins">
+            <label>Canal</label>
+            <select class="bord">
+                <option value="-1">Azteca 1</option>
+                <option> Azteca 7</option>
+                <option> A+</option>
+            </select>
+        </div>
+        <div class="objs-ins">
+            <label>Version de Carta</label>
+            <select class="bord">
+                <option value="-1">Select</option>
+                <option>	V. 1532	</option>
+                <option>	V. Mañanas	</option>
+                <option>	V. Tardes	</option>
+                <option>	V. 6543	</option>
+            </select>
+        </div>
+        <div class="objs-ins">
+            <label>Escenario</label>
+            <select class="bord">
+                <option value="-1">Select</option>
+                <option>Estructura A</option>
+                <option>Estructura C</option>
+                <option>Estructura H</option>
+                <option>Default</option>
+            </select>
+        </div>
+        <div style="width: 40%;">
+            <button id="demo" class="success" style="margin: 0 auto;margin-top: 22px;">BUSCAR</button>
+          </div>
+    </div>
+</div>
+
+<div id="panel-lateral" class="panel">
+
+  <h4 class="text-center">MENÚ</h4>
+    <div class="close-panel">
+      <span class="fas fa-times"></span>
+    </div>
+
+        <div class="css-nav-lat m-100">
+          <ul class="lat-list">
+            <li><a href="#sec-colores">Plantillas</a><span class="flag fas fa-angle-down"></span><span class="activated"></span></li>
+            <li><a href="#sec-colores">Columnas por Usuario</a><span class="flag fas fa-angle-down"></span><span class="activated"></span></li>
+            <li><a href="#sec-colores">Bitácora de Candados</a><span class="flag fas fa-angle-down"></span><span class="activated"></span></li>
+            <li><a href="#sec-colores">Líneas en Guía</a><span class="flag fas fa-angle-down"></span><span class="activated"></span></li>
+            <li><a href="#sec-colores">Candados</a><span class="flag fas fa-angle-down"></span><span class="activated"></span></li>
+          </ul>
+        </div>
+
+    <div class="m-100">
+      <div class="objs-elems">
+        <div class="objs-ins">
+          <button style="font-size: 22px;" id="ok-back" class="success" data-tooltip="Guardar y regresar" data-popup="modal" data-popup-titulo="Guardado" data-popup-cont="Los datos se han guardado en una version alterna."><i class="fas fa-save"></i></button>
+        </div>
+        <div class="objs-ins">
+            <button style="font-size: 22px;" id="back" class="warning" data-tooltip="Regresar sin guardar" data-popup="arriba" data-popup-titulo="Precaución" data-popup-cont="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+        <div class="objs-ins">
+              <button style="font-size: 22px;" id="exit" class="info" data-tooltip="Menu principal"><i class="fas fa-undo"></i></button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="panel-herramientas">
+  <div class="tool-box">
+    <ul class="tool-down">
+      <li data-tooltip= "Busqueda" ><i class="fas fa-search"></i></li>
+      <li data-tooltip= "Exportar" class="item-ii"><i class="fas fa-download"></i></li>
+      <li data-tooltip= "Guardar" class="item-ii"><i class="fas fa-save"></i></li>
+      <li data-tooltip= "Enviar Mail" class="item-ii"><i class="fas fa-envelope"></i></li>
+      <li data-tooltip= "Copiar" class="item-ii"><i class="fas fa-copy"></i></li>
+      <li data-tooltip= "Generar Version" class="item-ii"><i class="fas fa-box-open"></i></li>
+      <li data-tooltip= "Bloquear Version" class="item-ii"><i class="fas fa-lock"></i></li>
+    </ul>
+  </div>
+
+</div>
+
+<div id="panel-admin" class="p-middle">
+  <div class="close-admin fas fa-times"></div>
+  <h4><strong>Administración</strong></h4>
+
+  <div class="btn-add-usr" data-tooltip= "Añadir usuario"><i class="fas fa-user-plus"></i></div>
+  <div class="btn-add-usr" data-tooltip= "Avisos" id="btn-mensajes"><i class="fas fa-flag"></i></div>
+
+    <div class="content">
+        <div class="objs-elems head-tab">
+            <div class="objs-ins" style="width:23%;">ESTATUS</div>
+            <div class="objs-ins">NOMBRE</div>
+            <div class="objs-ins">CORREO</div>
+            <div class="objs-ins">PERFIL</div>
+            <div class="objs-ins" style="width:30%;"></div>
+        </div>
+
+        <div class="cont-result">
+        <div class="objs-elems panel-heros">
+            <div class="objs-ins s-status">
+               <div class="s-circle bkg-verde"></div>
+            </div>
+            <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Anon Pliego Crepe"></div>
+            <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="anon@tvazteca.com.mx"></div>
+            <div class="objs-ins">
+              <select class="bord">
+                  <option> OPERATIVO</option>
+                  <option> ADMINISTRADOR</option>
+                  <option> CONTINUIDAD</option>
+                  <option> CONTNIDOS</option>
+              </select>
+            </div>
+            <div class="objs-ins" style="width:30%;">
+                <button>Borrar</button>
+             </div>
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+</div>
+
+<div id="panel-mensajes" class="min-tool-box">
+    <div class="close-panel fas fa-times"></div>
+    <h4><strong>Mensajes</strong></h4>
+
+    <div class="line-ops m-up-30">
+        <div>Aviso de estructura general abierta</div>
+        <div><label class="toggle">
+          <input type="checkbox" checked="checked">
+          <span class="handle"></span></label>
+      </div>
+    </div>
+    <div class="line-ops">
+      <div>Aviso de candado de estructura individual abierto</div>
+      <div><label class="toggle">
+        <input type="checkbox" checked="checked">
+        <span class="handle"></span></label>
+    </div>
+  </div>
+  <div class="line-ops">
+    <div>Aviso de candado de estructura individual</div>
+    <div><label class="toggle">
+      <input type="checkbox" checked="checked">
+      <span class="handle"></span></label>
+  </div>
+</div>
+<div class="line-ops">
+  <div>Aviso de que el límite de entrega se ha cumplido</div>
+  <div><label class="toggle">
+    <input type="checkbox" checked="checked">
+    <span class="handle"></span></label>
+</div>
+</div>
+<div class="line-ops">
+  <div>Aviso de que no cuadran los tiempos del ine</div>
+  <div><label class="toggle">
+    <input type="checkbox" checked="checked">
+    <span class="handle"></span></label>
+</div>
+</div>
+<div class="line-ops">
+  <div>Periodicidad (se ejecuta 2 veces al dia)</div>
+  <div><label class="toggle">
+    <input type="checkbox" checked="checked">
+    <span class="handle"></span></label>
+</div>
+</div>
+</div>
+
+
+<script src="/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="/js/vendor/jquery.tabledit.js"></script>
+<script src="/js/vendor/TweenMax.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: 'roboto_black';
+    src: url('../fonts/roboto/roboto-blackfont.eot');
+    src: url('../fonts/roboto/roboto-blackfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-blackfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-blackfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_bold';
+    src: url('../fonts/roboto/roboto-boldfont.eot');
+    src: url('../fonts/roboto/roboto-boldfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-boldfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-boldfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/roboto-regularfont.eot');
+    src: url('../fonts/roboto/roboto-regularfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-regularfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-regularfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_light';
+    src: url('../fonts/roboto/roboto-lightfont.eot');
+    src: url('../fonts/roboto/roboto-lightfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-lightfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-lightfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

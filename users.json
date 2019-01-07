@@ -1,0 +1,22 @@
+{
+    "1":{
+        "user" : "Admin",
+        "pass" : "1234",
+        "level" : 0
+    },
+    "2" :{
+        "user" : "User2",
+        "pass" : "1234",
+        "level" : 2
+    },
+    "3":{
+        "user" : "User3",
+        "pass" : "1234",
+        "level" : 3     
+    },
+    "4":{
+        "user" : "User4",
+        "pass" : "1234",
+        "level" : 4
+    }
+}
