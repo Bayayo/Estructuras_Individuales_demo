@@ -245,12 +245,12 @@ textarea {
 
 
    .isotipo {
-    background: url(../imgs/logo/logo_estructuras.svg);
+    background: url(./imgs/logo/logo_estructuras.svg);
     background-repeat: no-repeat;
   }
 
   .github{
-    background: url(../imgs/logo/logo_github.svg);
+    background: url(./imgs/logo/logo_github.svg);
     background-repeat: no-repeat;
 }
 
@@ -785,6 +785,10 @@ button a{
 
    .bkg-red{
     background-color: #D62739 !important;
+  }
+
+  .red{
+    color: #D62739 !important;
   }
 
   .bkg-o{

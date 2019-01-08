@@ -10,6 +10,7 @@ var $p_toolbox =$('#panel-herramientas');
 var $panel_admin =$('#panel-admin');
 var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
+var $panle_add_p =$('#panel-add-plantilla');
 
 var modal_usr = document.getElementById('modal-usr');
 
@@ -143,6 +144,7 @@ var inicializa = function (){
     $panel_admin.css('display','none')
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
+    $panle_add_p.css("display","none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -314,6 +316,17 @@ $( "#b" ).click(function() {
 
     TweenMax.staggerFromTo( $("#p-operativa>div,#panel-herramientas"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
 
+});
+
+$("#btn-add-p").click(function(){
+
+    $('<div class="modal-20" style="z-index:590;"></div>').prependTo('body');
+    TweenMax.staggerFromTo( $("#panel-add-plantilla"), 0.3, { y:-20, opacity:0}, { y:0, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+});
+
+$("#cls-plantilla").click(function(){
+    $("#panel-add-plantilla").css("display","none");
+    $("#modal-20").remove();
 });
 
 $('body').on('click', '.close-panel', function () {
@@ -499,6 +512,45 @@ var UserMenu = (function(){
                  //CANDADOS
                  TweenMax.staggerFromTo( $("#usr-candados"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
                 $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+                 break;
+
+                default:
+                    break;
+            }
+        });
+})();
+
+
+
+var LoadPlantilla = (function(){
+
+    $('#load-plantilla>div').click(function () {
+
+            var index = $(this).index();
+
+            switch (index) {
+                case 0:
+                console.log("0");
+
+                break;
+
+                case 1:
+
+                break;
+
+                case 2:
+
+
+                 break;
+
+                 case 3:
+
+
+                 break;
+
+                 case 4:
 
 
                  break;
