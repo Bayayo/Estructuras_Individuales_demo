@@ -288,6 +288,8 @@ $('#demo').click(function(){
 
     estructuraA();
 
+    $("#es-individual").css("display","block");
+
 });
 
 $("#panel-mensajes .close-panel").click(function(){
