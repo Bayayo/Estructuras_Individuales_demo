@@ -238,7 +238,7 @@ $( $Close ).click(function() {
 
 $(".close-admin").click(function(){
     $("#panel-admin").css("display", "none");
-    $(".modal-30").remove();
+    $(".modal-20").remove();
 });
 
 $( ".p-i-bar" ).click(function() {
@@ -338,7 +338,7 @@ var InitButtons = (function(){
                 switch (index) {
                     case 0:
                     console.log("Administración");
-                    $('<div class="modal-30"></div>').prependTo('body');
+                    $('<div class="modal-20"></div>').prependTo('body');
                     $panel_admin.css('display','block');
                     $("#panel-admin").css('display','block')
                     //$('<div id="panel-admin" class="p-middle"><div class="close-panel fas fa-times"></div><h4><strong>Administración</strong></h4></div>').prependTo('body');
@@ -413,36 +413,36 @@ var ToolButtons = (function(){
                 break;
 
                 case 1:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Descargar</strong></h4></div>').prependTo('body');
                 break;
 
                 case 2:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
 
                  break;
 
                  case 3:
-                 $('<div class="modal-30"></div>').prependTo('body');
+                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Mandar Correo</strong></h4></div>').prependTo('body');
 
                  break;
 
                  case 4:
-                 $('<div class="modal-30"></div>').prependTo('body');
+                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Copiar version</strong></h4></div>').prependTo('body');
 
                  break;
 
                  case 5:
-                 $('<div class="modal-30"></div>').prependTo('body');
+                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Generar Version</strong></h4></div>').prependTo('body');
 
                  break;
 
                  case 6:
-                 $('<div class="modal-30"></div>').prependTo('body');
+                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Bloquear</strong></h4></div>').prependTo('body');
 
                  break;
