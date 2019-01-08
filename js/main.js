@@ -154,6 +154,7 @@ var inicializa = function (){
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
     $agregar.css("display", "none");
+    $tb_bloqueo.css("display", "none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -325,6 +326,7 @@ $( "#b" ).click(function() {
 
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
+    $tb_bloqueo.css("display", "none");
 
     TweenMax.staggerFromTo( $("#p-operativa>div,#panel-herramientas"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
 
