@@ -11,15 +11,56 @@ var $panel_admin =$('#panel-admin');
 var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
 
+var modal_usr = document.getElementById('modal-usr');
+
+var $u_plantilla=$("#usr-plantilla");
+var $u_columnas=$("#usr-columnas");
+var $u_bitacora=$("#usr-bitacora");
+var $u_lineas=$("#usr-lineas");
+var $u_candados=$("#usr-candados");
+
+
 var $Close = document.getElementById('bt-close-all');
 
 var $setMenu;
 
 $(document).ready(function(){
-    loader();
+    //loader();
     inicializa();
+    init();
 
 
+    var tl = new TimelineMax();
+            removeloader();
+            tl.to( $login , 0.1, { display: "flex" , opacity:0, xPercent:-50, yPercent:-50, left:"50%", top:"40%"}, 0.5 )
+            .to( $login , 0.8, { top:"50%", opacity:1, ease:Back.easeOut} );
+
+            $( "#btn_inicio" ).click(function() {
+                var t2 = new TimelineMax();
+
+                var storedName = localStorage.getItem('usuarios','user');
+                var storedPw = localStorage.getItem('usuarios','pass');
+
+                var User = document.getElementById('user_app').value;
+                var Pass = document.getElementById('pass_app').value;
+
+                    if(User == storedName && Pass == storedPw || User == "Admin" && Pass == "1234"){
+                        init();
+                        console.log("Acceso a: " + User );
+
+                        localStorage.setItem("User", User);
+                    }else{
+                        console.log("NO");
+                        t2.to( $login , 0.1, { x:10,  ease:Back.easeOut} )
+                        .to( $login , 0.1, { x:-10,  ease:Back.easeOut} )
+                        .to( $login , 0.1, { x:10,  ease:Back.easeOut} )
+                        .to( $login , 0.2, { x:0,  ease:Back.easeOut} );
+                    }
+
+
+            });
+
+    /*
         $.ajax({
             dataType: "json",
             url: '/users.json'
@@ -61,7 +102,7 @@ $(document).ready(function(){
             tl.to( $login , 0.1, { display: "flex" , opacity:0, xPercent:-50, yPercent:-50, left:"50%", top:"40%"}, 0.5 )
             .to( $login , 0.8, { top:"50%", opacity:1, ease:Back.easeOut} );
         });
-
+        */
 
 });
 
@@ -102,6 +143,14 @@ var inicializa = function (){
     $panel_admin.css('display','none')
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
+
+    $u_plantilla.css("display", "none");
+    $u_columnas.css("display", "none");
+    $u_bitacora.css("display", "none");
+    $u_lineas.css("display", "none");
+    $u_candados.css("display", "none");
+
+
 }
 
 $box.hover(
@@ -120,7 +169,7 @@ var init = function(){
   loader();
 
   setTimeout(function(){
-
+    $login.css("display", "none");
     removeloader();
 
     console.log("------- INICIO")
@@ -136,7 +185,7 @@ var init = function(){
         .to("#c", 0.3, {x:-270, y:-170, opacity:1})
         .to(".footer-init", 0.3, {y:0,opacity:1});
     */
-    }, 3000);
+    }, 1000);
 
 }
 
@@ -241,6 +290,18 @@ $('#demo').click(function(){
 
 $("#panel-mensajes .close-panel").click(function(){
     $panel_mensajes.css("display", "none");
+})
+
+
+$(".close-usr-lat").click(function(){
+    $("#modal-usr").remove();
+
+    $u_plantilla.css("display", "none");
+    $u_columnas.css("display", "none");
+    $u_bitacora.css("display", "none");
+    $u_lineas.css("display", "none");
+    $u_candados.css("display", "none");
+
 })
 
 $( "#b" ).click(function() {
@@ -383,6 +444,62 @@ var ToolButtons = (function(){
                  case 6:
                  $('<div class="modal-30"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Bloquear</strong></h4></div>').prependTo('body');
+
+                 break;
+
+                default:
+                    break;
+            }
+        });
+})();
+
+
+var UserMenu = (function(){
+
+    $('.lat-list li').click(function () {
+
+
+            var index = $(this).index();
+
+            switch (index) {
+                case 0:
+                //PLANTILLAS
+                TweenMax.staggerFromTo( $("#usr-plantilla"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+                $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+                break;
+
+                case 1:
+               //COLUMNAS
+               TweenMax.staggerFromTo( $("#usr-columnas"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+                $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+
+                break;
+
+                case 2:
+                //BITACORA
+                TweenMax.staggerFromTo( $("#usr-bitacora"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+                $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+                 break;
+
+                 case 3:
+                 //LINEAS
+                 TweenMax.staggerFromTo( $("#usr-lineas"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+                $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+                 break;
+
+                 case 4:
+                 //CANDADOS
+                 TweenMax.staggerFromTo( $("#usr-candados"), 0.3, { x:0, opacity:0}, { x:280, "display":"block", opacity:1,ease:Back.easeOut},0.3 );
+                $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
 
                  break;
 
