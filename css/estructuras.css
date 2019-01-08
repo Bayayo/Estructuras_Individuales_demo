@@ -441,9 +441,9 @@ md-autocomplete input:not(.md-input){
 
 .objs-ins label:nth-child(1){
 	font-size: 10px;
-    color: #909090;
-    text-transform: uppercase;
-    display: block;
+  color: #909090;
+  text-transform: uppercase;
+  display: block;
 }
 
 .objs-ins strong{
@@ -483,6 +483,34 @@ input[type="checkbox"], input[type="radio"], input[type="checkbox"]:focus, input
     height: 15px !important;
     margin-top: 6px !important;
     box-shadow: none !important;
+}
+
+.msg-bitacora {
+  width: 100%;
+}
+
+.msg-bitacora .objs-elems div {
+  padding-bottom: 6px;
+}
+
+.msg-bitacora .tabla-box thead tr th:nth-child(1), .msg-bitacora .tabla-box thead tr th:last-child {
+  background: #03A9F4 !important;
+  color: aliceblue !important;
+  border-bottom: 1px solid #03A9F4 !important;
+  border-right: 1px solid #03A9F4 !important;
+  padding: 2px;
+}
+
+.msg-bitacora .tabla-box td {
+  border: 1px solid #e2e2e2;
+  padding: 2px;
+  background-color: #e2e2e2;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
 }
 
 
