@@ -236,10 +236,7 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
 
 
 
-.tabla-box thead tr th:nth-child(1), .tabla-box thead tr th:last-child{
-    background-color: #434a54 !important;
-    width: 240px !important;
-}
+
 
 
 
@@ -430,6 +427,39 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
     list-style: none;
 }
 
+#panel-herramientas-bloqueo {
+    position: fixed;
+    right: -7px;
+    z-index: 51;
+    list-style: none;
+    display: none;
+    top: 0;
+}
+
+.tool-box, .tool-box-bloq{
+    margin-right: 20px;
+}
+
+.tool-box ul, .tool-box-bloq ul{
+    list-style: none;
+    display: contents;
+}
+
+.tool-box ul li, .tool-box-bloq ul li{
+    color: #004466;
+    padding: 14px 11px;
+    cursor: pointer;
+    font-size: 15px;
+    display: -webkit-inline-box;
+    border-radius: 2px;
+    transition: all 0.2s ease-in;
+}
+
+.tool-box ul li:hover, .tool-box-bloq ul li:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
 .tool-box{
     margin-right: 20px;
 }
@@ -546,17 +576,11 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
 }
 
 
-#es-general{
+#es-general, #es-bloqueo, #es-ine, #es-bloqueo, #es-individual {
     display: none;
-    margin: 50px 30px;
-    position: absolute;
+    margin: 65px 30px;
 }
 
-
-#es-individual{
-    display: none;
-    margin: 85px 30px;
-}
 
 
 
@@ -627,12 +651,17 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
 
 .make-table {
     background: #e2e2e2;
+    margin-top: 3px !important;
+    margin-bottom: 5px !important;
 }
 
 .make-table div{
     font-weight: bold;
 }
 
+.make-table .objs-ins div{
+    padding-bottom: 3px;
+}
 
 .p-middle{
 
@@ -875,7 +904,21 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
     -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.45);
     box-shadow: -3px 2px 5px 0px rgba(0,0,0,0.45);
     padding: 15px;
+}
 
+#usr-lineas.l-panel {
+    width: 450px !important;
+}
+
+#usr-lineas .objs-ins{
+    display: inline-block;
+    margin-top: 25px;
+    width: 39%;
+    text-align: center;
+}
+
+.objs-ins.ck {
+    width: 20% !important;
 }
 
 .usr-title{
@@ -918,4 +961,14 @@ box-shadow: 0px 6px 5px -2px rgba(0,0,0,0.21);
     float: right;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+.info-estructura{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 3px;
+    left: 65px;
+    width: 310px;
 }

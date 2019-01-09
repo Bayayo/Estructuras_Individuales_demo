@@ -12,6 +12,13 @@ var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
 var $panle_add_p =$('#panel-add-plantilla');
 
+var $p_bloqueo = $('#p-bloqueo');
+var $es_bloqueo = $('#es-bloqueo');
+var $es_ine = $('#es-ine');
+var $tb_bloqueo = $('#panel-herramientas-bloqueo');
+var $p_ine = $('#p-ine');
+var $agregar = $('#agregar');
+
 var modal_usr = document.getElementById('modal-usr');
 
 var $u_plantilla=$("#usr-plantilla");
@@ -145,6 +152,11 @@ var inicializa = function (){
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
     $panle_add_p.css("display","none");
+
+    $p_bloqueo.css("display", "none");
+    $p_ine.css("display", "none");
+    $agregar.css("display", "none");
+    $tb_bloqueo.css("display", "none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -289,6 +301,7 @@ $('#demo').click(function(){
     estructuraA();
 
     $("#es-individual").css("display","block");
+    $(".info-estructura").css("display","block");
 
 });
 
@@ -316,6 +329,10 @@ $( "#b" ).click(function() {
     $p_general.css("display", "none");
     $p_toolbox.css("display", "block");
 
+    $p_bloqueo.css("display", "none");
+    $p_ine.css("display", "none");
+    $tb_bloqueo.css("display", "none");
+
     TweenMax.staggerFromTo( $("#p-operativa>div,#panel-herramientas"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
 
 });
@@ -334,6 +351,7 @@ $("#cls-plantilla").click(function(){
 $('body').on('click', '.close-panel', function () {
     $('.modal-30, .mod').remove();
     $buscador.css("display", "none");
+    $agregar.css("display", "none");
 });
 
 $( "#btn-mensajes" ).click(function() {
@@ -368,6 +386,11 @@ var InitButtons = (function(){
                     $p_general.css("display", "block");
                     $p_toolbox.css("display", "block");
 
+                    $p_bloqueo.css("display", "none");
+                    $p_ine.css("display", "none");
+                    $p_bloqueo.css("display", "none");
+                    $tb_bloqueo.css("display","none");
+
                     TweenMax.staggerFromTo( $("#p-general>div,#panel-herramientas"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
 
                     if($( ".tool-down li" ).hasClass( "item-ii" )){
@@ -388,6 +411,11 @@ var InitButtons = (function(){
                     $p_operativa.css("display", "none");
                     $p_toolbox.css("display", "block");
 
+                    $p_bloqueo.css("display", "none");
+                    $p_ine.css("display", "none");
+                    $p_bloqueo.css("display", "none");
+                    $tb_bloqueo.css("display","none");
+
                     TweenMax.staggerFromTo( $("#p-individual>div,#panel-herramientas"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
 
                     if($( ".tool-down li" ).hasClass( "item-ii" )){
@@ -397,12 +425,46 @@ var InitButtons = (function(){
                     break;
 
                     case 3:
-                    console.log("Bloqueo")
+                    console.log("Bloqueo");
+
+                    $p_init.css("display", "none");
+                    $p_individual.css("display", "none");
+                    $p_general.css("display", "none");
+                    $p_operativa.css("display", "none");
+                    $p_toolbox.css("display", "none");
+
+                    $p_bloqueo.css("display", "block");
+                    $es_bloqueo.css("display", "block");
+                    $tb_bloqueo.css("display", "block");
+                    $p_ine.css("display", "none");
+
+                    TweenMax.staggerFromTo( $("#p-bloqueo>div,#panel-herramientas-bloqueo"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
+
+                    if($( ".tool-down li" ).hasClass( "item-ii" )){
+                        $('.item-ii').show();
+                    }
 
                     break;
 
                     case 4:
-                    console.log("INE")
+                    console.log("INE");
+
+                    $p_init.css("display", "none");
+                    $p_individual.css("display", "none");
+                    $p_general.css("display", "none");
+                    $p_operativa.css("display", "none");
+                    $p_toolbox.css("display", "none");
+
+                    $tb_bloqueo.css("display","block");
+                    $p_bloqueo.css("display", "none");
+                    $es_ine.css("display", "block");
+                    $p_ine.css("display", "block");
+
+                    TweenMax.staggerFromTo( $("#p-ine>div,#panel-herramientas-bloqueo"), 0.3, { y:-50, opacity:0}, { y:0, opacity:1,ease:Back.easeOut},0.3 );
+
+                    if($( ".tool-down li" ).hasClass( "item-ii" )){
+                        $('.item-ii').show();
+                    }
 
                     break;
                 }
@@ -468,6 +530,43 @@ var ToolButtons = (function(){
         });
 })();
 
+var ToolButtonsBloq = (function(){
+
+    $('.tool-box-bloq ul li').click(function () {
+
+            var index = $(this).index();
+
+            switch (index) {
+                case 0:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $agregar.css("display", "block");
+                var tl = new TimelineLite();
+                tl.to($agregar, 0.3, {opacity:1, y:48});
+
+                break;
+
+                case 1:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
+                break;
+
+                case 2:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Eliminar</strong></h4></div>').prependTo('body');
+
+                 break;
+
+                 case 3:
+                 $('<div class="modal-30"></div>').prependTo('body');
+                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Replicar rango de fechas</strong></h4></div>').prependTo('body');
+
+                 break;
+
+                default:
+                    break;
+            }
+    });
+})();
 
 var UserMenu = (function(){
 

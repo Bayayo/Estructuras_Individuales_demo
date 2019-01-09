@@ -441,9 +441,9 @@ md-autocomplete input:not(.md-input){
 
 .objs-ins label:nth-child(1){
 	font-size: 10px;
-    color: #909090;
-    text-transform: uppercase;
-    display: block;
+  color: #909090;
+  text-transform: uppercase;
+  display: block;
 }
 
 .objs-ins strong{
@@ -483,6 +483,34 @@ input[type="checkbox"], input[type="radio"], input[type="checkbox"]:focus, input
     height: 15px !important;
     margin-top: 6px !important;
     box-shadow: none !important;
+}
+
+.msg-bitacora {
+  width: 100%;
+}
+
+.msg-bitacora .objs-elems div {
+  padding-bottom: 6px;
+}
+
+.msg-bitacora .tabla-box thead tr th:nth-child(1), .msg-bitacora .tabla-box thead tr th:last-child {
+  background: #03A9F4 !important;
+  color: aliceblue !important;
+  border-bottom: 1px solid #03A9F4 !important;
+  border-right: 1px solid #03A9F4 !important;
+  padding: 2px;
+}
+
+.msg-bitacora .tabla-box td {
+  border: 1px solid #e2e2e2;
+  padding: 2px;
+  background-color: #e2e2e2;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
 }
 
 
@@ -1302,9 +1330,13 @@ input[type="radio"]:checked:disabled + label span {
 ///////////////////////////////////*/
 
 .tabla-box{
+  table-layout: fixed;
   position: relative;
   margin: auto;
-  margin-top:8px;
+  width: -webkit-fill-available;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 
 
@@ -1312,48 +1344,73 @@ input[type="radio"]:checked:disabled + label span {
   background-color: #2196F3;
   color: white;
   border-bottom: 1px solid #4C24A2;
-  padding: 6px;
+  padding: 3px 0px;
   font-weight: normal;
   font-size: 11px;
   border-right: 1px solid #0068bb;
   border-bottom: 4px solid #047fd6;
   white-space: nowrap;
-
-  width: 45px !important;
+  width: 44px !important;
   text-transform: uppercase;
   overflow: hidden;
-  font-size: 11px;
+  font-size: 10px;
+  text-align: center;
 }
 
 
+.tabla-box thead th:nth-child(1){
+  width:150px;
+  text-align: left;
+  padding-left: 10px;
+}
 
-.tabla-box td{
+.tabla-box tbody td:nth-child(1){
+  width:150px;
+  text-align: left;
+
+}
+
+.tabla-box tbody td{
   border: 2px dashed #dcdcdc;
   padding: 2px;
   background-color: whitesmoke;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   white-space: nowrap;
+  font-size: 10px;
+  text-align: center;
+  overflow: hidden;
 
 }
 
 
 .tabla-box tfoot td{
   border: 1px solid #eaeaea;
-  padding: 2px;
-  background-color: #f4433633;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top: 2px solid #b3b3b3;
-  font-size: 11px;
-  white-space: nowrap;
-  font-weight: bold;
+    background-color: #f4433633;
+    padding: 1px;
+    border-top: 2px solid #b3b3b3;
+    font-size: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
 
 }
 
 
+.tabla-box tbody{
+overflow: auto;
+height: 100px;
+}
 
 
+
+.tabla-box thead tr th:nth-child(1), .tabla-box thead tr th:last-child{
+  background-color: #434a54 !important;
+  width: 130px !important;
+  overflow: hidden;
+  text-align: left;
+  padding-left: 6px;
+}
 
 /*///////////////////////////////////
 
