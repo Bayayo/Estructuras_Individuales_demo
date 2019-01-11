@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<!--  PANTALLAS  -->
+
 <div id="p-login" class="none">
 
       <form action="#" class="form">
@@ -1801,17 +1803,27 @@
 
 </div>
 
+
+<!--  MENUS  -->
+
 <div id="buscador" class="buscador" >
     <div class="urgente close-panel fas fa-times"></div>
     <div class="buscador-txt">Buscar Estructura</div>
     <div class="objs-elems" style="width: 95%;">
         <div class="objs-ins">
-            <label>Fecha</label>
+            <label>PROGRAMA</label>
             <select class="bord">
                 <option value="-1">Select</option>
                 <option></option>
             </select>
         </div>
+        <div class="objs-ins">
+          <label>Fecha</label>
+          <select class="bord">
+              <option value="-1">Select</option>
+              <option></option>
+          </select>
+      </div>
         <div class="objs-ins">
             <label>Canal</label>
             <select class="bord">
@@ -1914,6 +1926,8 @@
 </div>
 
 
+<!--  PANELES  -->
+
 <div id="panel-lateral" class="panel">
 
   <h4 class="text-center">MENÚ</h4>
@@ -1961,9 +1975,25 @@
 
 </div>
 
+<div id="panel-herramientas">
+  <div class="tool-box">
+    <ul class="tool-down">
+      <li data-tooltip= "Busqueda" ><i class="fas fa-search"></i></li>
+      <li data-tooltip= "Validar" class="item-ii"><i class="fas fa-download"></i></li>
+      <li data-tooltip= "Estructura general" class="item-ii"><i class="fas fa-save"></i></li>
+      <li data-tooltip= "Enviar Mail" class="item-ii"><i class="fas fa-envelope"></i></li>
+      <li data-tooltip= "Copiar" class="item-ii"><i class="fas fa-copy"></i></li>
+      <li data-tooltip= "Generar Version" class="item-ii"><i class="fas fa-box-open"></i></li>
+      <li data-tooltip= "Bloquear Version" class="item-ii"><i class="fas fa-lock"></i></li>
+    </ul>
+  </div>
+
+</div>
+
 <div id="panel-herramientas-bloqueo">
   <div class="tool-box-bloq">
     <ul class="tool-down">
+      <li data-tooltip= "Buscar" ><i class="fas fa-plus-circle"></i></li>
       <li data-tooltip= "Dar de alta" ><i class="fas fa-plus-circle"></i></li>
       <li data-tooltip= "Guardar" class="item-ii"><i class="fas fa-save"></i></li>
       <li data-tooltip= "Eliminar" ><i class="fas fa-trash-alt"></i></li>
@@ -2062,6 +2092,79 @@
 </div>
 </div>
 
+<div id="panel-add-plantilla" class="p-middle">
+    <div id="cls-plantilla" class="close-admin fas fa-times"></div>
+    <h4><strong>Crear plantilla</strong></h4>
+
+
+    <div id="" class="btn-add-usr" data-tooltip= "Añadir linea"><i class="fas fa-plus"></i></div>
+
+    <div id="" class="btn-add-usr f-right" data-tooltip= "Añadir linea"><i class="fas fa-plus"></i></div>
+
+    <table>
+        <thead>
+            <tr style="text-align: center;">
+              <th style="width: 5%;">No.</th>
+              <th style="width: 20%;">Descripción</th>
+              <th style="width: 20%;">Tipo</th>
+              <th style="width: 5%;">Conteo</th>
+              <th style="width: 20%;">Unidad</th>
+              <th style="width: 20%;">Duración</th>
+              <th style="width: 5%;">Bloqueado</th>
+              <th style="width: 5%;">Borrar</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          <tr style="text-align: center;">
+              <td style="width: 3%;"><input data-value="default" class="bord" style="width: 50% !important;"></td>
+              <td style="width: 20%;"><input data-value="default" class="bord"></td>
+              <td style="width: 20%;">
+                <select data-value="default" class="bord" >
+                      <option value="a">Select</option>
+                      <option style="color:#610B0B;" >COMMENT</option>
+                      <option style="color:#0B610B;" >PROGRAM BLOCK</option>
+                      <option style="color:#B404AE;" >NATIONAL SPOT</option>
+                      <option style="color:#DF7401;" >BLOCKEABLE SPOT</option>
+                      <option style="color:#0000FF;" >ENTRANCE PROMO</option>
+                      <option style="color:#0000FF;" >EXIT PROMO</option>
+                      <option style="color:#000000;" id="a">ENTRANCE SPOT</option>
+                      <option style="color:#000000;" >EXIT SPOT</option>
+                      <option style="color:#000000;" >NOT AIR</option>
+                      <option style="color:#000000;" >IDENTIFIER</option>
+                      <option style="color:#0B610B;" >CAPSULA</option>
+                      <option style="color:#000000;" >SUPERS AND MENTIONS</option>
+                      <option style="color:#0000FF;" >PROMOS</option>
+                      <option style="color:#DF7401;" >BLOCKEABLE ID</option>
+                      <option style="color:#000000;" >BLOCKABLE ENTRANCE PROMO</option>
+                      <option style="color:#000000;" >BLOCKABLE EXIT PROMO</option>
+                      <option style="color:#000000;" >INFOMERTIAL</option>
+
+                </td>
+              <td style="width: 5%;">
+                <div>
+                  <input id="demoCke" type="checkbox" value="1">
+                  <label for="demoCke"></label>
+                  </div>
+                </td>
+              <td style="width: 20%;"><input data-value="default" class="bord" type="text" size="10" ></td>
+              <td style="width: 20%;"><input data-value="default" class="bord" type="text" size="10" ></td>                	
+              <td style="width: 5%;">
+                  <input id="demoCkf" type="checkbox" value="1">
+                  <label for="demoCkf"></label>
+                </td>
+              <td style="width: 5%;"><button class="bkg-rojo"><i class="fa fa-minus fa-lg"></i></button></td>
+            </tr>
+          </tbody>     
+    </table>
+
+    <div id="" class="btn-add-usr bkg-verde f-right" data-tooltip= "Guardar" 
+    data-popup="modal" data-popup-titulo="Guardado" data-popup-cont="Los datos se han guardado en una plantilla alterna."><i class="fas fa-save"></i></div>
+
+</div>
+
+<!--  PANTALLAS SECUNDARIAS -->
 
 <div id="usr-plantilla" class="l-panel">
     <div class="close-usr-lat fas fa-arrow-left"></div>
@@ -2437,77 +2540,7 @@
 </div>
 
 
-<div id="panel-add-plantilla" class="p-middle">
-    <div id="cls-plantilla" class="close-admin fas fa-times"></div>
-    <h4><strong>Crear plantilla</strong></h4>
 
-
-    <div id="" class="btn-add-usr" data-tooltip= "Añadir linea"><i class="fas fa-plus"></i></div>
-
-    <div id="" class="btn-add-usr f-right" data-tooltip= "Añadir linea"><i class="fas fa-plus"></i></div>
-
-    <table>
-        <thead>
-            <tr style="text-align: center;">
-              <th style="width: 5%;">No.</th>
-              <th style="width: 20%;">Descripción</th>
-              <th style="width: 20%;">Tipo</th>
-              <th style="width: 5%;">Conteo</th>
-              <th style="width: 20%;">Unidad</th>
-              <th style="width: 20%;">Duración</th>
-              <th style="width: 5%;">Bloqueado</th>
-              <th style="width: 5%;">Borrar</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-          <tr style="text-align: center;">
-              <td style="width: 3%;"><input data-value="default" class="bord" style="width: 50% !important;"></td>
-              <td style="width: 20%;"><input data-value="default" class="bord"></td>
-              <td style="width: 20%;">
-                <select data-value="default" class="bord" >
-                      <option value="a">Select</option>
-                      <option style="color:#610B0B;" >COMMENT</option>
-                      <option style="color:#0B610B;" >PROGRAM BLOCK</option>
-                      <option style="color:#B404AE;" >NATIONAL SPOT</option>
-                      <option style="color:#DF7401;" >BLOCKEABLE SPOT</option>
-                      <option style="color:#0000FF;" >ENTRANCE PROMO</option>
-                      <option style="color:#0000FF;" >EXIT PROMO</option>
-                      <option style="color:#000000;" id="a">ENTRANCE SPOT</option>
-                      <option style="color:#000000;" >EXIT SPOT</option>
-                      <option style="color:#000000;" >NOT AIR</option>
-                      <option style="color:#000000;" >IDENTIFIER</option>
-                      <option style="color:#0B610B;" >CAPSULA</option>
-                      <option style="color:#000000;" >SUPERS AND MENTIONS</option>
-                      <option style="color:#0000FF;" >PROMOS</option>
-                      <option style="color:#DF7401;" >BLOCKEABLE ID</option>
-                      <option style="color:#000000;" >BLOCKABLE ENTRANCE PROMO</option>
-                      <option style="color:#000000;" >BLOCKABLE EXIT PROMO</option>
-                      <option style="color:#000000;" >INFOMERTIAL</option>
-
-                </td>
-              <td style="width: 5%;">
-                <div>
-                  <input id="demoCke" type="checkbox" value="1">
-                  <label for="demoCke"></label>
-                  </div>
-                </td>
-              <td style="width: 20%;"><input data-value="default" class="bord" type="text" size="10" ></td>
-              <td style="width: 20%;"><input data-value="default" class="bord" type="text" size="10" ></td>                	
-              <td style="width: 5%;">
-                  <input id="demoCkf" type="checkbox" value="1">
-                  <label for="demoCkf"></label>
-                </td>
-              <td style="width: 5%;"><button class="bkg-rojo"><i class="fa fa-minus fa-lg"></i></button></td>
-            </tr>
-          </tbody>     
-    </table>
-
-    <div id="" class="btn-add-usr bkg-verde f-right" data-tooltip= "Guardar" 
-    data-popup="modal" data-popup-titulo="Guardado" data-popup-cont="Los datos se han guardado en una plantilla alterna."><i class="fas fa-save"></i></div>
-
-</div>
 
 
 <script src="js/vendor/jquery-3.3.1.min.js"></script>

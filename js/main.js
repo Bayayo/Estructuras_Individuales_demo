@@ -32,6 +32,19 @@ var $Close = document.getElementById('bt-close-all');
 
 var $setMenu;
 
+
+
+$(document).ready(function(){
+    var AdminPerfiles = [{
+        Usiuario: "Checo Pérez", Correo: 11, Perfil: "México", Estatus: true
+    }, {Usiuario: "Checo Pérez", Correo: 11, Perfil: "México", Estatus: true}] 
+         
+    
+        localStorage.setItem("Usuarios", JSON.stringify(AdminPerfiles));
+});
+
+
+
 $(document).ready(function(){
     //loader();
     inicializa();
