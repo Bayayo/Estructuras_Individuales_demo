@@ -7,6 +7,7 @@ var $p_general = $('#p-general');
 var $p_operativa = $('#p-operativa');
 var $p_panel =$('#panel-lateral');
 var $p_toolbox =$('#panel-herramientas');
+var $p_toolbox_individual =$ ("#panel-herramientas-individual");
 var $panel_admin =$('#panel-admin');
 var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
@@ -165,7 +166,7 @@ var inicializa = function (){
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
     $panle_add_p.css("display","none");
-
+    $p_toolbox_individual.css("display", "none");
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
     $agregar.css("display", "none");
@@ -256,7 +257,15 @@ var estructuraA = function (){
     }, 3000);
 }
 
-    //init();
+
+var busqueda = function(){
+    $('<div class="modal-30"></div>').prependTo('body');
+     $buscador.css("display", "block");
+    var tl = new TimelineLite();
+    tl.to($buscador, 0.3, {opacity:1, y:48});
+};
+
+//init();
 
 $( $Close ).click(function() {
     loader();
@@ -392,12 +401,15 @@ var InitButtons = (function(){
 
                     case 1:
                     console.log("Estructura General");
+
+                    busqueda();
+
                     $setMenu = false;
                     $p_init.css("display", "none");
                     $p_individual.css("display", "none");
                     $p_operativa.css("display", "none");
                     $p_general.css("display", "block");
-                    $p_toolbox.css("display", "block");
+                    $p_toolbox_individual.css("display", "block");
 
                     $p_bloqueo.css("display", "none");
                     $p_ine.css("display", "none");
@@ -416,8 +428,11 @@ var InitButtons = (function(){
 
                     case 2:
                     console.log("Estructura Individual");
+                    busqueda();
 
                     $p_init.css("display", "none");
+                    $p_toolbox_individual.css("display", "block");
+
 
                     $p_individual.css("display", "block");
                     $p_general.css("display", "none");
@@ -495,10 +510,7 @@ var ToolButtons = (function(){
 
             switch (index) {
                 case 0:
-                $('<div class="modal-30"></div>').prependTo('body');
-                $buscador.css("display", "block");
-                var tl = new TimelineLite();
-                tl.to($buscador, 0.3, {opacity:1, y:48});
+                busqueda();
 
                 break;
 
