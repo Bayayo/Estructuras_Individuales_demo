@@ -570,7 +570,7 @@ body {
 #es-bloqueo,
 #es-individual {
     display: none;
-    margin: 65px 30px;
+    margin: 65px 30px 15px 30px;
 }
 
 #es-ine {

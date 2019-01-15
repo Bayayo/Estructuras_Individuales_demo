@@ -901,8 +901,8 @@ var intpanel = (function() {
 
 })();
 
-// TOGGLE MENÚ
 
+// TOGGLE MENÚ
 function myFunction() {
     var checkBox = document.getElementById("programas");
     var cdn = document.getElementById("programas-txt").children;

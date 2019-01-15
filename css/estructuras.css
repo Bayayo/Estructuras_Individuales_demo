@@ -1365,7 +1365,7 @@ input[type="radio"]:checked:disabled+label span {
 }
 
 .tbl-content {
-    height: 427px;
+    height: 490px;
     overflow-y: auto;
     overflow-x: hidden;
     width: 1775px;
@@ -1415,6 +1415,7 @@ input[type="radio"]:checked:disabled+label span {
 
 .table-fixed {
     width: 1768px;
+    margin: 0;
 }
 
 .tabla-box tbody {
@@ -1425,7 +1426,7 @@ input[type="radio"]:checked:disabled+label span {
 .tabla-box thead tr th:nth-child(1),
 .tabla-box thead tr th:last-child {
     background-color: #434a54 !important;
-    width: 155px !important;
+    width: 152px !important;
     overflow: hidden;
     padding-left: 6px;
     text-align: center;
@@ -1436,12 +1437,15 @@ input[type="radio"]:checked:disabled+label span {
     width: 165px !important;
     overflow: hidden;
     text-align: center;
-    border: 2px solid #eaeaea;
 }
 
 .tbl-header,
 .tbl-footer {
     width: 1768px;
+}
+
+.tbl-footer .tabla-box {
+    margin-top: 0px;
 }
 
 .tbl-bloqueo thead tr th:nth-child(1) {
