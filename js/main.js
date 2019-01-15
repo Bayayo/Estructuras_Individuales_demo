@@ -9,13 +9,16 @@ var $p_toolbox = $('#panel-herramientas');
 var $panel_admin = $('#panel-admin');
 var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
+var $panle_add_p = $('#panel-add-plantilla');
 
 var $p_bloqueo = $('#p-bloqueo');
 var $es_bloqueo = $('#es-bloqueo');
 var $es_ine = $('#es-ine');
 var $tb_bloqueo = $('#panel-herramientas-bloqueo');
+var $tb_bloqueo_bloq = $('#panel-herramientas-bloqueo-2');
 var $p_ine = $('#p-ine');
 var $agregar = $('#agregar');
+var $buscador_bloq = $('#filtro-bloq');
 
 var modal_usr = document.getElementById('modal-usr');
 
@@ -144,16 +147,19 @@ var inicializa = function() {
     $p_general.css("display", "none");
     $p_operativa.css("display", "none");
     $buscador.css("display", "none");
+    $buscador_bloq.css("display", "none");
     $p_panel.css("display", "none");
     $p_toolbox.css("display", "none");
     $panel_admin.css('display', 'none')
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
+    $panle_add_p.css("display", "none");
 
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
     $agregar.css("display", "none");
     $tb_bloqueo.css("display", "none");
+    $tb_bloqueo_bloq.css("display", "none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -251,7 +257,7 @@ $($Close).click(function() {
 
 $(".close-admin").click(function() {
     $("#panel-admin").css("display", "none");
-    $(".modal-30").remove();
+    $(".modal-20").remove();
 });
 
 $(".p-i-bar").click(function() {
@@ -303,6 +309,9 @@ $('#demo').click(function() {
 
     estructuraA();
 
+    $("#es-individual").css("display", "block");
+    $(".info-estructura").css("display", "block");
+
 });
 
 $("#panel-mensajes .close-panel").click(function() {
@@ -332,15 +341,28 @@ $("#b").click(function() {
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
     $tb_bloqueo.css("display", "none");
+    $tb_bloqueo_bloq.css("display", "none");
 
     TweenMax.staggerFromTo($("#p-operativa>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
+});
+
+$("#btn-add-p").click(function() {
+
+    $('<div class="modal-20" style="z-index:590;"></div>').prependTo('body');
+    TweenMax.staggerFromTo($("#panel-add-plantilla"), 0.3, { y: -20, opacity: 0 }, { y: 0, "display": "block", opacity: 1, ease: Back.easeOut }, 0.3);
+});
+
+$("#cls-plantilla").click(function() {
+    $("#panel-add-plantilla").css("display", "none");
+    $("#modal-20").remove();
 });
 
 $('body').on('click', '.close-panel', function() {
     $('.modal-30, .mod').remove();
     $buscador.css("display", "none");
     $agregar.css("display", "none");
+    $buscador_bloq.css("display", "none");
 });
 
 $("#btn-mensajes").click(function() {
@@ -360,7 +382,7 @@ var InitButtons = (function() {
         switch (index) {
             case 0:
                 console.log("Administración");
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-20"></div>').prependTo('body');
                 $panel_admin.css('display', 'block');
                 $("#panel-admin").css('display', 'block')
                     //$('<div id="panel-admin" class="p-middle"><div class="close-panel fas fa-times"></div><h4><strong>Administración</strong></h4></div>').prependTo('body');
@@ -375,10 +397,12 @@ var InitButtons = (function() {
                 $p_general.css("display", "block");
                 $p_toolbox.css("display", "block");
 
+
                 $p_bloqueo.css("display", "none");
                 $p_ine.css("display", "none");
                 $p_bloqueo.css("display", "none");
                 $tb_bloqueo.css("display", "none");
+                $tb_bloqueo_bloq.css("display", "none");
 
                 TweenMax.staggerFromTo($("#p-general>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
@@ -404,6 +428,7 @@ var InitButtons = (function() {
                 $p_ine.css("display", "none");
                 $p_bloqueo.css("display", "none");
                 $tb_bloqueo.css("display", "none");
+                $tb_bloqueo_bloq.css("display", "none");
 
                 TweenMax.staggerFromTo($("#p-individual>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
@@ -424,10 +449,11 @@ var InitButtons = (function() {
 
                 $p_bloqueo.css("display", "block");
                 $es_bloqueo.css("display", "block");
-                $tb_bloqueo.css("display", "block");
+                $tb_bloqueo_bloq.css("display", "block");
+                $tb_bloqueo.css("display", "none");
                 $p_ine.css("display", "none");
 
-                TweenMax.staggerFromTo($("#p-bloqueo>div,#panel-herramientas-bloqueo"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
+                TweenMax.staggerFromTo($("#p-bloqueo>div,#panel-herramientas-bloqueo-2"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
                 if ($(".tool-down li").hasClass("item-ii")) {
                     $('.item-ii').show();
@@ -445,6 +471,7 @@ var InitButtons = (function() {
                 $p_toolbox.css("display", "none");
 
                 $tb_bloqueo.css("display", "block");
+                $tb_bloqueo_bloq.css("display", "none");
                 $p_bloqueo.css("display", "none");
                 $es_ine.css("display", "block");
                 $p_ine.css("display", "block");
@@ -479,36 +506,36 @@ var ToolButtons = (function() {
                 break;
 
             case 1:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Descargar</strong></h4></div>').prependTo('body');
                 break;
 
             case 2:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
 
                 break;
 
             case 3:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Mandar Correo</strong></h4></div>').prependTo('body');
 
                 break;
 
             case 4:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Copiar version</strong></h4></div>').prependTo('body');
 
                 break;
 
             case 5:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Generar Version</strong></h4></div>').prependTo('body');
 
                 break;
 
             case 6:
-                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Bloquear</strong></h4></div>').prependTo('body');
 
                 break;
@@ -531,6 +558,44 @@ var ToolButtonsBloq = (function() {
                 $agregar.css("display", "block");
                 var tl = new TimelineLite();
                 tl.to($agregar, 0.3, { opacity: 1, y: 48 });
+
+                break;
+
+            case 1:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
+                break;
+
+            case 2:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Eliminar</strong></h4></div>').prependTo('body');
+
+                break;
+
+            case 3:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Replicar rango de fechas</strong></h4></div>').prependTo('body');
+
+                break;
+
+            default:
+                break;
+        }
+    });
+})();
+
+var ToolButtonsBloq2 = (function() {
+
+    $('.tool-box-bloq-2 ul li').click(function() {
+
+        var index = $(this).index();
+
+        switch (index) {
+            case 0:
+                $('<div class="modal-30"></div>').prependTo('body');
+                $buscador_bloq.css("display", "block");
+                var tl = new TimelineLite();
+                tl.to($buscador_bloq, 0.3, { opacity: 1, y: 48 });
 
                 break;
 
@@ -602,6 +667,45 @@ var UserMenu = (function() {
                 //CANDADOS
                 TweenMax.staggerFromTo($("#usr-candados"), 0.3, { x: 0, opacity: 0 }, { x: 280, "display": "block", opacity: 1, ease: Back.easeOut }, 0.3);
                 $('<div class="modal-30" id="modal-usr" style="z-index:502;"></div>').prependTo('body');
+
+
+                break;
+
+            default:
+                break;
+        }
+    });
+})();
+
+
+
+var LoadPlantilla = (function() {
+
+    $('#load-plantilla>div').click(function() {
+
+        var index = $(this).index();
+
+        switch (index) {
+            case 0:
+                console.log("0");
+
+                break;
+
+            case 1:
+
+                break;
+
+            case 2:
+
+
+                break;
+
+            case 3:
+
+
+                break;
+
+            case 4:
 
 
                 break;
@@ -764,7 +868,6 @@ var intpanel = (function() {
                 $("#user-bkg, .user-menu").remove();
             }
 
-
             var modalTl = new TimelineMax();
 
 
@@ -797,3 +900,718 @@ var intpanel = (function() {
 
 
 })();
+
+// TOGGLE MENÚ
+
+function myFunction() {
+    var checkBox = document.getElementById("programas");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[0].style.visibility = "visible";
+            cnt[0].style.visibility = "visible";
+            cnf[0].style.visibility = "visible";
+            final2[0].style.visibility = "visible";
+        } else {
+            cdn[0].style.visibility = "hidden";
+            cnt[0].style.visibility = "hidden";
+            cnf[0].style.visibility = "hidden";
+            final2[0].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction1() {
+    var checkBox = document.getElementById("entrada");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[1].style.visibility = "visible";
+            cnt[1].style.visibility = "visible";
+            cnf[1].style.visibility = "visible";
+            final2[1].style.visibility = "visible";
+        } else {
+            cdn[1].style.visibility = "hidden";
+            cnt[1].style.visibility = "hidden";
+            cnf[1].style.visibility = "hidden";
+            final2[1].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction2() {
+    var checkBox = document.getElementById("contenido");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[2].style.visibility = "visible";
+            cnt[2].style.visibility = "visible";
+            cnf[2].style.visibility = "visible";
+            final2[2].style.visibility = "visible";
+        } else {
+            cdn[2].style.visibility = "hidden";
+            cnt[2].style.visibility = "hidden";
+            cnf[2].style.visibility = "hidden";
+            final2[2].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction3() {
+    var checkBox = document.getElementById("fin");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[3].style.visibility = "visible";
+            cnt[3].style.visibility = "visible";
+            cnf[3].style.visibility = "visible";
+            final2[3].style.visibility = "visible";
+        } else {
+            cdn[3].style.visibility = "hidden";
+            cnt[3].style.visibility = "hidden";
+            cnf[3].style.visibility = "hidden";
+            final2[3].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction4() {
+    var checkBox = document.getElementById("bloqueo-ine");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[4].style.visibility = "visible";
+            cnt[4].style.visibility = "visible";
+            cnf[4].style.visibility = "visible";
+            final2[4].style.visibility = "visible";
+        } else {
+            cdn[4].style.visibility = "hidden";
+            cnt[4].style.visibility = "hidden";
+            cnf[4].style.visibility = "hidden";
+            final2[4].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction5() {
+    var checkBox = document.getElementById("plecas");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[5].style.visibility = "visible";
+            cnt[5].style.visibility = "visible";
+            cnf[5].style.visibility = "visible";
+            final2[5].style.visibility = "visible";
+        } else {
+            cdn[5].style.visibility = "hidden";
+            cnt[5].style.visibility = "hidden";
+            cnf[5].style.visibility = "hidden";
+            final2[5].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction6() {
+    var checkBox = document.getElementById("venta-nac");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[6].style.visibility = "visible";
+            cnt[6].style.visibility = "visible";
+            cnf[6].style.visibility = "visible";
+            final2[6].style.visibility = "visible";
+        } else {
+            cdn[6].style.visibility = "hidden";
+            cnt[6].style.visibility = "hidden";
+            cnf[6].style.visibility = "hidden";
+            final2[6].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction7() {
+    var checkBox = document.getElementById("venta-b");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[7].style.visibility = "visible";
+            cnt[7].style.visibility = "visible";
+            cnf[7].style.visibility = "visible";
+            final2[7].style.visibility = "visible";
+        } else {
+            cdn[7].style.visibility = "hidden";
+            cnt[7].style.visibility = "hidden";
+            cnf[7].style.visibility = "hidden";
+            final2[7].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction8() {
+    var checkBox = document.getElementById("patrocinio");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[8].style.visibility = "visible";
+            cnt[8].style.visibility = "visible";
+            cnf[8].style.visibility = "visible";
+            final2[8].style.visibility = "visible";
+        } else {
+            cdn[8].style.visibility = "hidden";
+            cnt[8].style.visibility = "hidden";
+            cnf[8].style.visibility = "hidden";
+            final2[8].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction9() {
+    var checkBox = document.getElementById("garantizado");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[9].style.visibility = "visible";
+            cnt[9].style.visibility = "visible";
+            cnf[9].style.visibility = "visible";
+            final2[9].style.visibility = "visible";
+        } else {
+            cdn[9].style.visibility = "hidden";
+            cnt[9].style.visibility = "hidden";
+            cnf[9].style.visibility = "hidden";
+            final2[9].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction10() {
+    var checkBox = document.getElementById("venta-nac-b");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[10].style.visibility = "visible";
+            cnt[10].style.visibility = "visible";
+            cnf[10].style.visibility = "visible";
+            final2[10].style.visibility = "visible";
+        } else {
+            cdn[10].style.visibility = "hidden";
+            cnt[10].style.visibility = "hidden";
+            cnf[10].style.visibility = "hidden";
+            final2[10].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction11() {
+    var checkBox = document.getElementById("total-venta");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[11].style.visibility = "visible";
+            cnt[11].style.visibility = "visible";
+            cnf[11].style.visibility = "visible";
+            final2[11].style.visibility = "visible";
+        } else {
+            cdn[11].style.visibility = "hidden";
+            cnt[11].style.visibility = "hidden";
+            cnf[11].style.visibility = "hidden";
+            final2[11].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction12() {
+    var checkBox = document.getElementById("cap-informativa");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[12].style.visibility = "visible";
+            cnt[12].style.visibility = "visible";
+            cnf[12].style.visibility = "visible";
+            final2[12].style.visibility = "visible";
+        } else {
+            cdn[12].style.visibility = "hidden";
+            cnt[12].style.visibility = "hidden";
+            cnf[12].style.visibility = "hidden";
+            final2[12].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction13() {
+    var checkBox = document.getElementById("promos-nacionales");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[13].style.visibility = "visible";
+            cnt[13].style.visibility = "visible";
+            cnf[13].style.visibility = "visible";
+            final2[13].style.visibility = "visible";
+        } else {
+            cdn[13].style.visibility = "hidden";
+            cnt[13].style.visibility = "hidden";
+            cnf[13].style.visibility = "hidden";
+            final2[13].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction14() {
+    var checkBox = document.getElementById("promos-ine");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[14].style.visibility = "visible";
+            cnt[14].style.visibility = "visible";
+            cnf[14].style.visibility = "visible";
+            final2[14].style.visibility = "visible";
+        } else {
+            cdn[14].style.visibility = "hidden";
+            cnt[14].style.visibility = "hidden";
+            cnf[14].style.visibility = "hidden";
+            final2[14].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction15() {
+    var checkBox = document.getElementById("identificador-canal");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[15].style.visibility = "visible";
+            cnt[15].style.visibility = "visible";
+            cnf[15].style.visibility = "visible";
+            final2[15].style.visibility = "visible";
+        } else {
+            cdn[15].style.visibility = "hidden";
+            cnt[15].style.visibility = "hidden";
+            cnf[15].style.visibility = "hidden";
+            final2[15].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction16() {
+    var checkBox = document.getElementById("rtc");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[16].style.visibility = "visible";
+            cnt[16].style.visibility = "visible";
+            cnf[16].style.visibility = "visible";
+            final2[16].style.visibility = "visible";
+        } else {
+            cdn[16].style.visibility = "hidden";
+            cnt[16].style.visibility = "hidden";
+            cnf[16].style.visibility = "hidden";
+            final2[16].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction17() {
+    var checkBox = document.getElementById("ine-ordinario");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[17].style.visibility = "visible";
+            cnt[17].style.visibility = "visible";
+            cnf[17].style.visibility = "visible";
+            final2[17].style.visibility = "visible";
+        } else {
+            cdn[17].style.visibility = "hidden";
+            cnt[17].style.visibility = "hidden";
+            cnf[17].style.visibility = "hidden";
+            final2[17].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction18() {
+    var checkBox = document.getElementById("total");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[18].style.visibility = "visible";
+            cnt[18].style.visibility = "visible";
+            cnf[18].style.visibility = "visible";
+            final2[18].style.visibility = "visible";
+        } else {
+            cdn[18].style.visibility = "hidden";
+            cnt[18].style.visibility = "hidden";
+            cnf[18].style.visibility = "hidden";
+            final2[18].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction19() {
+    var checkBox = document.getElementById("comentario-av");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[19].style.visibility = "visible";
+            cnt[19].style.visibility = "visible";
+            cnf[19].style.visibility = "visible";
+            final2[19].style.visibility = "visible";
+        } else {
+            cdn[19].style.visibility = "hidden";
+            cnt[19].style.visibility = "hidden";
+            cnf[19].style.visibility = "hidden";
+            final2[19].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction20() {
+    var checkBox = document.getElementById("carrier-ine");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[20].style.visibility = "visible";
+            cnt[20].style.visibility = "visible";
+            cnf[20].style.visibility = "visible";
+            final2[20].style.visibility = "visible";
+        } else {
+            cdn[20].style.visibility = "hidden";
+            cnt[20].style.visibility = "hidden";
+            cnf[20].style.visibility = "hidden";
+            final2[20].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction21() {
+    var checkBox = document.getElementById("cap-avances");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[21].style.visibility = "visible";
+            cnt[21].style.visibility = "visible";
+            cnf[21].style.visibility = "visible";
+            final2[21].style.visibility = "visible";
+        } else {
+            cdn[21].style.visibility = "hidden";
+            cnt[21].style.visibility = "hidden";
+            cnf[21].style.visibility = "hidden";
+            final2[21].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction22() {
+    var checkBox = document.getElementById("total-ine");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[22].style.visibility = "visible";
+            cnt[22].style.visibility = "visible";
+            cnf[22].style.visibility = "visible";
+            final2[22].style.visibility = "visible";
+        } else {
+            cdn[22].style.visibility = "hidden";
+            cnt[22].style.visibility = "hidden";
+            cnf[22].style.visibility = "hidden";
+            final2[22].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction23() {
+    var checkBox = document.getElementById("total-carrier");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[23].style.visibility = "visible";
+            cnt[23].style.visibility = "visible";
+            cnf[23].style.visibility = "visible";
+            final2[23].style.visibility = "visible";
+        } else {
+            cdn[23].style.visibility = "hidden";
+            cnt[23].style.visibility = "hidden";
+            cnf[23].style.visibility = "hidden";
+            final2[23].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction24() {
+    var checkBox = document.getElementById("salida");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[24].style.visibility = "visible";
+            cnt[24].style.visibility = "visible";
+            cnf[24].style.visibility = "visible";
+            final2[24].style.visibility = "visible";
+        } else {
+            cdn[24].style.visibility = "hidden";
+            cnt[24].style.visibility = "hidden";
+            cnf[24].style.visibility = "hidden";
+            final2[24].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction25() {
+    var checkBox = document.getElementById("spots-patrocinio");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[25].style.visibility = "visible";
+            cnt[25].style.visibility = "visible";
+            cnf[25].style.visibility = "visible";
+            final2[25].style.visibility = "visible";
+        } else {
+            cdn[25].style.visibility = "hidden";
+            cnt[25].style.visibility = "hidden";
+            cnf[25].style.visibility = "hidden";
+            final2[25].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction26() {
+    var checkBox = document.getElementById("spots-garantizado");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[26].style.visibility = "visible";
+            cnt[26].style.visibility = "visible";
+            cnf[26].style.visibility = "visible";
+            final2[26].style.visibility = "visible";
+        } else {
+            cdn[26].style.visibility = "hidden";
+            cnt[26].style.visibility = "hidden";
+            cnf[26].style.visibility = "hidden";
+            final2[26].style.visibility = "hidden";
+        }
+    }
+}
+
+function myFunction27() {
+    var checkBox = document.getElementById("promocion");
+    var cdn = document.getElementById("programas-txt").children;
+    var cnt = document.getElementById("programas-cont").children;
+    var cnf = document.getElementById("programas-foot").children;
+
+    for (let num = 1; num < 32; num++) {
+        var cnt2 = "programas-cont" + num;
+        var final = cnt2;
+        var final2 = document.getElementById(final).children;
+
+        if (checkBox.checked == true) {
+            cdn[27].style.visibility = "visible";
+            cnt[27].style.visibility = "visible";
+            cnf[27].style.visibility = "visible";
+            final2[27].style.visibility = "visible";
+        } else {
+            cdn[27].style.visibility = "hidden";
+            cnt[27].style.visibility = "hidden";
+            cnf[27].style.visibility = "hidden";
+            final2[27].style.visibility = "hidden";
+        }
+    }
+}
+
+//FECHA
+window.onload = function() {
+    var fecha = new Date();
+    var mes = fecha.getMonth() + 1;
+    var dia = fecha.getDate();
+    var ano = fecha.getFullYear();
+    if (dia < 10)
+        dia = '0' + dia;
+    if (mes < 10)
+        mes = '0' + mes
+    document.getElementById('fechaActual').value = ano + "-" + mes + "-" + dia;
+}

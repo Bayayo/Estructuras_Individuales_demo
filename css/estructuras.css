@@ -236,12 +236,12 @@ textarea {
    ========================================================================== */
 
 .isotipo {
-    background: url(../imgs/logo/logo_estructuras.svg);
+    background: url(./imgs/logo/logo_estructuras.svg);
     background-repeat: no-repeat;
 }
 
 .github {
-    background: url(../imgs/logo/logo_github.svg);
+    background: url(./imgs/logo/logo_github.svg);
     background-repeat: no-repeat;
 }
 
@@ -851,6 +851,10 @@ button a {
     background-color: #D62739 !important;
 }
 
+.red {
+    color: #D62739 !important;
+}
+
 .bkg-o {
     background-color: #FC6E51 !important;
 }
@@ -1333,46 +1337,172 @@ input[type="radio"]:checked:disabled+label span {
 ///////////////////////////////////*/
 
 .tabla-box {
-    position: relative;
+    table-layout: fixed;
+    position: inherit;
     margin: auto;
-    margin-top: 8px;
+    width: -webkit-fill-available;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .tabla-box thead th {
     background-color: #2196F3;
     color: white;
     border-bottom: 1px solid #4C24A2;
-    padding: 6px;
+    padding: 3px 0px;
     font-weight: normal;
     font-size: 11px;
-    border-right: 1px solid #0068bb;
+    border-right: 2px solid #0068bb;
+    border-left: 2px solid #0068bb;
     border-bottom: 4px solid #047fd6;
     white-space: nowrap;
-    width: 45px !important;
+    width: 50px !important;
     text-transform: uppercase;
     overflow: hidden;
-    font-size: 11px;
+    font-size: 10px;
+    text-align: center;
 }
 
-.tabla-box td {
+.tbl-content {
+    height: 427px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 1775px;
+}
+
+.tbl-content .tabla-box {
+    margin-top: 0px;
+}
+
+
+/*.tabla-box thead th:nth-child(1) {
+    width: 150px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.tabla-box tbody td:nth-child(1) {
+    width: 150px;
+    text-align: left;
+}*/
+
+.tbl-content .tabla-box tbody td {
     border: 2px dashed #dcdcdc;
     padding: 2px;
     background-color: whitesmoke;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
     white-space: nowrap;
+    font-size: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 45px;
 }
 
-.tabla-box tfoot td {
+.tabla-box tfoot td,
+.tb-ftr-total {
     border: 1px solid #eaeaea;
-    padding: 2px;
     background-color: #f4433633;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 1px;
     border-top: 2px solid #b3b3b3;
-    font-size: 11px;
+    font-size: 10px;
     white-space: nowrap;
     font-weight: bold;
+    text-align: center;
+}
+
+.table-fixed {
+    width: 1768px;
+}
+
+.tabla-box tbody {
+    overflow: auto;
+    height: 100px;
+}
+
+.tabla-box thead tr th:nth-child(1),
+.tabla-box thead tr th:last-child {
+    background-color: #434a54 !important;
+    width: 155px !important;
+    overflow: hidden;
+    padding-left: 6px;
+    text-align: center;
+}
+
+.tabla-box #programas-foot td:nth-child(1),
+.tabla-box #programas-foot td:last-child {
+    width: 165px !important;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #eaeaea;
+}
+
+.tbl-header,
+.tbl-footer {
+    width: 1768px;
+}
+
+.tbl-bloqueo thead tr th:nth-child(1) {
+    width: 40px !important;
+}
+
+.tbl-bloqueo {
+    text-align: center;
+}
+
+.tb-ftr .tb-ftr-total {
+    width: 565px !important;
+}
+
+.tb-ftr .tb-ftr-total table {
+    width: -webkit-fill-available;
+}
+
+.tb-ftr .tb-ftr-total table td {
+    background-color: inherit;
+    border: 0px solid transparent;
+    border-top: 0px solid transparent;
+}
+
+.tbl-content .tabla-box tbody td:nth-child(1),
+.tbl-content .tabla-box tbody td:last-child {
+    width: 145px !important;
+    overflow: hidden;
+    padding-left: 6px;
+    text-align: center;
+}
+
+
+/*.tbl-hddn td,
+#programas-txt th,
+#programas-foot td {
+    visibility: hidden;
+}*/
+
+
+/*///////////////////////////////////
+
+    TOOLTIP
+
+///////////////////////////////////*/
+
+.hasTooltip span {
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.hasTooltip:hover span {
+    display: block;
+    position: absolute;
+    background-color: rgba(12, 2, 2, 0.9);
+    border: 1px solid rgba(12, 2, 2, 0.7);
+    margin: auto;
+    border-radius: 6px;
+    text-align: center;
 }
 
 
