@@ -909,7 +909,7 @@ function myFunction() {
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -934,7 +934,7 @@ function myFunction1() {
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -959,7 +959,7 @@ function myFunction2() {
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -979,12 +979,12 @@ function myFunction2() {
 }
 
 function myFunction3() {
-    var checkBox = document.getElementById("fin");
+    var checkBox = document.getElementById("venta");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1004,12 +1004,12 @@ function myFunction3() {
 }
 
 function myFunction4() {
-    var checkBox = document.getElementById("bloqueo-ine");
+    var checkBox = document.getElementById("venta-loc");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1029,12 +1029,12 @@ function myFunction4() {
 }
 
 function myFunction5() {
-    var checkBox = document.getElementById("plecas");
+    var checkBox = document.getElementById("total-venta");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1054,12 +1054,12 @@ function myFunction5() {
 }
 
 function myFunction6() {
-    var checkBox = document.getElementById("venta-nac");
+    var checkBox = document.getElementById("cap-informativa");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1079,12 +1079,12 @@ function myFunction6() {
 }
 
 function myFunction7() {
-    var checkBox = document.getElementById("venta-b");
+    var checkBox = document.getElementById("promos-nacionales");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1104,12 +1104,12 @@ function myFunction7() {
 }
 
 function myFunction8() {
-    var checkBox = document.getElementById("patrocinio");
+    var checkBox = document.getElementById("promos-ine");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1129,12 +1129,12 @@ function myFunction8() {
 }
 
 function myFunction9() {
-    var checkBox = document.getElementById("garantizado");
+    var checkBox = document.getElementById("identificador-canal");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1154,12 +1154,12 @@ function myFunction9() {
 }
 
 function myFunction10() {
-    var checkBox = document.getElementById("venta-nac-b");
+    var checkBox = document.getElementById("cortinilla-az");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1178,13 +1178,14 @@ function myFunction10() {
     }
 }
 
+
 function myFunction11() {
-    var checkBox = document.getElementById("total-venta");
+    var checkBox = document.getElementById("rtc");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1204,12 +1205,12 @@ function myFunction11() {
 }
 
 function myFunction12() {
-    var checkBox = document.getElementById("cap-informativa");
+    var checkBox = document.getElementById("ine-ordinario");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1229,12 +1230,12 @@ function myFunction12() {
 }
 
 function myFunction13() {
-    var checkBox = document.getElementById("promos-nacionales");
+    var checkBox = document.getElementById("carrier-ine");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1254,12 +1255,12 @@ function myFunction13() {
 }
 
 function myFunction14() {
-    var checkBox = document.getElementById("promos-ine");
+    var checkBox = document.getElementById("total");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1279,12 +1280,12 @@ function myFunction14() {
 }
 
 function myFunction15() {
-    var checkBox = document.getElementById("identificador-canal");
+    var checkBox = document.getElementById("cap-avances");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1304,12 +1305,12 @@ function myFunction15() {
 }
 
 function myFunction16() {
-    var checkBox = document.getElementById("rtc");
+    var checkBox = document.getElementById("salida");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1329,12 +1330,12 @@ function myFunction16() {
 }
 
 function myFunction17() {
-    var checkBox = document.getElementById("ine-ordinario");
+    var checkBox = document.getElementById("promocion");
     var cdn = document.getElementById("programas-txt").children;
     var cnt = document.getElementById("programas-cont").children;
     var cnf = document.getElementById("programas-foot").children;
 
-    for (let num = 1; num < 32; num++) {
+    for (let num = 1; num < 37; num++) {
         var cnt2 = "programas-cont" + num;
         var final = cnt2;
         var final2 = document.getElementById(final).children;
@@ -1349,256 +1350,6 @@ function myFunction17() {
             cnt[17].style.visibility = "hidden";
             cnf[17].style.visibility = "hidden";
             final2[17].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction18() {
-    var checkBox = document.getElementById("total");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[18].style.visibility = "visible";
-            cnt[18].style.visibility = "visible";
-            cnf[18].style.visibility = "visible";
-            final2[18].style.visibility = "visible";
-        } else {
-            cdn[18].style.visibility = "hidden";
-            cnt[18].style.visibility = "hidden";
-            cnf[18].style.visibility = "hidden";
-            final2[18].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction19() {
-    var checkBox = document.getElementById("comentario-av");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[19].style.visibility = "visible";
-            cnt[19].style.visibility = "visible";
-            cnf[19].style.visibility = "visible";
-            final2[19].style.visibility = "visible";
-        } else {
-            cdn[19].style.visibility = "hidden";
-            cnt[19].style.visibility = "hidden";
-            cnf[19].style.visibility = "hidden";
-            final2[19].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction20() {
-    var checkBox = document.getElementById("carrier-ine");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[20].style.visibility = "visible";
-            cnt[20].style.visibility = "visible";
-            cnf[20].style.visibility = "visible";
-            final2[20].style.visibility = "visible";
-        } else {
-            cdn[20].style.visibility = "hidden";
-            cnt[20].style.visibility = "hidden";
-            cnf[20].style.visibility = "hidden";
-            final2[20].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction21() {
-    var checkBox = document.getElementById("cap-avances");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[21].style.visibility = "visible";
-            cnt[21].style.visibility = "visible";
-            cnf[21].style.visibility = "visible";
-            final2[21].style.visibility = "visible";
-        } else {
-            cdn[21].style.visibility = "hidden";
-            cnt[21].style.visibility = "hidden";
-            cnf[21].style.visibility = "hidden";
-            final2[21].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction22() {
-    var checkBox = document.getElementById("total-ine");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[22].style.visibility = "visible";
-            cnt[22].style.visibility = "visible";
-            cnf[22].style.visibility = "visible";
-            final2[22].style.visibility = "visible";
-        } else {
-            cdn[22].style.visibility = "hidden";
-            cnt[22].style.visibility = "hidden";
-            cnf[22].style.visibility = "hidden";
-            final2[22].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction23() {
-    var checkBox = document.getElementById("total-carrier");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[23].style.visibility = "visible";
-            cnt[23].style.visibility = "visible";
-            cnf[23].style.visibility = "visible";
-            final2[23].style.visibility = "visible";
-        } else {
-            cdn[23].style.visibility = "hidden";
-            cnt[23].style.visibility = "hidden";
-            cnf[23].style.visibility = "hidden";
-            final2[23].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction24() {
-    var checkBox = document.getElementById("salida");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[24].style.visibility = "visible";
-            cnt[24].style.visibility = "visible";
-            cnf[24].style.visibility = "visible";
-            final2[24].style.visibility = "visible";
-        } else {
-            cdn[24].style.visibility = "hidden";
-            cnt[24].style.visibility = "hidden";
-            cnf[24].style.visibility = "hidden";
-            final2[24].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction25() {
-    var checkBox = document.getElementById("spots-patrocinio");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[25].style.visibility = "visible";
-            cnt[25].style.visibility = "visible";
-            cnf[25].style.visibility = "visible";
-            final2[25].style.visibility = "visible";
-        } else {
-            cdn[25].style.visibility = "hidden";
-            cnt[25].style.visibility = "hidden";
-            cnf[25].style.visibility = "hidden";
-            final2[25].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction26() {
-    var checkBox = document.getElementById("spots-garantizado");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[26].style.visibility = "visible";
-            cnt[26].style.visibility = "visible";
-            cnf[26].style.visibility = "visible";
-            final2[26].style.visibility = "visible";
-        } else {
-            cdn[26].style.visibility = "hidden";
-            cnt[26].style.visibility = "hidden";
-            cnf[26].style.visibility = "hidden";
-            final2[26].style.visibility = "hidden";
-        }
-    }
-}
-
-function myFunction27() {
-    var checkBox = document.getElementById("promocion");
-    var cdn = document.getElementById("programas-txt").children;
-    var cnt = document.getElementById("programas-cont").children;
-    var cnf = document.getElementById("programas-foot").children;
-
-    for (let num = 1; num < 32; num++) {
-        var cnt2 = "programas-cont" + num;
-        var final = cnt2;
-        var final2 = document.getElementById(final).children;
-
-        if (checkBox.checked == true) {
-            cdn[27].style.visibility = "visible";
-            cnt[27].style.visibility = "visible";
-            cnf[27].style.visibility = "visible";
-            final2[27].style.visibility = "visible";
-        } else {
-            cdn[27].style.visibility = "hidden";
-            cnt[27].style.visibility = "hidden";
-            cnf[27].style.visibility = "hidden";
-            final2[27].style.visibility = "hidden";
         }
     }
 }
