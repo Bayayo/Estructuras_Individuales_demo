@@ -1403,7 +1403,7 @@ input[type="radio"]:checked:disabled+label span {
 
 .tabla-box tfoot td,
 .tb-ftr-total {
-    border: 1px solid #eaeaea;
+    border: 2px solid #eaeaea;
     background-color: #f4433633;
     padding: 1px;
     border-top: 2px solid #b3b3b3;
@@ -1434,7 +1434,7 @@ input[type="radio"]:checked:disabled+label span {
 
 .tabla-box #programas-foot td:nth-child(1),
 .tabla-box #programas-foot td:last-child {
-    width: 165px !important;
+    width: 239px !important;
     overflow: hidden;
     text-align: center;
 }
