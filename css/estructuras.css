@@ -1569,3 +1569,120 @@ input[type="radio"]:checked:disabled+label span {
     text-align: right;
     padding-right: 15px;
 }
+
+
+/*Dropdown selector checkbox*/
+
+.dropdown {
+    max-width: 150px;
+    margin: auto;
+    position: relative;
+}
+
+.dropdown dd,
+.dropdown dt {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown ul {
+    margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+    position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+.dropdown dt a {
+    border-bottom: 2px solid #8971d5 !important;
+    white-space: nowrap;
+    display: block;
+    color: #4e4e4e;
+    padding: 4px 10px 0px 10px;
+    min-height: 20px;
+    margin-top: 2px;
+    line-height: 8px;
+    overflow: hidden;
+    border: 0;
+    width: 130px;
+    font-size: 11px;
+}
+
+.dropdown dt a:hover {
+    border-bottom: 2px solid #653b9d !important;
+}
+
+.dropdown dt a:focus {
+    background: rgba(96, 125, 139, 0.08) !important;
+    border-bottom: 2px solid #33c3f0 !important;
+    color: black !important;
+    box-shadow: 0px -1px 3px 0px #03a9f442 !important;
+}
+
+.dropdown dt a span,
+.multiSel span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+    background: #fff !important;
+    border: 1px solid #03a9f442 !important;
+    color: black !important;
+    box-shadow: 0px -1px 3px 0px #03a9f442 !important;
+    display: none;
+    left: 0px;
+    padding: 2px 15px 2px 5px;
+    position: absolute;
+    top: 2px;
+    width: 160px;
+    list-style: none;
+    height: 180px;
+    overflow: auto;
+    font-size: 10px;
+    z-index: 100;
+    text-align: left;
+}
+
+.dropdown span.value {
+    display: none;
+}
+
+.dropdown dd ul li a {
+    padding: 5px;
+    display: block;
+}
+
+.dropdown dd ul li a:hover {
+    background-color: #fff;
+}
+
+.dwn {
+    right: 0;
+    background-color: white;
+    float: right;
+    width: 20px;
+    height: auto;
+    font-size: 9px;
+    position: absolute;
+}
+
+.mutliSelect input[type=checkbox] {
+    display: inline-block !important;
+    margin-right: 5px;
+}
+
+#panel-admin .content {
+    height: 450px;
+}
+
+#panel-admin .cont-result {
+    height: 250px;
+}
