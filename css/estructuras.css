@@ -1686,3 +1686,34 @@ input[type="radio"]:checked:disabled+label span {
 #panel-admin .cont-result {
     height: 250px;
 }
+
+
+/*SEARCH*/
+
+.accordion {
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel-accordion {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

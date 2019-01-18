@@ -1877,14 +1877,44 @@
 
         <div class="btn-add-usr" data-tooltip="Añadir usuario"><i class="fas fa-user-plus"></i></div>
         <div class="btn-add-usr" data-tooltip="Avisos" id="btn-mensajes"><i class="fas fa-flag"></i></div>
+        <div class="btn-add-usr accordion" data-tooltip="Buscar"><i class="fas fa-search"></i></div>
+        <div class="panel-accordion">
+            <h5>BUSCAR POR</h5>
+            <div class="objs-elems" style="width: 95%;">
+                <div class="objs-ins">
+                    <label>ESTATUS</label>
+                    <select class="bord">
+                        <option value="-1"> <div class="s-circle bkg-verde"></div> Activo</option>
+                        <option> <div class="s-circle bkg-red"></div> Inactivo</option>
+                        <option> <div class="s-circle bkg-amarillo"></div> Bloqueado</option>
+                    </select>
+                </div>
+                <div class="objs-ins">
+                    <label>NOMBRE</label>
+                    <input class="bord" data-value="default" type="text" name="Nombre">
+                </div>
+                <div class="objs-ins">
+                    <label>PERFIL</label>
+                    <select class="bord">
+                        <option> OPERATIVO</option>
+                        <option> ADMINISTRADOR</option>
+                        <option> CONTINUIDAD</option>
+                        <option> CONTENIDOS</option>
+                    </select>
+                </div>
+                <div style="width: 30%;">
+                    <button id="demo" class="success" style="margin: 0 auto;margin-top: 22px;">BUSCAR</button>
+                </div>
+            </div>
+        </div>
 
         <div class="content">
             <div class="objs-elems head-tab">
                 <div class="objs-ins" style="width:23%;">ESTATUS</div>
-                <div class="objs-ins">NOMBRE</div>
-                <div class="objs-ins">CORREO</div>
-                <div class="objs-ins">FECHA DE ALTA</div>
-                <div class="objs-ins">NO. EMPLEADO</div>
+                <div class="objs-ins">NOMBRE &#x25BC;</div>
+                <div class="objs-ins">CORREO &#x25BC;</div>
+                <div class="objs-ins">FECHA DE ALTA &#x25BC;</div>
+                <div class="objs-ins">NO. EMPLEADO &#x25BC;</div>
                 <div class="objs-ins">PERFIL OPERATIVO</div>
                 <div class="objs-ins">PERFIL CONTENIDOS</div>
                 <div class="objs-ins">NOTIFICACIONES</div>
@@ -1963,7 +1993,7 @@
 
                 <div class="objs-elems panel-heros">
                     <div class="objs-ins s-status">
-                        <div class="status-adm s-circle bkg-verde"></div>
+                        <div class="status-adm s-circle bkg-red"></div>
                     </div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Laura López Treviño"></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="llopez@tvazteca.com.mx"></div>
