@@ -5,10 +5,12 @@ var $p_individual = $('#p-individual');
 var $p_general = $('#p-general');
 var $p_operativa = $('#p-operativa');
 var $p_panel = $('#panel-lateral');
+var $p_panel_der = $('#panel-lateral-der');
 var $p_toolbox = $('#panel-herramientas');
 var $panel_admin = $('#panel-admin');
 var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
+var $panel_eliminar = $('#panel-elim-usuario');
 var $panle_add_p = $('#panel-add-plantilla');
 
 var $p_bloqueo = $('#p-bloqueo');
@@ -149,10 +151,12 @@ var inicializa = function() {
     $buscador.css("display", "none");
     $buscador_bloq.css("display", "none");
     $p_panel.css("display", "none");
+    $p_panel_der.css("display", "none");
     $p_toolbox.css("display", "none");
     $panel_admin.css('display', 'none')
     $login.css("display", "none");
     $panel_mensajes.css("display", "none");
+    $panel_eliminar.css("display", "none");
     $panle_add_p.css("display", "none");
 
     $p_bloqueo.css("display", "none");
@@ -272,11 +276,33 @@ $(".p-i-bar").click(function() {
 
 });
 
+$(".p-i-not").click(function() {
+    $($p_panel_der).css("display", "block");
+    $($p_panel_der).css("opacity", "0");
+    $('<div class="modal-all"></div>').prependTo('body');
+
+    var tl = new TimelineLite();
+
+    tl.to($p_panel_der, 0.3, { opacity: 1, x: 0 })
+        .to(".modal-all", 0.3, { opacity: 1, });
+
+});
+
 $(".close-panel").click(function() {
 
     var tl = new TimelineLite();
 
     tl.to($p_panel, 0.3, { opacity: 1, x: -500 });
+
+    $(".modal-all").remove();
+
+});
+
+$(".close-panel").click(function() {
+
+    var tl1 = new TimelineLite();
+
+    tl1.to($p_panel_der, 0.3, { opacity: 1, x: 500 });
 
     $(".modal-all").remove();
 
@@ -316,6 +342,10 @@ $('#demo').click(function() {
 
 $("#panel-mensajes .close-panel").click(function() {
     $panel_mensajes.css("display", "none");
+})
+
+$("#panel-elim-usuario .close-panel").click(function() {
+    $panel_eliminar.css("display", "none");
 })
 
 
@@ -368,6 +398,17 @@ $('body').on('click', '.close-panel', function() {
 $("#btn-mensajes").click(function() {
     $('<div class="modal-30" style="z-index:101;"></div>').prependTo('body');
     TweenMax.staggerFromTo($("#panel-mensajes"), 0.3, { display: "block", y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
+
+});
+
+$("#trash").click(function() {
+    $('<div class="modal-30" style="z-index:101;"></div>').prependTo('body');
+    TweenMax.staggerFromTo($("#panel-elim-usuario"), 0.3, { display: "block", y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
+
+});
+$("#trash1").click(function() {
+    $('<div class="modal-30" style="z-index:101;"></div>').prependTo('body');
+    TweenMax.staggerFromTo($("#panel-elim-usuario"), 0.3, { display: "block", y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
 });
 
@@ -1366,3 +1407,21 @@ window.onload = function() {
         mes = '0' + mes
     document.getElementById('fechaActual').value = ano + "-" + mes + "-" + dia;
 }
+
+//ESTATUS ADMIN
+
+$(".status-adm").on("click", function() {
+    var $this = $(this);
+
+    if ($this.hasClass("bkg-verde")) {
+        $this.addClass("bkg-red");
+        $this.removeClass("bkg-verde");
+    } else if ($this.hasClass("bkg-red")) {
+        $this.addClass("bkg-amarillo");
+        $this.removeClass("bkg-red");
+    } else {
+        $this.removeClass("bkg-amarillo");
+        $this.addClass("bkg-verde");
+    }
+
+});

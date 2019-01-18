@@ -128,6 +128,7 @@
 
                 </div>
                 <div class="p-i-text">ESTRUCTURA GENERAL</div>
+
             </div>
         </div>
 
@@ -1761,6 +1762,75 @@
         </div>
     </div>
 
+    <div id="panel-lateral-der" class="panel-der">
+
+        <h4 class="text-center">NOTIFICACIONES</h4>
+        <div class="close-panel">
+            <span class="fas fa-times"></span>
+        </div>
+
+        <div class="msg-bitacora">
+            <table class="tabla-box">
+                <thead>
+                    <tr>
+                        <th>NOTIFICACIÓN</th>
+                        <th>FECHA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>02-01-2019</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>27-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>23-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>22-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>02-01-2019</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>27-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>23-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>22-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>02-01-2019</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>27-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>23-12-2018</td>
+                    </tr>
+                    <tr>
+                        <td style="overflow: hidden;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </td>
+                        <td>22-12-2018</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <div id="panel-herramientas">
         <div class="tool-box">
             <ul class="tool-down">
@@ -1772,6 +1842,7 @@
                 <li data-tooltip="Generar Version" class="item-ii"><i class="fas fa-box-open"></i></li>
                 <li data-tooltip="Bloquear Version" class="item-ii"><i class="fas fa-lock"></i></li>
             </ul>
+            <div class="p-i-not" data-tooltip="Notificaciones" style="display: inline-block; font-size:15px;    color: #004466;"><i class="fas fa-bell"></i></div>
         </div>
 
     </div>
@@ -1784,8 +1855,8 @@
                 <li data-tooltip="Eliminar"><i class="fas fa-trash-alt"></i></li>
                 <li data-tooltip="Replicar rango" class="item-ii"><i class="fas fa-copy"></i></li>
             </ul>
+            <div class="p-i-not" data-tooltip="Notificaciones" style="display: inline-block; font-size:15px;    color: #004466;"><i class="fas fa-bell"></i></div>
         </div>
-
     </div>
 
     <div id="panel-herramientas-bloqueo-2">
@@ -1796,8 +1867,8 @@
                 <li data-tooltip="Eliminar"><i class="fas fa-trash-alt"></i></li>
                 <li data-tooltip="Replicar rango" class="item-ii"><i class="fas fa-copy"></i></li>
             </ul>
+            <div class="p-i-not" data-tooltip="Notificaciones" style="display: inline-block; font-size:15px;    color: #004466;"><i class="fas fa-bell"></i></div>
         </div>
-
     </div>
 
     <div id="panel-admin" class="p-middle">
@@ -1812,33 +1883,103 @@
                 <div class="objs-ins" style="width:23%;">ESTATUS</div>
                 <div class="objs-ins">NOMBRE</div>
                 <div class="objs-ins">CORREO</div>
-                <div class="objs-ins">PERFIL</div>
+                <div class="objs-ins">FECHA DE ALTA</div>
+                <div class="objs-ins">NO. EMPLEADO</div>
+                <div class="objs-ins">PERFIL OPERATIVO</div>
+                <div class="objs-ins">PERFIL CONTENIDOS</div>
+                <div class="objs-ins">NOTIFICACIONES</div>
                 <div class="objs-ins" style="width:30%;"></div>
             </div>
 
             <div class="cont-result">
                 <div class="objs-elems panel-heros">
                     <div class="objs-ins s-status">
-                        <div class="s-circle bkg-verde"></div>
+                        <div class="status-adm s-circle bkg-verde"></div>
                     </div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Anon Pliego Crepe"></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="anon@tvazteca.com.mx"></div>
+                    <div class="objs-ins"><input type="date" value="2019-01-01" class="bord" required></div>
+                    <div class="objs-ins"><input data-value="default" class="bord" type="number" placeholder="101010"></div>
                     <div class="objs-ins">
                         <select class="bord">
-                  <option> OPERATIVO</option>
-                  <option> ADMINISTRADOR</option>
-                  <option> CONTINUIDAD</option>
-                  <option> CONTNIDOS</option>
-              </select>
+                            <option> OPERATIVO</option>
+                            <option> ADMINISTRADOR</option>
+                            <option> CONTINUIDAD</option>
+                            <option> CONTENIDOS</option>
+                        </select>
                     </div>
-                    <div class="objs-ins" style="width:30%;">
-                        <button>Borrar</button>
+                    <div class="objs-ins">
+                        <select class="bord">
+                            <option> OPERATIVO</option>
+                            <option> ADMINISTRADOR</option>
+                            <option> CONTINUIDAD</option>
+                            <option> CONTENIDOS</option>
+                        </select>
+                    </div>
+                    <div class="objs-ins">
+                        <select class="bord">
+                                <option> ESTRUCTURA GENERAL ABIERTA</option>
+                                <option> CANDADO DE ESTRUCTURA INDIVIDUAL ABIERTO</option>
+                                <option> CANDADO DE ESTRUCTURA INDIVIDUAL CERRADO</option>
+                                <option> LÍMITE DE ENTREGA CUMPLIDO</option>
+                                <option>CUADRE DE TIEMPOS INE</option>
+                            </select>
+                    </div>
+                    <div class="objs-ins admin" style="width:30%;">
+                        <button id="trash"><div class="fa fa-times-circle"></div></button>
                     </div>
                 </div>
+
+                <div class="objs-elems panel-heros">
+                    <div class="objs-ins s-status">
+                        <div class="status-adm s-circle bkg-verde"></div>
+                    </div>
+                    <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Laura López Treviño"></div>
+                    <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="llopez@tvazteca.com.mx"></div>
+                    <div class="objs-ins"><input type="date" value="2019-01-01" class="bord" required></div>
+                    <div class="objs-ins"><input data-value="default" class="bord" type="number" placeholder="101010"></div>
+                    <div class="objs-ins">
+                        <select class="bord">
+                                <option> OPERATIVO</option>
+                                <option> ADMINISTRADOR</option>
+                                <option> CONTINUIDAD</option>
+                                <option> CONTENIDOS</option>
+                            </select>
+                    </div>
+                    <div class="objs-ins">
+                        <select class="bord">
+                                <option> OPERATIVO</option>
+                                <option> ADMINISTRADOR</option>
+                                <option> CONTINUIDAD</option>
+                                <option> CONTENIDOS</option>
+                            </select>
+                    </div>
+                    <div class="objs-ins">
+                        <select class="bord not-select">
+                                    <option> ESTRUCTURA GENERAL ABIERTA</option>
+                                    <option> CANDADO DE ESTRUCTURA INDIVIDUAL ABIERTO</option>
+                                    <option> CANDADO DE ESTRUCTURA INDIVIDUAL CERRADO</option>
+                                    <option> LÍMITE DE ENTREGA CUMPLIDO</option>
+                                    <option>CUADRE DE TIEMPOS INE</option>
+                                </select>
+                    </div>
+                    <div class="objs-ins admin" style="width:30%;">
+                        <button id="trash1"><div class="fa fa-times-circle"></div></button>
+                    </div>
+                </div>
+
+
 
             </div>
 
         </div>
+    </div>
+
+    <div id="panel-elim-usuario" class="min-tool-box">
+        <div class="close-panel fas fa-times"></div>
+        <h4><strong>Eliminar</strong></h4>
+        <p>¿Está seguro de eliminar este usuario?</p>
+        <button class="close-panel btn-adm">Aceptar</button>
     </div>
 
     <div id="panel-mensajes" class="min-tool-box">

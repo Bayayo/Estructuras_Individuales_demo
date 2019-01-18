@@ -453,7 +453,8 @@ pre>code {
     justify-content: space-between;
     display: -webkit-flex;
     -webkit-justify-content: flex-start;
-    width: 100%;
+    width: 98%;
+    padding: 2px 10px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -592,6 +593,16 @@ select {
     background-color: #f9f9f9;
     text-align: center;
     text-align-last: center;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date] {
+    padding: 6px 5px 2px 6px !important;
+    text-align: center;
 }
 
 
@@ -753,6 +764,23 @@ button a {
 }
 
 
+/* Admin */
+
+.admin button {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 6px;
+    margin: auto !important;
+    cursor: pointer;
+    position: relative;
+    min-width: 40px;
+    color: #da190b !important;
+    font-size: 16px;
+}
+
+
 /*///////////////////////////////////
 
         MODAL
@@ -836,6 +864,10 @@ button a {
     position: absolute;
     padding: 3px;
     font-size: 12px;
+}
+
+#panel-admin.p-middle {
+    max-width: 90%;
 }
 
 

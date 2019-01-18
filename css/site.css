@@ -109,7 +109,8 @@ body {
 }
 
 .p-i-bar,
-.p-g-bar {
+.p-g-bar,
+.p-i-not {
     margin-left: 15px;
     margin-top: 15px;
     cursor: pointer;
@@ -265,6 +266,20 @@ body {
     z-index: 500;
 }
 
+.panel-der {
+    width: 80vh;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.45);
+    box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.45);
+    padding: 15px;
+    z-index: 500;
+}
+
 .modal-all {
     width: 100%;
     height: 100%;
@@ -341,6 +356,17 @@ body {
     top: 10px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.close-panel.btn-adm {
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    bottom: 10px;
+    top: auto;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #D62739 !important;
 }
 
 .text-center {
@@ -855,7 +881,8 @@ body {
     width: 20%;
 }
 
-#panel-mensajes {
+#panel-mensajes,
+#panel-elim-usuario {
     z-index: 105 !important;
 }
 
