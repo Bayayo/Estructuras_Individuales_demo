@@ -298,11 +298,11 @@ $(".close-panel").click(function() {
 
 });
 
-$(".close-panel").click(function() {
+$(".close-panel-der").click(function() {
 
     var tl1 = new TimelineLite();
 
-    tl1.to($p_panel_der, 0.3, { opacity: 1, x: 500 });
+    tl1.to($p_panel_der, 0.3, { opacity: 1, x: 600 });
 
     $(".modal-all").remove();
 

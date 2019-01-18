@@ -349,6 +349,7 @@ body {
 }
 
 .close-panel,
+.close-panel-der,
 .close-admin,
 .close-usr-lat {
     position: absolute;

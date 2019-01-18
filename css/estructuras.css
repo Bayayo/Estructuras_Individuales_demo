@@ -1407,19 +1407,8 @@ input[type="radio"]:checked:disabled+label span {
     margin-top: 0px;
 }
 
-
-/*.tabla-box thead th:nth-child(1) {
-    width: 150px;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.tabla-box tbody td:nth-child(1) {
-    width: 150px;
-    text-align: left;
-}*/
-
-.tbl-content .tabla-box tbody td {
+.tbl-content .tabla-box tbody td,
+.tabla-box>tbody>tr>td {
     border: 2px dashed #dcdcdc;
     padding: 2px;
     background-color: whitesmoke;
