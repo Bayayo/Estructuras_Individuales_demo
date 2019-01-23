@@ -12,6 +12,7 @@ var $buscador = $('#buscador');
 var $panel_mensajes = $('#panel-mensajes');
 var $panel_eliminar = $('#panel-elim-usuario');
 var $panle_add_p = $('#panel-add-plantilla');
+var $buscador_individual =$("#buscador-individual");
 
 var $p_bloqueo = $('#p-bloqueo');
 var $es_bloqueo = $('#es-bloqueo');
@@ -159,6 +160,7 @@ var inicializa = function() {
     $panel_mensajes.css("display", "none");
     $panel_eliminar.css("display", "none");
     $panle_add_p.css("display", "none");
+    $buscador_individual.css("display", "none");
 
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
@@ -171,6 +173,12 @@ var inicializa = function() {
     $u_bitacora.css("display", "none");
     $u_lineas.css("display", "none");
     $u_candados.css("display", "none");
+
+    $( "#es-general" ).remove( ":contains('estructura-i')" );
+
+    $( "#es-individual" ).remove( ":contains('estructura-g')" );
+
+
 
 
 }
@@ -213,10 +221,12 @@ var init = function() {
 
 var estructuraA = function() {
     loader();
+    $("#es-general").load("jsondata/estructura-general.html");
 
     setTimeout(function() {
         removeloader();
         $("#es-general").css("display", "block");
+
 
         $(document).ready(function() {
 
@@ -260,6 +270,14 @@ var buscador = function(){
     var tl = new TimelineLite();
     tl.to($buscador, 0.3, { opacity: 1, y: 48 });
 };
+
+var buscadorInd = function(){
+    $('<div class="modal-30"></div>').prependTo('body');
+    $buscador_individual.css("display", "block");
+    var tl = new TimelineLite();
+    tl.to($buscador_individual, 0.3, { opacity: 1, y: 48 });
+};
+
 
 $("#cls-tiempos").click(function(){
     $(".bar-tiempos").css("display", "none");
@@ -352,6 +370,22 @@ $('#demo').click(function() {
 
 });
 
+$("#load-individual").click(function(){
+    var tl = new TimelineLite();
+    tl.to($buscador_individual, 0.3, {
+        opacity: 1,
+        y: -90,
+        onComplete: function() {
+            $buscador_individual.css("display", "none");
+            $('.modal-30').remove();
+        }
+    });
+
+    $("#es-individual").load("jsondata/estructura-individual.html");
+
+    $("#es-individual").css("display", "block");
+});
+
 $("#panel-mensajes .close-panel").click(function() {
     $panel_mensajes.css("display", "none");
 })
@@ -403,6 +437,7 @@ $("#cls-plantilla").click(function() {
 $('body').on('click', '.close-panel', function() {
     $('.modal-30, .mod').remove();
     $buscador.css("display", "none");
+    $buscador_individual.css("display", "none");
     $agregar.css("display", "none");
     $buscador_bloq.css("display", "none");
 });
@@ -470,7 +505,7 @@ var InitButtons = (function() {
 
             case 1:
                 console.log("Estructura General");
-                $setMenu = false;
+                $setMenu = true;
                 $p_init.css("display", "none");
                 $p_individual.css("display", "none");
                 $p_operativa.css("display", "none");
@@ -496,6 +531,7 @@ var InitButtons = (function() {
 
             case 2:
                 console.log("Estructura Individual");
+                $setMenu = false;
 
                 $p_init.css("display", "none");
 
@@ -578,7 +614,12 @@ var ToolButtons = (function() {
 
         switch (index) {
             case 0:
-               buscador();
+                if($setMenu == false){
+                    buscadorInd();
+
+                }else{
+                    buscador();
+                }
 
                 break;
 
