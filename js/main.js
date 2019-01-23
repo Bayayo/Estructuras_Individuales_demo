@@ -40,6 +40,7 @@ $(document).ready(function() {
     inicializa();
     init();
 
+    $("#get-programas").load("jsondata/programas" + $(this).val() + ".txt");
 
     var tl = new TimelineMax();
     removeloader();
@@ -253,6 +254,17 @@ var estructuraA = function() {
 }
 
 //init();
+var buscador = function(){
+    $('<div class="modal-30"></div>').prependTo('body');
+    $buscador.css("display", "block");
+    var tl = new TimelineLite();
+    tl.to($buscador, 0.3, { opacity: 1, y: 48 });
+};
+
+$("#cls-tiempos").click(function(){
+    $(".bar-tiempos").css("display", "none");
+    $("#es-individual").css("margin", "65px 30px");
+});
 
 $($Close).click(function() {
     loader();
@@ -412,7 +424,34 @@ $("#trash1").click(function() {
 
 });
 
+$("#get-programas").change(function() {
 
+	var $dropdown = $(this);
+
+	$.getJSON("jsondata/programas.json", function(data) {
+	
+		var key = $dropdown.val();
+		var vals = [];
+							
+		switch(key) {
+			case 'beverages':
+				vals = data.beverages.split(",");
+				break;
+			case 'snacks':
+				vals = data.snacks.split(",");
+				break;
+			case 'base':
+				vals = ['Please choose from above'];
+		}
+		
+		var $secondChoice = $("#second-choice");
+		$secondChoice.empty();
+		$.each(vals, function(index, value) {
+			$secondChoice.append("<option>" + value + "</option>");
+		});
+
+	});
+});
 
 var InitButtons = (function() {
 
@@ -539,43 +578,53 @@ var ToolButtons = (function() {
 
         switch (index) {
             case 0:
-                $('<div class="modal-30"></div>').prependTo('body');
-                $buscador.css("display", "block");
-                var tl = new TimelineLite();
-                tl.to($buscador, 0.3, { opacity: 1, y: 48 });
+               buscador();
 
                 break;
 
-                case 1:
+            case 1:
+
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Agregar Linea</strong></h4></div>').prependTo('body');
+                
+                break;
+            case 2:
+
+                $(".bar-tiempos").css("display", "block");
+                $("#es-individual").css("margin", "65px 19% 25px 30px");
+
+                break;
+            case 3:
+
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Descargar</strong></h4></div>').prependTo('body');
                 break;
 
-                case 2:
+            case 4:
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
 
                 break;
 
-                 case 3:
+            case 5:
                  $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Mandar Correo</strong></h4></div>').prependTo('body');
 
                 break;
 
-                 case 4:
+            case 6:
                  $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Copiar version</strong></h4></div>').prependTo('body');
 
                 break;
 
-                 case 5:
+            case 7:
                  $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Generar Version</strong></h4></div>').prependTo('body');
 
                 break;
 
-                 case 6:
+            case 8:
                  $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                  $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Bloquear</strong></h4></div>').prependTo('body');
 

@@ -982,18 +982,30 @@
 
         <div id="es-individual">
 
+                <div>
+                        <table class="tabla-header">
+                              <tr>
+                                  <td> A </td>
+                                  <td> SEMANA 2</td>
+                                  <td> LUNES 09 ENERO DEL 2019</td>
+                              </tr>
+                        </table>
+                      </div>
+
 
             <table class="tabla-box">
-                <thead colspan="12">
+                <thead colspan="13">
                     <tr>
-                        <th colspan="11"> ABCD ELECCIONES</th>
+                            <th colspan="9"> ABCD ELECCIONES</th>
+                            <th colspan="3" style="visibility: hidden;"> </th>
 
                     </tr>
                 </thead>
                 <thead>
                     <tr>
-                        <th colspan="5"> CONTENIDO</th>
-                        <th colspan="6"> CARRIER</th>
+                            <th colspan="4"> CONTENIDO</th>
+                            <th colspan="5"> CARRIER</th>
+                            <th colspan="3" style="visibility: hidden;"> </th>
                     </tr>
                 </thead>
 
@@ -1005,11 +1017,12 @@
                         <td> FIN </td>
                         <td> CORTINILLAS </td>
                         <td> VENTA </td>
-                        <td> </td>
+                        <td> RTC</td>
                         <td> INE 2018 </td>
                         <td> PROMOS INE </td>
                         <td> SALIDA C </td>
                         <td> OBSERVACIONES </td>
+                        <td> SUMA CARRIES </td>
 
                     </tr>
 
@@ -1025,6 +1038,7 @@
                         <td> </td>
                         <td> 23:58:32</td>
                         <td> </td>
+                        <td> 00:03:30 </td>
 
                     </tr>
 
@@ -1041,6 +1055,7 @@
                         <td> </td>
                         <td> 00:04:38</td>
                         <td> </td>
+                        <td> 00:05:00 </td>
 
                     </tr>
 
@@ -1060,6 +1075,7 @@
                         <td> 00:00:00 </td>
                         <td style="visibility: hidden;"> </td>
                         <td style="visibility: hidden;"> </td>
+                        <td> 00:25:58 </td>
 
                     </tr>
                 </tfoot>
@@ -1636,6 +1652,14 @@
         <div class="buscador-txt">Buscar Estructura</div>
         <div class="objs-elems" style="width: 95%;">
             <div class="objs-ins">
+                <label>Canal</label>
+                    <select class="bord">
+                        <option value="-1">Azteca 1</option>
+                        <option> Azteca 7</option>
+                        <option> A+</option>
+                    </select>
+            </div>
+            <div class="objs-ins">
                 <label>Fecha</label>
                 <select class="bord">
                 <option value="-1">Select</option>
@@ -1643,11 +1667,8 @@
             </select>
             </div>
             <div class="objs-ins">
-                <label>Canal</label>
-                <select class="bord">
-                <option value="-1">Azteca 1</option>
-                <option> Azteca 7</option>
-                <option> A+</option>
+                <label>PROGRAMA</label>
+                <select class="bord" id="get-programas">
             </select>
             </div>
             <div class="objs-ins">
@@ -1835,6 +1856,8 @@
         <div class="tool-box">
             <ul class="tool-down">
                 <li data-tooltip="Busqueda"><i class="fas fa-search"></i></li>
+                <li data-tooltip="Agregar Linea" class="item-ii"><i class="fas fa-plus-circle"></i></li>
+                <li data-tooltip="Tiempo Total" class="item-ii"><i class="fas fa-eye"></i></li>
                 <li data-tooltip="Exportar" class="item-ii"><i class="fas fa-download"></i></li>
                 <li data-tooltip="Guardar" class="item-ii"><i class="fas fa-save"></i></li>
                 <li data-tooltip="Enviar Mail" class="item-ii"><i class="fas fa-envelope"></i></li>
@@ -1898,7 +1921,7 @@
                     </div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Anon Pliego Crepe"></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="anon@tvazteca.com.mx"></div>
-                    <div class="objs-ins"><input type="date" value="2019-01-01" class="bord" required></div>
+                    <div class="objs-ins"><input  data-value="default" type="date" value="2019-01-01" class="bord" required></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="number" placeholder="101010"></div>
                     <div class="objs-ins">
                         <select class="bord">
@@ -1936,7 +1959,7 @@
                     </div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="Laura López Treviño"></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="text" placeholder="llopez@tvazteca.com.mx"></div>
-                    <div class="objs-ins"><input type="date" value="2019-01-01" class="bord" required></div>
+                    <div class="objs-ins"><input  data-value="default" type="date" value="2019-01-01" class="bord" required></div>
                     <div class="objs-ins"><input data-value="default" class="bord" type="number" placeholder="101010"></div>
                     <div class="objs-ins">
                         <select class="bord">
@@ -2412,6 +2435,96 @@
 
 </div>
 
+
+<div class="bar-tiempos">
+    <div id="cls-tiempos" class="close-admin fas fa-times"></div>
+    <div class="bar-tit">Tiempos Totales</div>
+
+    <div class="bar-nombre">Escenario A</div>
+
+    <div class="bar-tbs">
+        <table class="table-bar">
+            <thead>
+                <tr>
+                    <th>CONCEPTO</th>
+                    <th>VALOR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Entrada</td>
+                    <td>05:49:00</td>
+                </tr>
+                <tr>
+                    <td>Contenido</td>
+                    <td>02:24:12</td>
+                </tr>
+                <tr>
+                        <td>Capsula</td>
+                        <td>00:00:03</td>
+                </tr>
+                <tr>
+                        <td>Venta Nac</td>
+                        <td>00:28:00</td>
+                </tr>
+                <tr>
+                        <td>Venta Local</td>
+                        <td>00:03:00</td>
+                </tr>
+                <tr>
+                        <td>Total Venta</td>
+                        <td>00:36:00</td>
+                </tr>
+                <tr>
+                        <td>Cap Informativa</td>
+                        <td>00:00:00</td>
+                </tr>
+                <tr>
+                        <td>Promos Nac</td>
+                        <td>00:02:00</td>
+                </tr>
+                <tr>
+                        <td>Promos INE</td>
+                        <td>00:00:00</td>
+                </tr>
+                <tr>
+                        <td>IDENTIFICADOR</td>
+                        <td>00:00:12</td>
+                </tr>
+                <tr>
+                        <td>RTC</td>
+                        <td>00:00:03</td>
+                </tr>
+                <tr>
+                        <td>INE ORDINARIO</td>
+                        <td>00:01:00</td>
+                </tr>
+                <tr>
+                        <td>TOTAL</td>
+                        <td>00:41:48</td>
+                </tr>
+                <tr>
+                        <td>Cortinillas</td>
+                        <td>00:00:06</td>
+                </tr>
+                <tr>
+                        <td>Caps Avances</td>
+                        <td>00:01:16</td>
+                </tr>
+                <tr>
+                        <td>Total INE</td>
+                        <td>00:07:30</td>
+                </tr>
+                <tr>
+                        <td>AUDIO</td>
+                        <td>08:55:00</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
 
 <script src="js/vendor/jquery-3.3.1.min.js"></script>
 <script src="js/vendor/modernizr-3.6.0.min.js"></script>
