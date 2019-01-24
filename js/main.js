@@ -958,25 +958,20 @@ var intpanel = (function() {
 })();
 
 
-$("input:checkbox:not(:checked)").each(function() {
-    var Head = "#table-g ." + $(this).attr("name");
-    var Body = "#g-tab ." + $(this).attr("name");
-    var Foot = "#g-tab-foot ." + $(this).attr("name");
-
-    $(Head).hide();
-    $(Body).hide();
-    $(Foot).hide();
-
-});
 
 $("input:checkbox").click(function(){
-    var Head = "#table-g ." + $(this).attr("name");
-    var Body = "#g-tab ." + $(this).attr("name");
-    var Foot = "#g-tab-foot ." + $(this).attr("name");
+    var cell = $(this).attr("name");
+    var Thead = "#table-h th:nth-child(" + cell + ")";
+    var Tbody = "#table-b tbody tr td:nth-child(" + cell + ")";
+    var Tfoot = "#table-f td:nth-child(" + cell + ")";
 
-    $(Head).toggle();
-    $(Body).toggle();
-    $(Foot).toggle();
+    $(Thead).toggle("fast");
+    $(Tbody).toggle("fast");
+    $(Tfoot).toggle("fast");
+
+    console.log(cell + Thead + Tbody + Tfoot );
+
+
 });
 
 //FECHA
