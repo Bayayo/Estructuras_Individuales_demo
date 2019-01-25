@@ -1,0 +1,37 @@
+<option>    BARRAS DE AJUSTE	</option>
+<option>	RTC	</option>
+<option>	MARCAS DE RENOMBRE 9	</option>
+<option>	HIMNO NACIONAL	</option>
+<option>	LA ISLA DEL TESORO	</option>
+<option>	DORAEMON	</option>
+<option>	POKEMON	</option>
+<option>	DISNEY MICKEY AVENTURAS SOBRE RUEDAS	</option>
+<option>	DISNEY MUPPET BABIES	</option>
+<option>	DISNEY PRINCESITA SOFIA	</option>
+<option>	DISNEY ELENA DE AVALOR	</option>
+<option>	BEN 10	</option>
+<option>	LAS CHICAS SUPERPODEROSAS	</option>
+<option>	ATCHOO	</option>
+<option>	GRAVITY FALLS	</option>
+<option>	PHINEAS Y FERB	</option>
+<option>	FAIL ARMY	</option>
+<option>	CASTLE	</option>
+<option>	LO QUE LA GENTE CUENTA	</option>
+<option>	LO QUE LA GENTE CUENTA 2	</option>
+<option>	ALMAS PERDIDAS	</option>
+<option>	ALMAS PERDIDAS 2	</option>
+<option>	MENTES CRIMINALES	</option>
+<option>	MENTES CRIMINALES 2	</option>
+<option>	EL CÉSAR	</option>
+<option>	MARCAS DE RENOMBRE	</option>
+<option>	INFOMERCIAL FARMACIAS SIMILARES	</option>
+<option>	CV DIRECTO 2	</option>
+<option>	CV DIRECTO 3	</option>
+<option>	MARCAS DE RENOMBRE 3	</option>
+<option>	MARCAS DE RENOMBRE 4	</option>
+<option>	MARCAS DE RENOMBRE 5	</option>
+<option>	MARCAS DE RENOMBRE 6	</option>
+<option>	MARCAS DE RENOMBRE 7	</option>
+<option>	MARCAS DE RENOMBRE 8	</option>
+<option>	HIMNO NACIONAL	</option>
+<option>	BARRA DE AJUSTE	</option>
