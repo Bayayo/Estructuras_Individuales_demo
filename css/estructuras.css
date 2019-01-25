@@ -325,10 +325,15 @@ p {
     margin-top: 0;
 }
 
+h4 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+}
 
-/* ==========================================================================
-   BODY
-   ========================================================================== */
+h5 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
 body {
     font-family: 'roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -507,7 +512,7 @@ md-autocomplete input:not(.md-input) {
 .objs-ins select,
 .objs-ins md-autocomplete,
 td input[data-value*="default"] {
-    width: 93% !important;
+    width: 90% !important;
     margin: 0 auto;
     background-color: white;
     text-align: center;
@@ -579,19 +584,22 @@ input[type="radio"]:focus {
 }
 
 select {
-    outline: none;
-    border: none;
-    padding: 5px;
-    margin-bottom: 1px;
-    cursor: pointer;
-    position: relative;
-    min-width: 60px;
+    display: block !important;
+    padding: 8px 5px 2px 6px !important;
     font-size: 11px !important;
-    display: block;
-    color: #4e4e4e;
-    background-color: #f9f9f9;
-    text-align: center;
-    text-align-last: center;
+    line-height: 1.42857143 !important;
+    color: #555 !important;
+    background-color: #fff !important;
+    background-image: none;
+    border: none;
+    /* border-bottom: 2px solid #dadada; */
+    border-radius: 1px;
+    outline: none !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 input[type=date]::-webkit-inner-spin-button {
@@ -1567,4 +1575,202 @@ input[type="radio"]:checked:disabled+label span {
 .alinea-derecha {
     text-align: right;
     padding-right: 15px;
+}
+
+
+/*SEARCH*/
+
+.accordion {
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel-accordion {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/*Dropdown selector checkbox*/
+
+.dropdown {
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.dropdown dd,
+.dropdown dt {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown ul {
+    margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+    position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+.dropdown dt a {
+    border-bottom: 2px solid #8971d5 !important;
+    white-space: nowrap;
+    display: block;
+    background-color: #fff;
+    color: #4e4e4e;
+    padding: 4px 10px 0px 10px;
+    min-height: 20px;
+    margin-top: 2px;
+    line-height: 8px;
+    overflow: hidden;
+    border: 0;
+    width: 90%;
+    font-size: 11px;
+}
+
+.dropdown dt a:hover {
+    border-bottom: 2px solid #653b9d !important;
+}
+
+.dropdown dt a:focus {
+    background: rgba(96, 125, 139, 0.08) !important;
+    border-bottom: 2px solid #33c3f0 !important;
+    color: black !important;
+    box-shadow: 0px -1px 3px 0px #03a9f442 !important;
+}
+
+.dropdown dt a span,
+.multiSel span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+    background: #fff !important;
+    border: 1px solid #03a9f442 !important;
+    color: black !important;
+    box-shadow: 0px -1px 3px 0px #03a9f442 !important;
+    display: none;
+    left: 0px;
+    padding: 2px 15px 2px 5px;
+    position: absolute;
+    top: 2px;
+    width: 160px;
+    list-style: none;
+    height: 180px;
+    overflow: auto;
+    font-size: 10px;
+    z-index: 100;
+    text-align: left;
+}
+
+.dropdown span.value {
+    display: none;
+}
+
+.dropdown dd ul li a {
+    padding: 5px;
+    display: block;
+}
+
+.dropdown dd ul li a:hover {
+    background-color: #fff;
+}
+
+.dwn {
+    right: 0;
+    background-color: white;
+    float: right;
+    width: 20px;
+    height: auto;
+    font-size: 9px;
+    position: absolute;
+}
+
+.mutliSelect input[type=checkbox] {
+    display: inline-block !important;
+    margin-right: 5px;
+}
+
+#panel-admin .content {
+    height: 450px;
+}
+
+#panel-admin .cont-result {
+    height: 250px;
+}
+
+#es-general {
+    position: fixed;
+    width: 90%;
+    max-width: 1850px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 5% 5%;
+}
+
+#table-h th:nth-child(1),
+#table-b tbody tr td:nth-child(1),
+#table-f td:nth-child(1) {
+    table-layout: fixed;
+    cursor: pointer;
+}
+
+#table-b tbody tr td:nth-child(2),
+#table-f td:nth-child(2),
+#table-b tbody tr td:nth-child(17),
+#table-f td:nth-child(17) {
+    background-color: #80ff80;
+}
+
+#table-b tbody tr td:nth-child(7),
+#table-f td:nth-child(7),
+#table-b tbody tr td:nth-child(13),
+#table-f td:nth-child(13) {
+    background-color: #80ffff;
+}
+
+#table-b tbody tr td:nth-child(6),
+#table-f td:nth-child(6) {
+    background-color: #ff8000;
+}
+
+#table-b tbody tr td:nth-child(12),
+#table-f td:nth-child(12) {
+    background-color: #00ffff;
+}
+
+#table-b tbody tr td:nth-child(15),
+#table-f td:nth-child(15) {
+    background-color: #ffff80;
+}
+
+#table-b tbody tr td:nth-child(16),
+#table-f td:nth-child(16) {
+    background-color: #ff0000;
 }

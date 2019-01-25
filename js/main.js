@@ -27,7 +27,7 @@ var $u_bitacora = $("#usr-bitacora");
 var $u_lineas = $("#usr-lineas");
 var $u_candados = $("#usr-candados");
 
-var $m_tiempos =$(".menu-tiempos");
+var $m_tiempos = $(".menu-tiempos");
 
 
 var $Close = document.getElementById('bt-close-all');
@@ -170,7 +170,7 @@ var inicializa = function() {
 
     $m_tiempos.css("display", "none");
 
-    $( ".data-load" ).remove();
+    $(".data-load").remove();
     $(".modal-all, .modal-30, #modal-20").remove();
 
 }
@@ -257,31 +257,31 @@ var estructuraGeneral = function() {
 }
 
 //init();
-var buscador = function(){
+var buscador = function() {
     $('<div class="modal-30"></div>').prependTo('body');
     var tl = new TimelineLite();
 
-    if($setMenu == "e-general"){
+    if ($setMenu == "e-general") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
-        $( "#objs-busqueda div").show();
-        $( "#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(6)").hide();
+        $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(6)").hide();
 
-    }else if($setMenu == "e-individual"){
+    } else if ($setMenu == "e-individual") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
-        $( "#objs-busqueda div").show();
+        $("#objs-busqueda div").show();
 
-    }else if($setMenu == "e-bloqueo"){
+    } else if ($setMenu == "e-bloqueo") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
-        $( "#objs-busqueda div").show();
+        $("#objs-busqueda div").show();
 
-    } else if($setMenu == "e-ine"){
+    } else if ($setMenu == "e-ine") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
-        $( "#objs-busqueda div").show();
-        $( "#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(4), #objs-busqueda div:nth-child(5)").hide();
+        $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(4), #objs-busqueda div:nth-child(5)").hide();
 
     }
 };
@@ -297,20 +297,20 @@ $('#btn-search').click(function() {
         }
     });
 
-    if($setMenu == "e-general"){
+    if ($setMenu == "e-general") {
         estructuraGeneral();
-        $( ".tool-down li:nth-child(3)").show();
+        $(".tool-down li:nth-child(3)").show();
 
-    }else if($setMenu == "e-individual"){
+    } else if ($setMenu == "e-individual") {
         $("#es-individual").load("infodata/estructura-individual.html");
         $("#es-individual").css("display", "block");
 
 
-    }else if($setMenu == "e-bloqueo"){
+    } else if ($setMenu == "e-bloqueo") {
         $("#es-bloqueo").load("infodata/bloqueos.html");
         $("#es-bloqueo").css("display", "block");
 
-    }else if($setMenu == "e-ine"){
+    } else if ($setMenu == "e-ine") {
         $("#es-ine").load("infodata/ine.html");
         $("#es-ine").css("display", "block");
 
@@ -320,7 +320,7 @@ $('#btn-search').click(function() {
 
 });
 
-$("#cls-tiempos").click(function(){
+$("#cls-tiempos").click(function() {
     $(".menu-tiempos").css("display", "none");
     $("#es-individual").css("margin", "65px 30px");
 });
@@ -374,6 +374,16 @@ $(".close-panel-der").click(function() {
     var tl1 = new TimelineLite();
 
     tl1.to($p_panel_der, 0.3, { opacity: 1, x: 900 });
+
+    $(".modal-all").remove();
+
+});
+
+$("#close-lateral-derecho").click(function() {
+
+    var tl1 = new TimelineLite();
+
+    tl1.to($menu_visualizacion, 0.3, { opacity: 1, x: 900 });
 
     $(".modal-all").remove();
 
@@ -470,34 +480,6 @@ $("#trash1").click(function() {
 
 });
 
-$("#get-programas").change(function() {
-
-	var $dropdown = $(this);
-
-	$.getJSON("infodata/programas.json", function(data) {
-	
-		var key = $dropdown.val();
-		var vals = [];
-							
-		switch(key) {
-			case 'beverages':
-				vals = data.beverages.split(",");
-				break;
-			case 'snacks':
-				vals = data.snacks.split(",");
-				break;
-			case 'base':
-				vals = ['Please choose from above'];
-		}
-		
-		var $secondChoice = $("#second-choice");
-		$secondChoice.empty();
-		$.each(vals, function(index, value) {
-			$secondChoice.append("<option>" + value + "</option>");
-		});
-
-	});
-});
 
 var InitButtons = (function() {
     var $ul = $('.tool-down');
@@ -510,8 +492,8 @@ var InitButtons = (function() {
                     case 0:
                     console.log("Administración");
                     $('<div class="modal-20"></div>').prependTo('body');
-                    $panel_admin.css('display','block');
-                    $("#panel-admin").css('display','block')
+                $panel_admin.css('display', 'block');
+                $("#panel-admin").css('display', 'block')
                 break;
 
             case 1:
@@ -529,7 +511,7 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-general>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1,10).hide();
+                $ul.find('li').slice(1, 10).hide();
 
 
                 break;
@@ -570,7 +552,7 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-bloqueo>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1,7).hide();
+                $ul.find('li').slice(1, 7).hide();
 
                 break;
 
@@ -590,7 +572,7 @@ var InitButtons = (function() {
                 TweenMax.staggerFromTo($("#p-ine>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
                 $ul.find('li').show();
-                $ul.find('li').slice(1,7).hide();
+                $ul.find('li').slice(1, 7).hide();
 
 
                 break;
@@ -959,7 +941,7 @@ var intpanel = (function() {
 
 
 
-$("input:checkbox").click(function(){
+$("input:checkbox").click(function() {
     var cell = $(this).attr("name");
     var Thead = "#table-h th:nth-child(" + cell + ")";
     var Tbody = "#table-b tbody tr td:nth-child(" + cell + ")";
@@ -968,9 +950,6 @@ $("input:checkbox").click(function(){
     $(Thead).toggle("fast");
     $(Tbody).toggle("fast");
     $(Tfoot).toggle("fast");
-
-    console.log(cell + Thead + Tbody + Tfoot );
-
 
 });
 
@@ -1001,6 +980,59 @@ $(".status-adm").on("click", function() {
     } else {
         $this.removeClass("bkg-amarillo");
         $this.addClass("bkg-verde");
+    }
+
+});
+
+//SEARCH ACCORDION
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+
+//DROPDOWN
+$(".dropdown dt a").on('click', function() {
+    $(".dropdown dd ul").slideToggle('fast');
+});
+
+$(".dropdown dd ul li a").on('click', function() {
+    $(".dropdown dd ul").hide();
+});
+
+function getSelectedValue(id) {
+    return $("#" + id).find("dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+    var $clicked = $(e.target);
+    if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+});
+
+$('.mutliSelect input[type="checkbox"]').on('click', function() {
+
+    var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+        title = $(this).val() + ",";
+
+    if ($(this).is(':checked')) {
+        var html = '<span title="' + title + '">' + title + '</span>';
+        $('.multiSel').append(html);
+        $(".hida").hide();
+        $('input[type="checkbox"]').show();
+    } else {
+        $('span[title="' + title + '"]').remove();
+        var ret = $(".hida");
+        $('.dropdown dt a').append(ret);
+        $(".hida").show();
     }
 
 });
