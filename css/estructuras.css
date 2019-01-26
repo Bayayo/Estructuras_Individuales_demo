@@ -1399,7 +1399,7 @@ input[type="radio"]:checked:disabled+label span {
 }
 
 .tbl-content {
-    height: 490px;
+    height: 450px;
     overflow-y: auto;
     overflow-x: hidden;
     width: 1775px;
@@ -1675,7 +1675,7 @@ input[type="radio"]:checked:disabled+label span {
     padding: 2px 15px 2px 5px;
     position: absolute;
     top: 2px;
-    width: 160px;
+    width: 90%;
     list-style: none;
     height: 180px;
     overflow: auto;
@@ -1698,8 +1698,7 @@ input[type="radio"]:checked:disabled+label span {
 }
 
 .dwn {
-    right: 0;
-    background-color: white;
+    right: 0px;
     float: right;
     width: 20px;
     height: auto;
@@ -1722,11 +1721,11 @@ input[type="radio"]:checked:disabled+label span {
 
 #es-general {
     position: fixed;
-    width: 90%;
+    width: 96%;
     max-width: 1850px;
     overflow-x: scroll;
     overflow-y: hidden;
-    margin: 5% 5%;
+    margin: 5% 2%;
 }
 
 #table-h th:nth-child(1),
@@ -1767,5 +1766,180 @@ input[type="radio"]:checked:disabled+label span {
 
 #table-b tbody tr td:nth-child(16),
 #table-f td:nth-child(16) {
+    color: #2b2a2a;
     background-color: #ff0000;
+}
+
+
+/*Notificaciones*/
+
+#notification_li {
+    position: relative
+}
+
+#notificationContainer {
+    background-color: #fff;
+    border: 1px solid rgba(100, 100, 100, .4);
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    overflow: visible;
+    position: absolute;
+    top: 40px;
+    right: -12px;
+    width: 350px;
+    max-height: 500px;
+    overflow-x: scroll;
+    z-index: -1;
+    display: none;
+    border-radius: 3px;
+}
+
+
+/*#notificationContainer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    color: transparent;
+    border: 10px solid black;
+    border-color: transparent transparent white;
+    margin-top: -20px;
+    right: 5px;
+}*/
+
+#notificationTitle {
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    width: 335px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.notificationsAll {
+    color: #909090;
+    padding: 15px 10px;
+}
+
+.notificationsAll p {
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.notificationsAll p:nth-child(2) {
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+#notificationsBody {
+    padding: 33px 0px 0px 0px !important;
+    min-height: 300px;
+}
+
+#notificationsBody hr {
+    width: 50%;
+    margin: auto;
+    border-top: 1px solid #5a5a5a38;
+}
+
+#notificationFooter {
+    background-color: #ececec;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 12px;
+    border-top: 1px solid #dddddd;
+}
+
+#notification_count {
+    padding: 3px 6px 3px 6px;
+    background: #cc0000;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 8px;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    position: absolute;
+    margin-top: -10px;
+    font-size: 8px;
+}
+
+
+/* Modal General */
+
+.modal-gral {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 100;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content-gral {
+    margin: auto;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    padding: 20px;
+    position: absolute;
+    border: 1px solid #888;
+    min-height: 100px;
+    max-height: 70%;
+    max-width: 25%;
+    background-color: #f1f1f1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    z-index: 100;
+    padding: 10px;
+    -webkit-box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.39);
+    box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.39);
+    text-align: center;
+}
+
+
+/* The Close Button */
+
+.dv-cls-gral {
+    width: 100%;
+    text-align: right;
+}
+
+.close-gral {
+    color: #aaaaaa;
+    right: 15px;
+    top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.close-gral:hover,
+.close-gral:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

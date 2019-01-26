@@ -361,11 +361,13 @@ body {
     cursor: pointer;
 }
 
-.close-panel.btn-adm {
+.close-panel.btn-adm,
+.modal-content-gral .btn-adm {
     position: absolute;
     left: 40%;
     width: 20%;
     bottom: 10px;
+    z-index: 101;
     top: auto;
     font-size: 15px;
     cursor: pointer;
@@ -687,8 +689,6 @@ body {
     padding-bottom: 3px;
 }
 
-
-
 .p-middle {
     max-height: 70%;
     max-width: 70%;
@@ -817,8 +817,7 @@ body {
 .panel-heros {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-  }
-
+}
 
 .cont-result {
     overflow-y: auto;
@@ -973,8 +972,7 @@ body {
     width: 310px;*/
 }
 
-
-.tabla-header{
+.tabla-header {
     width: 100%;
     background-color: #009688;
     padding: 5px;
@@ -982,22 +980,21 @@ body {
     border: 2px solid #607D8B;
 }
 
-.tabla-header td{
+.tabla-header td {
     border: 2px solid #607D8B;
     text-align: center;
     font-size: 13px;
 }
 
-.tabla-header>tbody>tr>td:nth-child(1){
+.tabla-header>tbody>tr>td:nth-child(1) {
     width: 10%;
 }
 
-.tabla-header>tbody>tr>td:nth-child(2){
+.tabla-header>tbody>tr>td:nth-child(2) {
     width: 25%;
 }
 
-
-.menu-tiempos{
+.menu-tiempos {
     display: none;
     position: fixed;
     top: 47px;
@@ -1005,15 +1002,14 @@ body {
     background-color: white;
     height: 100%;
     width: 16vw;
-    -webkit-box-shadow: -4px 4px 5px -1px rgba(0,0,0,0.44);
-    -moz-box-shadow: -4px 4px 5px -1px rgba(0,0,0,0.44);
-    box-shadow: -4px 4px 5px -1px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.44);
+    box-shadow: -4px 4px 5px -1px rgba(0, 0, 0, 0.44);
     text-align: center;
     padding: 10px;
 }
 
-
-.bar-tit{
+.bar-tit {
     text-align: center;
     font-size: 10px;
     margin-top: 2px;
@@ -1021,7 +1017,7 @@ body {
     color: #908f8f;
 }
 
-.bar-nombre{
+.bar-nombre {
     text-align: center;
     font-size: 15px;
     margin-top: 20px;
@@ -1030,22 +1026,22 @@ body {
     margin-bottom: 20px;
 }
 
-.table-bar{
+.table-bar {
     width: 100%;
 }
 
-.bar-tbs{
+.bar-tbs {
     margin-top: 10px;
 }
 
-.table-bar th{
+.table-bar th {
     background-color: #00BCD4;
     width: 50%;
     color: white;
     border-bottom: 2px solid #2196F3;
 }
 
-.table-bar td{
+.table-bar td {
     font-size: 11px;
     text-transform: uppercase;
     border: 1px solid #cccccc;

@@ -39,7 +39,7 @@ $(document).ready(function() {
     inicializa();
     init();
 
-    $("#get-programas").load("infodata/programas" + $(this).val() + ".txt");
+    $("#get-programas").load("infodata/programas-slc" + $(this).val() + ".txt");
 
     var tl = new TimelineMax();
     removeloader();
@@ -218,7 +218,6 @@ var estructuraGeneral = function() {
     setTimeout(function() {
         removeloader();
         $("#es-general").css("display", "block");
-
 
         $(document).ready(function() {
 
@@ -474,7 +473,7 @@ $("#get-programas").change(function() {
 
     var $dropdown = $(this);
 
-    $.getJSON("infodata/programas.json", function(data) {
+    $.getJSON("infodata/programas-slc.json", function(data) {
 
         var key = $dropdown.val();
         var vals = [];
@@ -493,7 +492,7 @@ $("#get-programas").change(function() {
         var $secondChoice = $("#second-choice");
         $secondChoice.empty();
         $.each(vals, function(index, value) {
-            $secondChoice.append("<option>" + value + "</option>");
+            $secondChoice.append("<li> <input type='checkbox' value='value'>" + value + "</li>");
         });
 
     });
@@ -974,9 +973,6 @@ $("input:checkbox").click(function() {
 
 });
 
-
-
-
 //FECHA
 window.onload = function() {
     var fecha = new Date();
@@ -1058,5 +1054,24 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
         $('.dropdown dt a').append(ret);
         $(".hida").show();
     }
+
+});
+
+$(document).ready(function() {
+    $("#notificationLink").click(function() {
+        $("#notificationContainer").fadeToggle(300);
+        $("#notification_count").fadeOut("slow");
+        return false;
+    });
+
+    //Document Click hiding the popup 
+    $(document).click(function() {
+        $("#notificationContainer").hide();
+    });
+
+    //Popup on click
+    $("#notificationContainer").click(function() {
+        return false;
+    });
 
 });

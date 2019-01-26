@@ -257,8 +257,24 @@
             </div>
             <div class="objs-ins">
                 <label>PROGRAMA</label>
-                <select class="bord" id="get-programas">
-                </select>
+                <div class="">
+                    <dl class="dropdown">
+                        <dt>
+                            <a href="#">
+                                <span class="hida">PROGRAMAS</span><span class="dwn">&#x25BC;</span>
+                                <p class="multiSel"></p>
+                            </a>
+                        </dt>
+                        <dd>
+                            <div class="mutliSelect">
+                                <ul id="get-programas">
+
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
             </div>
             <div class="objs-ins">
                 <label>Version de Carta</label>
@@ -398,6 +414,49 @@
         <div class="close-admin fas fa-times" id="close-lateral-derecho"></div>
         <div class="bar-nombre">Visualización de columnas</div>
 
+        <h5>Asignar a Usuario(s)</h5>
+        <dl class="dropdown">
+            <dt>
+                <a href="#">
+                    <span class="hida">Usuarios</span><span class="dwn">&#x25BC;</span>
+                    <p class="multiSel"></p>
+                </a>
+            </dt>
+            <dd>
+                <div class="mutliSelect">
+                    <ul>
+                        <li>
+                            <input type="checkbox" value="srobles@tvazteca.com.mx">srobles@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="jherrera@tvazteca.com.mx" />jherrera@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="zvega@tvazteca.com.mx" />zvega@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="mramirez@tvazteca.com.mx" />mramirez@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="adorantes@tvazteca.com.mx" />adorantes@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="hgonzalez@tvazteca.com.mx" />hgonzalez@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="kvenegas@tvazteca.com.mx" />kvenegas@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="snovelo@tvazteca.com.mx" />snovelo@tvazteca.com.mx
+                        </li>
+                        <li>
+                            <input type="checkbox" value="ptorres@tvazteca.com.mx" />ptorres@tvazteca.com.mx
+                        </li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+
         <div class="" id="">
             <div class="line-ops m-up-30">
                 <div>ENTRADA</div>
@@ -513,6 +572,10 @@
             </div>
         </div>
 
+        <div style="width: 100%;">
+            <button id="demo" class="success" style="margin: 0 auto;margin-top: 22px;">ASIGNAR</button>
+        </div>
+
     </div>
 
     <div id="panel-herramientas">
@@ -528,7 +591,58 @@
                 <li data-tooltip="Guardar"><i class="fas fa-save"></i></li>
                 <li data-tooltip="Copiar"><i class="fas fa-copy"></i></li>
                 <li data-tooltip="Eliminar"><i class="fas fa-trash"></i></li>
-                <li data-tooltip="Notificaciones"><i class="fas fa-bell"></i></li>
+                <li data-tooltip="Notificaciones" id="notification_li">
+                    <a href="" id="notificationLink">
+                        <i class="fas fa-bell"></i>
+                        <span id="notification_count">3</span>
+                    </a>
+
+                    <div id="notificationContainer">
+                        <div id="notificationTitle">Notificaciones</div>
+                        <div id="notificationsBody" class="notifications">
+                            <div class="notificationsAll">
+                                <p>Configuración de candado cerrado de la estructura general.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Candado de estructura general liberada.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Tiempos ejecutados en INE no cuadran.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Se ha cumplido el límite de entrega establecido.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Candado de estructura individual abierto.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Configuración de candado cerrado de la estructura colocado.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Configuración de candado cerrado de la estructura general.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                            <hr>
+                            <div class="notificationsAll">
+                                <p>Tiempos ejecutados en INE no cuadran.</p>
+                                <p>Hace 25 min.</p>
+                            </div>
+                        </div>
+                        <div id="notificationFooter"><a href="#">Ver todas</a></div>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -638,13 +752,10 @@
                                 <div class="mutliSelect">
                                     <ul>
                                         <li>
-                                            <input type="checkbox" value="ESTRUCTURA GENERAL ABIERTA">ESTRUCTURA GENERAL ABIERTA
+                                            <input type="checkbox" value="ESTRUCTURA GENERAL ABIERTA">CANDADO DE ESTRUCTURA GENERAL LIBERADA.
                                         </li>
                                         <li>
-                                            <input type="checkbox" value="CANDADO DE ESTRUCTURA INDIVIDUAL ABIERTO" />CANDADO DE ESTRUCTURA INDIVIDUAL ABIERTO
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" value="CANDADO DE ESTRUCTURA INDIVIDUAL CERRADO" />CANDADO DE ESTRUCTURA INDIVIDUAL CERRADO
+                                            <input type="checkbox" value="CANDADO DE ESTRUCTURA INDIVIDUAL CERRADO" />CANDADO DE ESTRUCTURA INDIVIDUAL LIBERADO
                                         </li>
                                         <li>
                                             <input type="checkbox" value="LÍMITE DE ENTREGA CUMPLIDO" />LÍMITE DE ENTREGA CUMPLIDO
@@ -712,6 +823,14 @@
         <h4><strong>Eliminar</strong></h4>
         <p>¿Está seguro de eliminar este usuario?</p>
         <button class="close-panel btn-adm">Aceptar</button>
+    </div>
+
+    <div id="modalGral" class="modal-gral">
+        <div class="modal-content-gral">
+            <div class="dv-cls-gral"><span class="close-gral fas fa-times"></span></div>
+            <h6>¿Ir a la Estructura Individual?</h6>
+            <button id="btn-am" class="btn-adm">Aceptar</button>
+        </div>
     </div>
 
     <div id="panel-mensajes" class="min-tool-box">
@@ -1228,6 +1347,8 @@
 
     </div>
 
+    
+    
 <script src="js/vendor/jquery-3.3.1.min.js"></script>
 <script src="js/vendor/modernizr-3.6.0.min.js"></script>
 <script src="js/vendor/jquery.tabledit.js"></script>
