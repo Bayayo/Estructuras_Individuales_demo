@@ -17,7 +17,6 @@ var $p_bloqueo = $('#p-bloqueo');
 var $es_bloqueo = $('#es-bloqueo');
 var $es_ine = $('#es-ine');
 var $p_ine = $('#p-ine');
-var $agregar = $('#agregar');
 
 var modal_usr = document.getElementById('modal-usr');
 
@@ -163,7 +162,6 @@ var inicializa = function() {
 
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
-    $agregar.css("display", "none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -267,17 +265,19 @@ var buscador = function() {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
-        $("#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(6)").hide();
+        $("#objs-busqueda div:nth-child(3),#objs-busqueda div:nth-child(6), #objs-busqueda div:nth-child(7),#objs-busqueda div:nth-child(8)").hide();
 
     } else if ($setMenu == "e-individual") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(6),#objs-busqueda div:nth-child(7),#objs-busqueda div:nth-child(8)").hide();
 
     } else if ($setMenu == "e-bloqueo") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(3),#objs-busqueda div:nth-child(4),#objs-busqueda div:nth-child(5),#objs-busqueda div:nth-child(6)").hide();
 
     } else if ($setMenu == "e-ine") {
         $buscador.css("display", "block");
@@ -306,7 +306,7 @@ $('#btn-search').click(function() {
     } else if ($setMenu == "e-individual") {
         $("#es-individual").load("infodata/estructura-individual.html");
         $("#es-individual").css("display", "block");
-        var esIndProg = $("#get-programas li input").append();
+        /*var esIndProg = $("#get-programas li input").append();
         var esIndFinal = esIndProg.val();
         console.log(esIndFinal);
 
@@ -319,7 +319,7 @@ $('#btn-search').click(function() {
                 break;
             case 'base':
                 vals = ['Please choose from above'];
-        }
+        }*/
 
 
     } else if ($setMenu == "e-bloqueo") {
@@ -466,7 +466,6 @@ $("#cls-plantilla").click(function() {
 $('body').on('click', '.close-panel', function() {
     $('.modal-30, .mod').remove();
     $buscador.css("display", "none");
-    $agregar.css("display", "none");
 });
 
 $("#btn-mensajes").click(function() {
@@ -582,6 +581,7 @@ var InitButtons = (function() {
                 $p_bloqueo.css("display", "block");
 
                 $es_bloqueo.css("display", "block");
+
 
                 $p_ine.css("display", "none");
 

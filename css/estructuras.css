@@ -1523,6 +1523,10 @@ input[type="radio"]:checked:disabled+label span {
     background-color: #fff6a4 !important;
 }
 
+.tbl-bloqueo input {
+    background-color: whitesmoke !important;
+}
+
 
 /*.tbl-hddn td,
 #programas-txt th,
