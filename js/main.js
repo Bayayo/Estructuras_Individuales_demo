@@ -40,6 +40,9 @@ $(document).ready(function() {
     init();
 
     $("#get-programas").load("infodata/programas-slc" + $(this).val() + ".txt");
+    $("#get-programas-linea").load("infodata/programas-slc" + $(this).val() + ".txt");
+
+
 
     var tl = new TimelineMax();
     removeloader();
@@ -303,6 +306,20 @@ $('#btn-search').click(function() {
     } else if ($setMenu == "e-individual") {
         $("#es-individual").load("infodata/estructura-individual.html");
         $("#es-individual").css("display", "block");
+        var esIndProg = $("#get-programas li input").append();
+        var esIndFinal = esIndProg.val();
+        console.log(esIndFinal);
+
+        switch (esIndProg) {
+            case 'BARRAS DE AJUSTE':
+                console.log("primero");
+                break;
+            case 'snacks':
+                vals = data.snacks.split(",");
+                break;
+            case 'base':
+                vals = ['Please choose from above'];
+        }
 
 
     } else if ($setMenu == "e-bloqueo") {
@@ -528,7 +545,7 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-general>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 10).hide();
+                $ul.find('li').slice(1, 11).hide();
 
 
                 break;
@@ -550,6 +567,7 @@ var InitButtons = (function() {
 
                 $ul.find('li').show();
                 $('.tool-down li:nth-child(10)').hide();
+                $('.tool-down li:nth-child(11)').hide();
 
                 break;
 
@@ -615,7 +633,7 @@ var ToolButtons = (function() {
             case 1:
 
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
-                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Agregar Linea</strong></h4></div>').prependTo('body');
+                $("#my-element-lin").css("visibility", "visible");
 
                 break;
             case 2:
@@ -987,7 +1005,6 @@ window.onload = function() {
 }
 
 //ESTATUS ADMIN
-
 $(".status-adm").on("click", function() {
     var $this = $(this);
 
@@ -1064,12 +1081,10 @@ $(document).ready(function() {
         return false;
     });
 
-    //Document Click hiding the popup 
     $(document).click(function() {
         $("#notificationContainer").hide();
     });
 
-    //Popup on click
     $("#notificationContainer").click(function() {
         return false;
     });

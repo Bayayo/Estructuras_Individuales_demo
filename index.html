@@ -582,7 +582,7 @@
         <div class="tool-box">
             <ul class="tool-down">
                 <li data-tooltip="Busqueda"><i class="fas fa-search"></i></li>
-                <li data-tooltip="Agregar Linea"><i class="fas fa-plus-circle"></i></li>
+                <li data-tooltip="Agregar Línea"><i class="fas fa-plus-circle"></i></li>
                 <li data-tooltip="Tiempo Total"><i class="fas fa-eye"></i></li>
                 <li data-tooltip="Exportar"><i class="fas fa-download"></i></li>
                 <li data-tooltip="Enviar Mail"><i class="fas fa-envelope"></i></li>
@@ -591,6 +591,7 @@
                 <li data-tooltip="Guardar"><i class="fas fa-save"></i></li>
                 <li data-tooltip="Copiar"><i class="fas fa-copy"></i></li>
                 <li data-tooltip="Eliminar"><i class="fas fa-trash"></i></li>
+                <li data-tooltip="Enviar a Ithic"><i class="fas fa-share-square"></i></li>
                 <li data-tooltip="Notificaciones" id="notification_li">
                     <a href="" id="notificationLink">
                         <i class="fas fa-bell"></i>
@@ -965,48 +966,48 @@
                 </div>
             </div>
             <div class="line-ops">
-                <div>ENTRADA</div>
+                <div>HORA</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="entrada"  onclick="myFunction1()">
                     <span class="handle"></span></label>
                 </div>
             </div>
             <div class="line-ops">
-                <div>CONTENIDO</div>
+                <div>INE ORDINARIO</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="contenido"  onclick="myFunction2()">
                     <span class="handle"></span></label>
                 </div>
             </div>
             <div class="line-ops">
-                <div>VENTA</div>
+                <div>RTC NACIONAL</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="venta"  onclick="myFunction3()">
                     <span class="handle"></span></label>
                 </div>
             </div>
             <div class="line-ops">
-                <div>VENTA LOCAL</div>
+                <div>TIEMPO LOCAL CB</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="venta-loc"  onclick="myFunction4()">
                     <span class="handle"></span></label>
                 </div>
             </div>
             <div class="line-ops">
-                <div>TOTAL VENTA</div>
+                <div>TIEMPO FALTANTE EN PROMO INE</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="total-venta"  onclick="myFunction5()">
                     <span class="handle"></span></label>
                 </div>
             </div>
             <div class="line-ops">
-                <div>CAP INFORMATIVA</div>
+                <div>REQUERIDO</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="cap-informativa"  onclick="myFunction6()">
                     <span class="handle"></span></label>
                 </div>
             </div>
-            <div class="line-ops">
+            <!--<div class="line-ops">
                 <div>PROMOS NACIONALES</div>
                 <div><label class="toggle">
                     <input type="checkbox" checked="checked" id="promos-nacionales"  onclick="myFunction7()">
@@ -1082,7 +1083,7 @@
                     <input type="checkbox" checked="checked" id="promocion"  onclick="myFunction17()">
                     <span class="handle"></span></label>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
@@ -1347,14 +1348,60 @@
 
     </div>
 
-    
-    
-<script src="js/vendor/jquery-3.3.1.min.js"></script>
-<script src="js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="js/vendor/jquery.tabledit.js"></script>
-<script src="js/vendor/TweenMax.min.js"></script>
+    <div id="my-element-lin" class="p-middle mod">
+        <div class="close-panel fas fa-times"></div>
+        <h4 class="tit-tut"><strong>Agregar Línea</strong></h4>
+        <div class="objs-elems" style="width: 95%;">
+        <div class="objs-ins">
+            <label>¿Cuántas líneas desea agregar?</label>
+            <select class="bord">
+                <option value="-1">1</option>
+                <option>2</option>
+                <option>2</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+    </div>
+    <div class="objs-ins">
+        <label>¿EN QUÉ PROGRAMA?</label>
+        <div class="">
+            <dl class="dropdown">
+                <dt>
+                                <a href="#">
+                                    <span class="hida">PROGRAMAS</span><span class="dwn">&#x25BC;</span>
+                                    <p class="multiSel"></p>
+                                </a>
+                            </dt>
+                <dd>
+                    <div class="mutliSelect">
+                        <ul id="get-programas-linea">
 
-<script src="js/main.js"></script>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div style="width: 40%;">
+        <button id="btn-search" class="success" style="margin: 0 auto;margin-top: 22px;">AGREGAR</button>
+    </div>
+
+    </div>
+    </div>
+
+
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery.tabledit.js"></script>
+    <script src="js/vendor/TweenMax.min.js"></script>
+
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>

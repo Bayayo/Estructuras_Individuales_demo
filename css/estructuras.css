@@ -1501,6 +1501,28 @@ input[type="radio"]:checked:disabled+label span {
     text-align: center;
 }
 
+.red-input {
+    color: red;
+}
+
+.red-input::placeholder {
+    color: red;
+    opacity: 1;
+}
+
+.red-input:-ms-input-placeholder {
+    color: red;
+}
+
+.red-input::-ms-input-placeholder {
+    color: red;
+}
+
+#table-i tr td:nth-child(4),
+#table-i tr td:nth-child(5) {
+    background-color: #fff6a4 !important;
+}
+
 
 /*.tbl-hddn td,
 #programas-txt th,
@@ -1942,4 +1964,16 @@ input[type="radio"]:checked:disabled+label span {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+#my-element-lin {
+    visibility: hidden;
+}
+
+#my-element-lin.p-middle {
+    position: relative !important;
+}
+
+#my-element-lin .dropdown dd ul {
+    position: relative;
 }
