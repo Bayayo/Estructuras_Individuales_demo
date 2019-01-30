@@ -1,142 +1,675 @@
-<div class="data-load">
-<div>
-    <div class="objs-elems make-table">
-        <div class="objs-ins"><label>RED 1</label></div>
-        <div class="objs-ins"><label>Enero 2019</label></div>
-        <div class="objs-ins"><label>PROGRAMACIÓN LOCAL Y NACIONAL</label></div>
-    </div>
-</div>
+<style>
+    .test-time {
+        display: inline-flex;
+    }
+    
+    .test-time input {
+        border: none;
+        text-align: center;
+        width: 33%;
+        font-size: 10px !important;
+        padding: 0px !important;
+    }
+    
+    .tab-ine input::-webkit-datetime-edit-ampm-field {
+        display: none;
+    }
+    
+    input[type=time]::-webkit-clear-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        margin: -10px;
+    }
+</style>
 
-<div class="">
-    <table class="tabla-box">
-        <thead>
+<div class="data-load tab-ine">
+    <div>
+        <table class="tabla-header">
             <tr>
-                <th>FECHA</th>
-                <th>HORARIO</th>
-                <th>PROGRAMA</th>
-                <th>DURACIÓN</th>
-                <th>DURACIÓN PROCESO</th>
-                <th>DURACIÓN REAL</th>
+                <td> A </td>
+                <td> SEMANA 2</td>
+                <td> LUNES 28 ENERO DEL 2019</td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="tabla-box" style="margin-bottom:0px;">
+        <thead colspan="8">
+            <tr>
+                <th colspan="1"></th>
+                <th colspan="1"></th>
+                <th colspan="1" style="border-right: 2px solid #2196F3;"></th>
+                <th colspan="1" style="border-right: 2px solid #2196F3; border-left: 2px solid #2196F3;"> INVENTARIO ACTUAL
+                </th>
+                <th colspan="1" style="border-left: 2px solid #2196F3;"></th>
+                <th colspan="1"></th>
+                <th colspan="1">TOTAL INV NAC </th>
+                <th colspan="1" style="display: none;width: 0;"></th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>14-01-2019</td>
-                <td>06:00:00</td>
-                <td>HECHOS AM</td>
-                <td>03:00:00</td>
-                <td><input data-value="default" type="text" placeholder="03:00"></td>
-                <td><input data-value="default" type="text" placeholder="02:20"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>08:55:00</td>
-                <td>VENGA LA ALEGRÍA</td>
-                <td>03:00:00</td>
-                <td><input data-value="default" type="text" placeholder="04:00"></td>
-                <td><input data-value="default" type="text" placeholder="03:30"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>10:30:00</td>
-                <td>HECHOS NOCHE</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="02:00"></td>
-                <td><input data-value="default" type="text" placeholder="01:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>11:00:00</td>
-                <td>REPORTE 13</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="02:00"></td>
-                <td><input data-value="default" type="text" placeholder="01:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>11:15:00</td>
-                <td>ENTRE REPORTEROS</td>
-                <td>00:45:00</td>
-                <td><input data-value="default" type="text" placeholder="02:30"></td>
-                <td><input data-value="default" type="text" placeholder="00:50"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>06:00:00</td>
-                <td>HECHOS AM</td>
-                <td>03:00:00</td>
-                <td><input data-value="default" type="text" placeholder="04:00"></td>
-                <td><input data-value="default" type="text" placeholder="03:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>08:55:00</td>
-                <td>VENGA LA ALEGRÍA</td>
-                <td>03:00:00</td>
-                <td><input data-value="default" type="text" placeholder="05:00"></td>
-                <td><input data-value="default" type="text" placeholder="01:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>10:30:00</td>
-                <td>HECHOS NOCHE</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="02:20"></td>
-                <td><input data-value="default" type="text" placeholder="00:30"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>11:00:00</td>
-                <td>REPORTE 13</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="04:00"></td>
-                <td><input data-value="default" type="text" placeholder="03:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>11:15:00</td>
-                <td>ENTRE REPORTEROS</td>
-                <td>00:45:00</td>
-                <td><input data-value="default" type="text" placeholder="03:40"></td>
-                <td><input data-value="default" type="text" placeholder="02:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>06:00:00</td>
-                <td>HECHOS AM</td>
-                <td>03:00:00</td>
-                <td><input data-value="default" type="text" placeholder="01:00"></td>
-                <td><input data-value="default" type="text" placeholder="0:20"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>10:30:00</td>
-                <td>HECHOS NOCHE</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="02:00"></td>
-                <td><input data-value="default" type="text" placeholder="01:10"></td>
-            </tr>
-            <tr>
-                <td>14-01-2019</td>
-                <td>11:00:00</td>
-                <td>REPORTE 13</td>
-                <td>00:30:00</td>
-                <td><input data-value="default" type="text" placeholder="03:00"></td>
-                <td><input data-value="default" type="text" placeholder="00:50"></td>
-            </tr>
-        </tbody>
     </table>
-    <table class="tabla-box">
+
+    <table class="tabla-box" style="margin-top:0px;">
+        <thead colspan="8">
+            <tr>
+                <th colspan="1"> PROGRAMA</th>
+                <th colspan="1"> HORA</th>
+                <th colspan="1"> INE ORDINARIO </th>
+                <th colspan="1"> RTC NACIONAL </th>
+                <th colspan="1"> TIEMPO LOCAL CB </th>
+                <th colspan="1"> TIEMPO FALTANTE EN PROMO INE </th>
+                <th colspan="1"> REQUERIDO </th>
+                <th colspan="1" style="display: none;width: 0;"></th>
+            </tr>
+        </thead>
+
+        <tbody id="table-i">
+            <tr>
+                <td></td>
+                <td>5:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> HECHOS AM </td>
+                <td>6:00</td>
+                <td></td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> HECHOS AM </td>
+                <td>7:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> HECHOS AM </td>
+                <td>8:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> VLA </td>
+                <td>9:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> VLA </td>
+                <td>10:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> VLA </td>
+                <td>11:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> TODO</td>
+                <td>12:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> TODO </td>
+                <td>13:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> MERIDIANO </td>
+                <td>14:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> ESCAPE </td>
+                <td>15:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> VENTANEANDO </td>
+                <td>16:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td> VENTANEANDO / ENAMORANDONOS </td>
+                <td>17:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>ENAMORANDONOS</td>
+                <td>18:00</td>
+                <td></td>
+                <td>0:01:00</td>
+                <td>0:00:30</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>ENAMORANDONOS /EXATLON</td>
+                <td>19:00</td>
+                <td></td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="02">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>EXATLON</td>
+                <td>20:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>EXATLON</td>
+                <td>21:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>EXATLON / HECHOS NOCHE</td>
+                <td>22:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="01">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>PROTA</td>
+                <td>23:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+                <td>0:01:00</td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>00:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="03">:
+                        <input type="number" min="0" max="59" placeholder="00">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>01:00</td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" class="red-input" min="0" max="23" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="00">:
+                        <input type="number" class="red-input" min="0" max="59" placeholder="30*">
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="test-time">
+                        <input type="number" min="0" max="23" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="00">:
+                        <input type="number" min="0" max="59" placeholder="30">
+                    </div>
+                </td>
+            </tr>
+
+
+        </tbody>
+
         <tfoot>
             <tr>
                 <td> </td>
-                <td> </td>
                 <td></td>
-                <td></td>
-                <td>62:30</td>
-                <td>41:20</td>
+                <td class="myColorIne">00:05:30</td>
+                <td class="myColorIne"> 00:18:00 </td>
+                <td class="myColorIne"> 00:05:00 </td>
+                <td class="myColorIne"> 00:16:00 </td>
+                <td class="myColorIne"> 00:53:00 </td>
+                <td style="display: none;width: 0;"> </td>
             </tr>
         </tfoot>
     </table>
+
 </div>
-</div>
+
+<script>
+    document.querySelectorAll('input[type=number]')
+        .forEach(e => e.oninput = () => {
+            // Always 2 digits
+            if (e.value.length >= 2) e.value = e.value.slice(0, 2);
+            // 0 on the left (doesn't work on FF)
+            if (e.value.length === 1) e.value = '0' + e.value;
+            // Avoiding letters on FF
+            if (!e.value) e.value = '00';
+        });
+    //VALIDACIÓN COLOR
+    var c = this.document.getElementsByClassName("myColorIne");
+    var r;
+    for (r = 0; r < c.length; r++) {
+        finalresult = c[r].innerText;
+        test = c[r];
+
+        for (var i = 0; i < c.length; i++) {
+            var colorVal = this.c[i].innerText;
+
+            if (colorVal >= "00:10:00") {
+
+                if (colorVal == finalresult) {
+                    this.test.style.background = "#f4433633";
+                    console.log("mayor");
+                }
+            } else {
+                if (colorVal == finalresult) {
+                    this.test.style.background = "#48CFAD";
+                    console.log("menor");
+                }
+            }
+        }
+    }
+</script>

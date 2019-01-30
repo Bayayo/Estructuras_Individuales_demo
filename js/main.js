@@ -385,6 +385,16 @@ $(".close-panel").click(function() {
 
 });
 
+$(".close-btn-gdr").click(function() {
+
+    var tl = new TimelineLite();
+
+    tl.to($p_panel, 0.3, { opacity: 1, x: -500 });
+
+    $(".modal-all").remove();
+
+});
+
 $(".close-panel-der").click(function() {
 
     var tl1 = new TimelineLite();
@@ -544,7 +554,7 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-general>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 11).hide();
+                $ul.find('li').slice(1, 12).hide();
 
 
                 break;
@@ -567,6 +577,7 @@ var InitButtons = (function() {
                 $ul.find('li').show();
                 $('.tool-down li:nth-child(10)').hide();
                 $('.tool-down li:nth-child(11)').hide();
+                $('.tool-down li:nth-child(12)').hide();
 
                 break;
 
@@ -587,7 +598,8 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-bloqueo>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 7).hide();
+                $ul.find('li').slice(1, 6).hide();
+                $('.tool-down li:nth-child(9)').hide();
 
                 break;
 
@@ -607,7 +619,8 @@ var InitButtons = (function() {
                 TweenMax.staggerFromTo($("#p-ine>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 7).hide();
+                $ul.find('li').slice(1, 6).hide();
+                $('.tool-down li:nth-child(10)').hide();
 
 
                 break;
@@ -680,7 +693,7 @@ var ToolButtons = (function() {
 
             case 7:
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
-                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4><h5 style="text-align:center;">¿Validar información actualizada?</h5> <button class="close-btn-gdr success" style="margin: 0 auto;margin-top: 22px;">ACEPTAR</button></div>').prependTo('body');
 
                 break;
 
@@ -691,7 +704,18 @@ var ToolButtons = (function() {
                 break;
             case 9:
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $("#my-element-bloq-rep").css("visibility", "visible");
+                //$('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Replicar 2</strong></h4></div>').prependTo('body');
+
+                break;
+            case 10:
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Eliminar</strong></h4></div>').prependTo('body');
+
+                break;
+            case 11:
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Enviar a Ithic</strong></h4></div>').prependTo('body');
 
                 break;
 
@@ -1089,4 +1113,38 @@ $(document).ready(function() {
         return false;
     });
 
+});
+
+//DATE RANGE
+
+$(function() {
+    var dateFormat = "D M d, yyyy",
+        from = $("#from")
+        .datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 2
+        })
+        .on("change", function() {
+            to.datepicker("option", "minDate", getDate(this));
+        }),
+        to = $("#to").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 2
+        })
+        .on("change", function() {
+            from.datepicker("option", "maxDate", getDate(this));
+        });
+
+    function getDate(element) {
+        var date;
+        try {
+            date = $.datepicker.parseDate(dateFormat, element.value);
+        } catch (error) {
+            date = null;
+        }
+
+        return date;
+    }
 });

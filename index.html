@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/fontawesome.css"></link>
     <link rel="stylesheet" href="css/animate.css"></link>
     <link rel="stylesheet" href="css/site.css"></link>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Latest compiled and minified CSS
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
@@ -253,7 +254,6 @@
             <div class="objs-ins">
                 <label>Fecha</label>
                 <input class="bord" data-value="default" type="date" id="fechaActual" value="" name="fecha">
-                </select>
             </div>
             <div class="objs-ins">
                 <label>PROGRAMA</label>
@@ -637,6 +637,7 @@
                 <li data-tooltip="Bloquear Version"><i class="fas fa-lock"></i></li>
                 <li data-tooltip="Guardar"><i class="fas fa-save"></i></li>
                 <li data-tooltip="Copiar"><i class="fas fa-copy"></i></li>
+                <li data-tooltip="Replicar"><i class="fas fa-copy"></i></li>
                 <li data-tooltip="Eliminar"><i class="fas fa-trash"></i></li>
                 <li data-tooltip="Enviar a Ithic"><i class="fas fa-share-square"></i></li>
                 <li data-tooltip="Notificaciones" id="notification_li">
@@ -1139,7 +1140,7 @@
         <div class="usr-title">bitácora</div>
 
         <div class="msg-bitacora">
-            <table class="tabla-box">
+            <table class="tabla-box" style="max-width:100%; table-layout: auto; position: inherit;">
                 <thead>
                     <tr>
                         <th>BLOQUEO</th>
@@ -1203,7 +1204,7 @@
         <div class="usr-title">Candados</div>
 
         <div class="msg-bitacora">
-            <table class="tabla-box">
+            <table class="tabla-box" style="max-width:100%; table-layout: auto; position: inherit;">
                 <thead>
                     <tr>
                         <th>CANDADO</th>
@@ -1418,11 +1419,11 @@
         <div class="">
             <dl class="dropdown">
                 <dt>
-                                <a href="#">
-                                    <span class="hida">PROGRAMAS</span><span class="dwn">&#x25BC;</span>
-                                    <p class="multiSel"></p>
-                                </a>
-                            </dt>
+                        <a href="#">
+                            <span class="hida">PROGRAMAS</span><span class="dwn">&#x25BC;</span>
+                            <p class="multiSel"></p>
+                        </a>
+                    </dt>
                 <dd>
                     <div class="mutliSelect">
                         <ul id="get-programas-linea">
@@ -1440,9 +1441,73 @@
     </div>
     </div>
 
+    <div id="my-element-bloq-rep" class="p-middle mod">
+        <div class="close-panel fas fa-times"></div>
+        <h4 class="tit-tut"><strong>Replicar</strong></h4>
+        <div class="objs-elems" style="width: 80%; margin: 10px auto;">
+            <div class="objs-ins">
+                FECHA INICIAL
+            </div>
+            <div class="objs-ins">
+                <input type="text" id="from" name="from">
+            </div>
+        </div>
+        <div class="objs-elems" style="width: 80%;margin: 10px auto;">
+            <div class="objs-ins">
+                FECHA FINAL
+            </div>
+            <div class="objs-ins">
+                <input type="text" id="to" name="to">
+            </div>
+        </div>
+        <div class="objs-elems" style="width: 60%;margin: 10px auto;">
+            <div class="objs-ins">
+                DÍAS A COPIAR
+            </div>
+            <div class="objs-ins">
+                <input id="lun" type="checkbox" value="0">
+                <label for="lun">Lun</label>
+            </div>
+            <div class="objs-ins">
+                <input id="mar" type="checkbox" value="0">
+                <label for="mar">Mar</label>
+            </div>
+            <div class="objs-ins">
+                <input id="mier" type="checkbox" value="0">
+                <label for="mier">Mie</label>
+            </div>
+            <div class="objs-ins">
+                <input id="jue" type="checkbox" value="0">
+                <label for="jue">Jue</label>
+            </div>
+            <div class="objs-ins">
+                <input id="vier" type="checkbox" value="0">
+                <label for="vier">Vie</label>
+            </div>
+            <div class="objs-ins">
+                <input id="sab" type="checkbox" value="0">
+                <label for="sab">Sab</label>
+            </div>
+            <div class="objs-ins">
+                <input id="dom" type="checkbox" value="0">
+                <label for="dom">Dom</label>
+            </div>
+        </div>
+        <div class="objs-elems" style="width: 80%;margin: 10px auto;">
+            <div class="objs-ins">
+                <input id="all" type="checkbox" value="0">
+                <label for="all">Todos los escenarios</label>
+            </div>
+        </div>
+
+    </div>
 
 
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/tablefilter.js"></script>
+
+    <!--<script src="js/vendor/jquery-3.3.1.min.js"></script>-->
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery.tabledit.js"></script>
     <script src="js/vendor/TweenMax.min.js"></script>

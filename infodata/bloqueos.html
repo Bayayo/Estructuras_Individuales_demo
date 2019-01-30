@@ -1,3 +1,8 @@
+<style>
+    .tabla-box thead tr th:last-child {
+        width: 300px !important;
+    }
+</style>
 <div class="data-load">
     <div>
         <div class="objs-elems make-table">
@@ -7,16 +12,17 @@
     </div>
 
     <div class="">
-        <table class="tabla-box tbl-bloqueo">
+        <table class="tabla-box tbl-bloqueo" id="demo">
             <thead>
                 <tr>
                     <th>FECHA</th>
                     <th>HORARIO</th>
-                    <th>PROGRAMA</th>
-                    <th>DURACIÓN</th>
+                    <th>PROGRAMA &#x25BC;</th>
+                    <th>DURACIÓN &#x25BC;</th>
+                    <th>INVENTARIO</th>
                     <th>COMERCIAL BLOQUEABLE
                         <table style=" width: -webkit-fill-available;">
-                            <tr>
+                            <tr class="blq-time">
                                 <td>1</td>
                                 <td>2</td>
                                 <td>3</td>
@@ -32,25 +38,26 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="bloqTable">
                 <tr>
                     <td>14-01-2019</td>
                     <td>06:00:00</td>
                     <td>HECHOS AM</td>
                     <td>03:00:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -60,19 +67,20 @@
                     <td>08:55:00</td>
                     <td>VENGA LA ALEGRÍA</td>
                     <td>03:00:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -82,19 +90,20 @@
                     <td>10:30:00</td>
                     <td>HECHOS NOCHE</td>
                     <td>00:30:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -104,19 +113,20 @@
                     <td>11:00:00</td>
                     <td>REPORTE 13</td>
                     <td>00:30:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -126,19 +136,20 @@
                     <td>11:15:00</td>
                     <td>ENTRE REPORTEROS</td>
                     <td>00:45:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -148,19 +159,20 @@
                     <td>06:00:00</td>
                     <td>HECHOS AM</td>
                     <td>03:00:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -170,19 +182,20 @@
                     <td>08:55:00</td>
                     <td>VENGA LA ALEGRÍA</td>
                     <td>03:00:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -192,19 +205,20 @@
                     <td>10:30:00</td>
                     <td>HECHOS NOCHE</td>
                     <td>00:30:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -214,19 +228,20 @@
                     <td>11:00:00</td>
                     <td>REPORTE 13</td>
                     <td>00:30:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -236,19 +251,20 @@
                     <td>11:15:00</td>
                     <td>ENTRE REPORTEROS</td>
                     <td>00:45:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -258,19 +274,20 @@
                     <td>06:00:00</td>
                     <td>HECHOS AM</td>
                     <td>03:00:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
@@ -280,45 +297,45 @@
                     <td>10:30:00</td>
                     <td>HECHOS NOCHE</td>
                     <td>00:30:00</td>
+                    <td></td>
                     <td>
                         <table>
                             <tr>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
-                                <td><input data-value="default" type="time" placeholder="00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
+                                <td><input data-value="default" type="time" value="00:00"></td>
                             </tr>
                         </table>
                     </td>
                 </tr>
             </tbody>
-        </table>
-        <table class="tabla-box tb-ftr">
             <tfoot>
                 <tr>
                     <td> </td>
                     <td> </td>
                     <td></td>
                     <td></td>
+                    <td></td>
                     <td class="tb-ftr-total">
                         <table>
                             <tr>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
-                                <td>00</td>
+                                <td class="myColorBloq">06:30</td>
+                                <td class="myColorBloq">03:10</td>
+                                <td class="myColorBloq">01:00</td>
+                                <td class="myColorBloq">05:50</td>
+                                <td class="myColorBloq">00:00</td>
+                                <td class="myColorBloq">00:00</td>
+                                <td class="myColorBloq">00:30</td>
+                                <td class="myColorBloq">00:20</td>
+                                <td class="myColorBloq">01:40</td>
+                                <td class="myColorBloq">07:10</td>
                             </tr>
                         </table>
                     </td>
@@ -328,3 +345,44 @@
     </div>
 
 </div>
+
+<script>
+    var filtersConfig = {
+        //base_path: 'tablefilter/',
+        col_0: 'none',
+        col_1: 'none',
+        col_2: 'select',
+        col_3: 'select',
+        col_4: 'none',
+        col_5: 'none'
+
+    };
+
+    var tf = new TableFilter('demo', filtersConfig);
+    tf.init();
+
+    //VALIDACIÓN COLOR
+    var c = this.document.getElementsByClassName("myColorBloq");
+    var r;
+    for (r = 0; r < c.length; r++) {
+        finalresult = c[r].innerText;
+        test = c[r];
+
+        for (var i = 0; i < c.length; i++) {
+            var colorVal = this.c[i].innerText;
+
+            if (colorVal >= "05:00") {
+
+                if (colorVal == finalresult) {
+                    this.test.style.background = "#f4433633";
+                    console.log("mayor");
+                }
+            } else {
+                if (colorVal == finalresult) {
+                    this.test.style.background = "#48CFAD";
+                    console.log("menor");
+                }
+            }
+        }
+    }
+</script>
