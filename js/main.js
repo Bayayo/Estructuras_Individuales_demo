@@ -17,7 +17,6 @@ var $p_bloqueo = $('#p-bloqueo');
 var $es_bloqueo = $('#es-bloqueo');
 var $es_ine = $('#es-ine');
 var $p_ine = $('#p-ine');
-var $agregar = $('#agregar');
 
 var modal_usr = document.getElementById('modal-usr');
 
@@ -39,7 +38,10 @@ $(document).ready(function() {
     inicializa();
     init();
 
-    $("#get-programas").load("infodata/programas" + $(this).val() + ".txt");
+    $("#get-programas").load("infodata/programas-slc" + $(this).val() + ".txt");
+    $("#get-programas-linea").load("infodata/programas-slc" + $(this).val() + ".txt");
+
+
 
     var tl = new TimelineMax();
     removeloader();
@@ -160,7 +162,6 @@ var inicializa = function() {
 
     $p_bloqueo.css("display", "none");
     $p_ine.css("display", "none");
-    $agregar.css("display", "none");
 
     $u_plantilla.css("display", "none");
     $u_columnas.css("display", "none");
@@ -219,7 +220,6 @@ var estructuraGeneral = function() {
         removeloader();
         $("#es-general").css("display", "block");
 
-
         $(document).ready(function() {
 
             var element = $('#table-g thead tr th');
@@ -265,17 +265,19 @@ var buscador = function() {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
-        $("#objs-busqueda div:nth-child(3), #objs-busqueda div:nth-child(6)").hide();
+        $("#objs-busqueda div:nth-child(3),#objs-busqueda div:nth-child(6), #objs-busqueda div:nth-child(7),#objs-busqueda div:nth-child(8)").hide();
 
     } else if ($setMenu == "e-individual") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(6),#objs-busqueda div:nth-child(7),#objs-busqueda div:nth-child(8)").hide();
 
     } else if ($setMenu == "e-bloqueo") {
         $buscador.css("display", "block");
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
+        $("#objs-busqueda div:nth-child(3),#objs-busqueda div:nth-child(4),#objs-busqueda div:nth-child(5),#objs-busqueda div:nth-child(6)").hide();
 
     } else if ($setMenu == "e-ine") {
         $buscador.css("display", "block");
@@ -304,6 +306,20 @@ $('#btn-search').click(function() {
     } else if ($setMenu == "e-individual") {
         $("#es-individual").load("infodata/estructura-individual.html");
         $("#es-individual").css("display", "block");
+        /*var esIndProg = $("#get-programas li input").append();
+        var esIndFinal = esIndProg.val();
+        console.log(esIndFinal);
+
+        switch (esIndProg) {
+            case 'BARRAS DE AJUSTE':
+                console.log("primero");
+                break;
+            case 'snacks':
+                vals = data.snacks.split(",");
+                break;
+            case 'base':
+                vals = ['Please choose from above'];
+        }*/
 
 
     } else if ($setMenu == "e-bloqueo") {
@@ -360,6 +376,16 @@ $(".p-i-not").click(function() {
 });
 
 $(".close-panel").click(function() {
+
+    var tl = new TimelineLite();
+
+    tl.to($p_panel, 0.3, { opacity: 1, x: -500 });
+
+    $(".modal-all").remove();
+
+});
+
+$(".close-btn-gdr").click(function() {
 
     var tl = new TimelineLite();
 
@@ -460,7 +486,6 @@ $("#cls-plantilla").click(function() {
 $('body').on('click', '.close-panel', function() {
     $('.modal-30, .mod').remove();
     $buscador.css("display", "none");
-    $agregar.css("display", "none");
 });
 
 $("#btn-mensajes").click(function() {
@@ -480,6 +505,34 @@ $("#trash1").click(function() {
 
 });
 
+$("#get-programas").change(function() {
+
+    var $dropdown = $(this);
+
+    $.getJSON("infodata/programas-slc.json", function(data) {
+
+        var key = $dropdown.val();
+        var vals = [];
+
+        switch (key) {
+            case 'beverages':
+                vals = data.beverages.split(",");
+                break;
+            case 'snacks':
+                vals = data.snacks.split(",");
+                break;
+            case 'base':
+                vals = ['Please choose from above'];
+        }
+
+        var $secondChoice = $("#second-choice");
+        $secondChoice.empty();
+        $.each(vals, function(index, value) {
+            $secondChoice.append("<li> <input type='checkbox' value='value'>" + value + "</li>");
+        });
+
+    });
+});
 
 var InitButtons = (function() {
     var $ul = $('.tool-down');
@@ -511,7 +564,7 @@ var InitButtons = (function() {
 
                 TweenMax.staggerFromTo($("#p-general>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 10).hide();
+                $ul.find('li').slice(1, 12).hide();
 
 
                 break;
@@ -533,6 +586,8 @@ var InitButtons = (function() {
 
                 $ul.find('li').show();
                 $('.tool-down li:nth-child(10)').hide();
+                $('.tool-down li:nth-child(11)').hide();
+                $('.tool-down li:nth-child(12)').hide();
 
                 break;
 
@@ -548,11 +603,13 @@ var InitButtons = (function() {
 
                 $es_bloqueo.css("display", "block");
 
+
                 $p_ine.css("display", "none");
 
                 TweenMax.staggerFromTo($("#p-bloqueo>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 7).hide();
+                $ul.find('li').slice(1, 6).hide();
+                $('.tool-down li:nth-child(9)').hide();
 
                 break;
 
@@ -572,7 +629,8 @@ var InitButtons = (function() {
                 TweenMax.staggerFromTo($("#p-ine>div,#panel-herramientas"), 0.3, { y: -50, opacity: 0 }, { y: 0, opacity: 1, ease: Back.easeOut }, 0.3);
 
                 $ul.find('li').show();
-                $ul.find('li').slice(1, 7).hide();
+                $ul.find('li').slice(1, 6).hide();
+                $('.tool-down li:nth-child(10)').hide();
 
 
                 break;
@@ -598,8 +656,8 @@ var ToolButtons = (function() {
             case 1:
 
                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
-                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Agregar Linea</strong></h4></div>').prependTo('body');
-                
+                $("#my-element-lin").css("visibility", "visible");
+
                 break;
             case 2:
                 if($setMenu == "e-individual"){
@@ -644,8 +702,8 @@ var ToolButtons = (function() {
                 break;
 
             case 7:
-                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
-                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Guardar</strong></h4><h5 style="text-align:center;">¿Validar información actualizada?</h5> <button class="close-btn-gdr success" style="margin: 0 auto;margin-top: 22px;">ACEPTAR</button></div>').prependTo('body');
 
                 break;
 
@@ -655,8 +713,19 @@ var ToolButtons = (function() {
 
                 break;
             case 9:
-                 $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
-                 $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Eliminar</strong></h4></div>').prependTo('body');
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $("#my-element-bloq-rep").css("visibility", "visible");
+                //$('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Replicar 2</strong></h4></div>').prependTo('body');
+
+                break;
+            case 10:
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Eliminar</strong></h4></div>').prependTo('body');
+
+                break;
+            case 11:
+                $('<div class="modal-30" style="z-index:90;"></div>').prependTo('body');
+                $('<div id="my-element" class="p-middle mod"><div class="close-panel fas fa-times"></div><h4 class="tit-tut"><strong>Enviar a Ithic</strong></h4></div>').prependTo('body');
 
                 break;
 
@@ -967,7 +1036,6 @@ window.onload = function() {
 }
 
 //ESTATUS ADMIN
-
 $(".status-adm").on("click", function() {
     var $this = $(this);
 
@@ -1035,4 +1103,55 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
         $(".hida").show();
     }
 
+});
+
+$(document).ready(function() {
+    $("#notificationLink").click(function() {
+        $("#notificationContainer").fadeToggle(300);
+        $("#notification_count").fadeOut("slow");
+        return false;
+    });
+
+    $(document).click(function() {
+        $("#notificationContainer").hide();
+    });
+
+    $("#notificationContainer").click(function() {
+        return false;
+    });
+
+});
+
+//DATE RANGE
+
+$(function() {
+    var dateFormat = "D M d, yyyy",
+        from = $("#from")
+        .datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 2
+        })
+        .on("change", function() {
+            to.datepicker("option", "minDate", getDate(this));
+        }),
+        to = $("#to").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 2
+        })
+        .on("change", function() {
+            from.datepicker("option", "maxDate", getDate(this));
+        });
+
+    function getDate(element) {
+        var date;
+        try {
+            date = $.datepicker.parseDate(dateFormat, element.value);
+        } catch (error) {
+            date = null;
+        }
+
+        return date;
+    }
 });
