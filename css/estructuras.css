@@ -1519,11 +1519,6 @@ input[type="radio"]:checked:disabled+label span {
     color: red;
 }
 
-#table-i tr td:nth-child(4),
-#table-i tr td:nth-child(5) {
-    background-color: #FFDA7C !important;
-}
-
 .tbl-bloqueo input {
     background-color: whitesmoke !important;
 }
