@@ -28,10 +28,13 @@ var $u_candados = $("#usr-candados");
 
 var $m_tiempos = $(".menu-tiempos");
 
+var $c_programas = $("#get-programas");
 
 var $Close = document.getElementById('bt-close-all');
 
 var $setMenu;
+var totalCount = 0;
+
 
 $(document).ready(function() {
     //loader();
@@ -174,6 +177,10 @@ var inicializa = function() {
     $(".data-load").remove();
     $(".modal-all, .modal-30, #modal-20").remove();
 
+    var totalCount = 0;
+    $('#get-programs').prop('checked', false);
+    $('input[type="checkbox"]').prop('checked' , false);
+
 }
 
 $box.hover(
@@ -259,6 +266,9 @@ var estructuraGeneral = function() {
 //init();
 var buscador = function() {
     $('<div class="modal-30"></div>').prependTo('body');
+    $('input[type="checkbox"]').prop('checked' , false);
+    var totalCount = 0;
+
     var tl = new TimelineLite();
 
     if ($setMenu == "e-general") {
@@ -272,6 +282,8 @@ var buscador = function() {
         tl.to($buscador, 0.3, { opacity: 1, y: 48 });
         $("#objs-busqueda div").show();
         $("#objs-busqueda div:nth-child(6),#objs-busqueda div:nth-child(7),#objs-busqueda div:nth-child(8)").hide();
+
+
 
     } else if ($setMenu == "e-bloqueo") {
         $buscador.css("display", "block");
@@ -304,22 +316,22 @@ $('#btn-search').click(function() {
         $(".tool-down li:nth-child(3)").show();
 
     } else if ($setMenu == "e-individual") {
-        $("#es-individual").load("infodata/estructura-individual.html");
-        $("#es-individual").css("display", "block");
-        /*var esIndProg = $("#get-programas li input").append();
-        var esIndFinal = esIndProg.val();
-        console.log(esIndFinal);
 
-        switch (esIndProg) {
-            case 'BARRAS DE AJUSTE':
-                console.log("primero");
-                break;
-            case 'snacks':
-                vals = data.snacks.split(",");
-                break;
-            case 'base':
-                vals = ['Please choose from above'];
-        }*/
+        $("#es-individual").css("display", "block");
+
+        console.log(totalCount);
+
+        for (var i=0; i<totalCount; i++) {
+            //$("#es-individual").prepend("infodata/estructura-individual.html");
+            $.ajax({ type: "GET",
+                url: "infodata/estructura-individual.html",
+                success : function(result)
+                {
+                    $('#es-individual').prepend('<div>'+result+'</div>');
+                }
+            });
+        }
+
 
 
     } else if ($setMenu == "e-bloqueo") {
@@ -505,34 +517,7 @@ $("#trash1").click(function() {
 
 });
 
-$("#get-programas").change(function() {
 
-    var $dropdown = $(this);
-
-    $.getJSON("infodata/programas-slc.json", function(data) {
-
-        var key = $dropdown.val();
-        var vals = [];
-
-        switch (key) {
-            case 'beverages':
-                vals = data.beverages.split(",");
-                break;
-            case 'snacks':
-                vals = data.snacks.split(",");
-                break;
-            case 'base':
-                vals = ['Please choose from above'];
-        }
-
-        var $secondChoice = $("#second-choice");
-        $secondChoice.empty();
-        $.each(vals, function(index, value) {
-            $secondChoice.append("<li> <input type='checkbox' value='value'>" + value + "</li>");
-        });
-
-    });
-});
 
 var InitButtons = (function() {
     var $ul = $('.tool-down');
@@ -1008,6 +993,24 @@ var intpanel = (function() {
 
 })();
 
+(function(){
+
+    $("#get-programas").change(function() {
+
+        totalCount = calculateAll()
+
+    });
+
+    function calculateAll(){
+        count = 0;
+        $("#get-programas input[name='opt']").each(function(index, checkbox){
+          if(checkbox.checked)
+            count += parseInt(checkbox.value)
+        })
+        return count;
+      }
+
+})();
 
 
 $("input:checkbox").click(function() {
