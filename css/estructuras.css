@@ -1806,8 +1806,8 @@ input[type="radio"]:checked:disabled+label span {
     position: fixed;
     width: 96%;
     max-width: 1850px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    /*overflow-x: scroll;
+    overflow-y: hidden;*/
     margin: 5% 2%;
 }
 

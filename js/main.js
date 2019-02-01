@@ -1002,9 +1002,9 @@ var intpanel = (function() {
 
 $("input:checkbox").click(function() {
     var cell = $(this).attr("name");
-    var Thead = "#table-h th:nth-child(" + cell + ")";
-    var Tbody = "#table-b tbody tr td:nth-child(" + cell + ")";
-    var Tfoot = "#table-f td:nth-child(" + cell + ")";
+    var Thead = "#fixTable thead tr th:nth-child(" + cell + ")";
+    var Tbody = "#fixTable tbody tr td:nth-child(" + cell + ")";
+    var Tfoot = "#fixTable tfoot tr th:nth-child(" + cell + ")";
 
     $(Thead).toggle("fast");
     $(Tbody).toggle("fast");
